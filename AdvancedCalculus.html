@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+  <table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
+</div>
+
+  <form id='foo'>
+    <input hidden type="checkbox" name="subject" value="advcalc" checked>
+
+    <table class="students">
+
+<tr><td>Alina Lai
+</td><td><input type="radio" name="alina-lai" value="Present" checked></td><td><input type="radio" name="alina-lai" value="Late"></td><td><input type="radio" name="alina-lai" value="Excused"></td><td><input type="radio" name="alina-lai" value="Unexcused"></td></tr>
+
+<tr><td>Chris Zhu
+</td><td><input type="radio" name="chris-zhu" value="Present" checked></td><td><input type="radio" name="chris-zhu" value="Late"></td><td><input type="radio" name="chris-zhu" value="Excused"></td><td><input type="radio" name="chris-zhu" value="Unexcused"></td></tr>
+
+<tr><td>Jy Yan
+</td><td><input type="radio" name="jy-yan" value="Present" checked></td><td><input type="radio" name="jy-yan" value="Late"></td><td><input type="radio" name="jy-yan" value="Excused"></td><td><input type="radio" name="jy-yan" value="Unexcused"></td></tr>
+
+<tr><td>Owen Sweeney
+</td><td><input type="radio" name="owen-sweeney" value="Present" checked></td><td><input type="radio" name="owen-sweeney" value="Late"></td><td><input type="radio" name="owen-sweeney" value="Excused"></td><td><input type="radio" name="owen-sweeney" value="Unexcused"></td></tr>
+
+<tr><td>Shannon Morgello
+</td><td><input type="radio" name="shannon-morgello" value="Present" checked></td><td><input type="radio" name="shannon-morgello" value="Late"></td><td><input type="radio" name="shannon-morgello" value="Excused"></td><td><input type="radio" name="shannon-morgello" value="Unexcused"></td></tr>
+
+      </table>
+
+      <br>
+      &emsp;<button type='submit'>Send</button>&emsp;
+      <br><br>
+
+    </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src='google-sheet.js'></script>
+
+  <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</html>
