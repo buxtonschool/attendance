@@ -1,3 +1,3 @@
 # attendance
 
-custom attendance submission
+Buxton School's Attendance software (with aggregation and slack integration)
