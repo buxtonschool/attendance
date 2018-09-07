@@ -13,10 +13,15 @@
   <table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
 </div>
 
-  <form id='foo'>
-    <input hidden type="checkbox" name="subject" value="advcalc" checked>
+  <form id="foo" action="https://buxtonschool.github.io/attendance/ManaryAttendance">
+    <input hidden type="checkbox" name="subject" value="master" checked>
 
-    <table class="students">
+
+    <br>
+    Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01">
+    <br>
+
+    <table class="students" cellpadding=0 cellspacing=0>
 
 <tr><td>Alina Lai
 </td><td><input type="radio" name="alina-lai" value="Present" checked></td><td><input type="radio" name="alina-lai" value="Late"></td><td><input type="radio" name="alina-lai" value="Excused"></td><td><input type="radio" name="alina-lai" value="Unexcused"></td></tr>
@@ -24,7 +29,7 @@
 <tr><td>Chris Zhu
 </td><td><input type="radio" name="chris-zhu" value="Present" checked></td><td><input type="radio" name="chris-zhu" value="Late"></td><td><input type="radio" name="chris-zhu" value="Excused"></td><td><input type="radio" name="chris-zhu" value="Unexcused"></td></tr>
 
-<tr><td>Jy Yan
+<tr><td>Junzhe Yan
 </td><td><input type="radio" name="jy-yan" value="Present" checked></td><td><input type="radio" name="jy-yan" value="Late"></td><td><input type="radio" name="jy-yan" value="Excused"></td><td><input type="radio" name="jy-yan" value="Unexcused"></td></tr>
 
 <tr><td>Owen Sweeney
@@ -33,19 +38,22 @@
 <tr><td>Shannon Morgello
 </td><td><input type="radio" name="shannon-morgello" value="Present" checked></td><td><input type="radio" name="shannon-morgello" value="Late"></td><td><input type="radio" name="shannon-morgello" value="Excused"></td><td><input type="radio" name="shannon-morgello" value="Unexcused"></td></tr>
 
+
       </table>
 
       <br>
-      &emsp;<button type='submit'>Send</button>&emsp;
+      &emsp;<button class="button" type="submit">Send</button>&emsp;
       <br><br>
-
+        
     </form>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src='google-sheet.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-  <script>
+<script src="google-sheet.js"></script>
+
+<script src="manary-redirect.js"></script>
+
+<script>
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
@@ -59,4 +67,8 @@ function myFunction() {
   }
 }
 </script>
+
+<script> document.getElementById('datePicker').valueAsDate = new Date(); </script>
+
+</body>
 </html>

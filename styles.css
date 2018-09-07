@@ -30,13 +30,28 @@ body {
   padding-top: 102px;
 }
 
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+}
+
 tr td {width:20%}
 .students tr:nth-child(even) {background: #CCC}
 .students tr:nth-child(odd) {background: #FFF}
 .students tr {height: 30px}
+td {cellpadding:0;}
 
 table {cellpadding: 0;
   cellspacing: 0;
   width:100%;
+  max-width: 1080px;
   border: 0}
 </style>
