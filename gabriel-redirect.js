@@ -9,5 +9,5 @@ $("#foo").submit(function(event){
         request.abort();
     }
 
-    window.location.href = "http://buxtonschool.github.io/attendance/ManaryAttendance";
+    window.location.href = "http://buxtonschool.github.io/attendance/GabrielAttendance";
 });
