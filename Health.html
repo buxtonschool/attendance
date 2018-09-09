@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+	<table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
+</div>
+
+	<form id="foo">
+		<input hidden type="checkbox" name="subject" value="health" checked>
+
+
+		<br>
+		Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01">
+		<br>
+
+		<table class="students" cellpadding=0 cellspacing=0>
+
+<tr><td>Adrian Aguasvivas</td><td><input type="radio" name="adrian-aguasvivas" value="Present" checked></td><td><input type="radio" name="adrian-aguasvivas" value="Late"></td><td><input type="radio" name="adrian-aguasvivas" value="Excused"></td><td><input type="radio" name="adrian-aguasvivas" value="Unexcused"></td></tr>
+
+<tr><td>Aurora Sikelianos</td><td><input type="radio" name="aurora-sikelianos" value="Present" checked></td><td><input type="radio" name="aurora-sikelianos" value="Late"></td><td><input type="radio" name="aurora-sikelianos" value="Excused"></td><td><input type="radio" name="aurora-sikelianos" value="Unexcused"></td></tr>
+
+<tr><td>Isaac Mobolaji</td><td><input type="radio" name="isaac-mobolaji" value="Present" checked></td><td><input type="radio" name="isaac-mobolaji" value="Late"></td><td><input type="radio" name="isaac-mobolaji" value="Excused"></td><td><input type="radio" name="isaac-mobolaji" value="Unexcused"></td></tr>
+
+<tr><td>Jusmaylin Melo</td><td><input type="radio" name="jusmaylin-melo" value="Present" checked></td><td><input type="radio" name="jusmaylin-melo" value="Late"></td><td><input type="radio" name="jusmaylin-melo" value="Excused"></td><td><input type="radio" name="jusmaylin-melo" value="Unexcused"></td></tr>
+
+<tr><td>Kiyah Arrington</td><td><input type="radio" name="kiyah-arrington" value="Present" checked></td><td><input type="radio" name="kiyah-arrington" value="Late"></td><td><input type="radio" name="kiyah-arrington" value="Excused"></td><td><input type="radio" name="kiyah-arrington" value="Unexcused"></td></tr>
+
+<tr><td>Maura Michalowski</td><td><input type="radio" name="maura-michalowski" value="Present" checked></td><td><input type="radio" name="maura-michalowski" value="Late"></td><td><input type="radio" name="maura-michalowski" value="Excused"></td><td><input type="radio" name="maura-michalowski" value="Unexcused"></td></tr>
+
+<tr><td>Niamh Mcdonnell</td><td><input type="radio" name="niamh-mcdonnell" value="Present" checked></td><td><input type="radio" name="niamh-mcdonnell" value="Late"></td><td><input type="radio" name="niamh-mcdonnell" value="Excused"></td><td><input type="radio" name="niamh-mcdonnell" value="Unexcused"></td></tr>
+
+<tr><td>Noelle Mitchell</td><td><input type="radio" name="noelle-mitchell" value="Present" checked></td><td><input type="radio" name="noelle-mitchell" value="Late"></td><td><input type="radio" name="noelle-mitchell" value="Excused"></td><td><input type="radio" name="noelle-mitchell" value="Unexcused"></td></tr>
+
+<tr><td>Sadie Chernila</td><td><input type="radio" name="sadie-chernila" value="Present" checked></td><td><input type="radio" name="sadie-chernila" value="Late"></td><td><input type="radio" name="sadie-chernila" value="Excused"></td><td><input type="radio" name="sadie-chernila" value="Unexcused"></td></tr>
+
+<tr><td>Solo Lorusso</td><td><input type="radio" name="solo-lorusso" value="Present" checked></td><td><input type="radio" name="solo-lorusso" value="Late"></td><td><input type="radio" name="solo-lorusso" value="Excused"></td><td><input type="radio" name="solo-lorusso" value="Unexcused"></td></tr>
+
+<tr><td>Tiger Van der Laan</td><td><input type="radio" name="tiger-van der laan" value="Present" checked></td><td><input type="radio" name="tiger-van der laan" value="Late"></td><td><input type="radio" name="tiger-van der laan" value="Excused"></td><td><input type="radio" name="tiger-van der laan" value="Unexcused"></td></tr>
+
+      </table>
+
+      <br>
+      &emsp;<button class="button" type="submit">Send</button>&emsp;
+      <br><br>
+        
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="google-sheet.js"></script>
+
+<script src="chiara-redirect.js"></script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<script> document.getElementById('datePicker').valueAsDate = new Date(); </script>
+
+</body>
+</html>

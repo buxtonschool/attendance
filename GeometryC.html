@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+	<table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
+</div>
+
+	<form id="foo">
+		<input hidden type="checkbox" name="subject" value="geometryC" checked>
+
+
+		<br>
+		Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01">
+		<br>
+
+		<table class="students" cellpadding=0 cellspacing=0>
+
+<tr><td>Carly Anselmo</td><td><input type="radio" name="carly-anselmo" value="Present" checked></td><td><input type="radio" name="carly-anselmo" value="Late"></td><td><input type="radio" name="carly-anselmo" value="Excused"></td><td><input type="radio" name="carly-anselmo" value="Unexcused"></td></tr>
+
+<tr><td>Izzy Thompson</td><td><input type="radio" name="izzy-thompson" value="Present" checked></td><td><input type="radio" name="izzy-thompson" value="Late"></td><td><input type="radio" name="izzy-thompson" value="Excused"></td><td><input type="radio" name="izzy-thompson" value="Unexcused"></td></tr>
+
+<tr><td>Jacob Merrill</td><td><input type="radio" name="jacob-merrill" value="Present" checked></td><td><input type="radio" name="jacob-merrill" value="Late"></td><td><input type="radio" name="jacob-merrill" value="Excused"></td><td><input type="radio" name="jacob-merrill" value="Unexcused"></td></tr>
+
+<tr><td>JW Braugher</td><td><input type="radio" name="jw-braugher" value="Present" checked></td><td><input type="radio" name="jw-braugher" value="Late"></td><td><input type="radio" name="jw-braugher" value="Excused"></td><td><input type="radio" name="jw-braugher" value="Unexcused"></td></tr>
+
+<tr><td>Kai Bjork</td><td><input type="radio" name="kai-bjork" value="Present" checked></td><td><input type="radio" name="kai-bjork" value="Late"></td><td><input type="radio" name="kai-bjork" value="Excused"></td><td><input type="radio" name="kai-bjork" value="Unexcused"></td></tr>
+
+<tr><td>Maura Michalowski</td><td><input type="radio" name="maura-michalowski" value="Present" checked></td><td><input type="radio" name="maura-michalowski" value="Late"></td><td><input type="radio" name="maura-michalowski" value="Excused"></td><td><input type="radio" name="maura-michalowski" value="Unexcused"></td></tr>
+
+<tr><td>Naya Davison</td><td><input type="radio" name="naya-davison" value="Present" checked></td><td><input type="radio" name="naya-davison" value="Late"></td><td><input type="radio" name="naya-davison" value="Excused"></td><td><input type="radio" name="naya-davison" value="Unexcused"></td></tr>
+
+<tr><td>Shakira Hunt</td><td><input type="radio" name="shakira-hunt" value="Present" checked></td><td><input type="radio" name="shakira-hunt" value="Late"></td><td><input type="radio" name="shakira-hunt" value="Excused"></td><td><input type="radio" name="shakira-hunt" value="Unexcused"></td></tr>
+
+<tr><td>Tiger Van der Laan</td><td><input type="radio" name="tiger-van der laan" value="Present" checked></td><td><input type="radio" name="tiger-van der laan" value="Late"></td><td><input type="radio" name="tiger-van der laan" value="Excused"></td><td><input type="radio" name="tiger-van der laan" value="Unexcused"></td></tr>
+
+      </table>
+
+      <br>
+      &emsp;<button class="button" type="submit">Send</button>&emsp;
+      <br><br>
+        
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="google-sheet.js"></script>
+
+<script src="chiara-redirect.js"></script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<script> document.getElementById('datePicker').valueAsDate = new Date(); </script>
+
+</body>
+</html>
