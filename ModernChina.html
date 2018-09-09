@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+	<table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
+</div>
+
+	<form id="foo">
+		<input hidden type="checkbox" name="subject" value="modernchina" checked>
+
+
+		<br>
+		Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01">
+		<br>
+
+		<table class="students" cellpadding=0 cellspacing=0>
+
+<tr><td>Alina Lai</td><td><input type="radio" name="alina-lai" value="Present" checked></td><td><input type="radio" name="alina-lai" value="Late"></td><td><input type="radio" name="alina-lai" value="Excused"></td><td><input type="radio" name="alina-lai" value="Unexcused"></td></tr>
+
+<tr><td>Ava Freyer</td><td><input type="radio" name="ava-freyer" value="Present" checked></td><td><input type="radio" name="ava-freyer" value="Late"></td><td><input type="radio" name="ava-freyer" value="Excused"></td><td><input type="radio" name="ava-freyer" value="Unexcused"></td></tr>
+
+<tr><td>Benji Lenett</td><td><input type="radio" name="benji-lenett" value="Present" checked></td><td><input type="radio" name="benji-lenett" value="Late"></td><td><input type="radio" name="benji-lenett" value="Excused"></td><td><input type="radio" name="benji-lenett" value="Unexcused"></td></tr>
+
+<tr><td>Eric Ye</td><td><input type="radio" name="eric-ye" value="Present" checked></td><td><input type="radio" name="eric-ye" value="Late"></td><td><input type="radio" name="eric-ye" value="Excused"></td><td><input type="radio" name="eric-ye" value="Unexcused"></td></tr>
+
+<tr><td>Evan Spencer</td><td><input type="radio" name="evan-spencer" value="Present" checked></td><td><input type="radio" name="evan-spencer" value="Late"></td><td><input type="radio" name="evan-spencer" value="Excused"></td><td><input type="radio" name="evan-spencer" value="Unexcused"></td></tr>
+
+<tr><td>Irene Chen</td><td><input type="radio" name="irene-chen" value="Present" checked></td><td><input type="radio" name="irene-chen" value="Late"></td><td><input type="radio" name="irene-chen" value="Excused"></td><td><input type="radio" name="irene-chen" value="Unexcused"></td></tr>
+
+<tr><td>Karina Jiang</td><td><input type="radio" name="karina-jiang" value="Present" checked></td><td><input type="radio" name="karina-jiang" value="Late"></td><td><input type="radio" name="karina-jiang" value="Excused"></td><td><input type="radio" name="karina-jiang" value="Unexcused"></td></tr>
+
+<tr><td>Khanyi Ndaba</td><td><input type="radio" name="khanyi-ndaba" value="Present" checked></td><td><input type="radio" name="khanyi-ndaba" value="Late"></td><td><input type="radio" name="khanyi-ndaba" value="Excused"></td><td><input type="radio" name="khanyi-ndaba" value="Unexcused"></td></tr>
+
+<tr><td>Kirsten Shang</td><td><input type="radio" name="kirsten-shang" value="Present" checked></td><td><input type="radio" name="kirsten-shang" value="Late"></td><td><input type="radio" name="kirsten-shang" value="Excused"></td><td><input type="radio" name="kirsten-shang" value="Unexcused"></td></tr>
+
+<tr><td>Lauren Proffitt</td><td><input type="radio" name="lauren-proffitt" value="Present" checked></td><td><input type="radio" name="lauren-proffitt" value="Late"></td><td><input type="radio" name="lauren-proffitt" value="Excused"></td><td><input type="radio" name="lauren-proffitt" value="Unexcused"></td></tr>
+
+<tr><td>Marco Caliandro</td><td><input type="radio" name="marco-caliandro" value="Present" checked></td><td><input type="radio" name="marco-caliandro" value="Late"></td><td><input type="radio" name="marco-caliandro" value="Excused"></td><td><input type="radio" name="marco-caliandro" value="Unexcused"></td></tr>
+
+<tr><td>Owen Bjork</td><td><input type="radio" name="owen-bjork" value="Present" checked></td><td><input type="radio" name="owen-bjork" value="Late"></td><td><input type="radio" name="owen-bjork" value="Excused"></td><td><input type="radio" name="owen-bjork" value="Unexcused"></td></tr>
+
+<tr><td>Sophie Lane</td><td><input type="radio" name="sophie-lane" value="Present" checked></td><td><input type="radio" name="sophie-lane" value="Late"></td><td><input type="radio" name="sophie-lane" value="Excused"></td><td><input type="radio" name="sophie-lane" value="Unexcused"></td></tr>
+
+<tr><td>Tess Barber</td><td><input type="radio" name="tess-barber" value="Present" checked></td><td><input type="radio" name="tess-barber" value="Late"></td><td><input type="radio" name="tess-barber" value="Excused"></td><td><input type="radio" name="tess-barber" value="Unexcused"></td></tr>
+
+<tr><td>Tommy Yao</td><td><input type="radio" name="tommy-yao" value="Present" checked></td><td><input type="radio" name="tommy-yao" value="Late"></td><td><input type="radio" name="tommy-yao" value="Excused"></td><td><input type="radio" name="tommy-yao" value="Unexcused"></td></tr>
+
+      </table>
+
+      <br>
+      &emsp;<button class="button" type="submit">Send</button>&emsp;
+      <br><br>
+        
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="google-sheet.js"></script>
+
+<script src="timothy-redirect.js"></script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<script> document.getElementById('datePicker').valueAsDate = new Date(); </script>
+
+</body>
+</html>
