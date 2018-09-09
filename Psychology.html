@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+	<table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
+</div>
+
+	<form id="foo">
+		<input hidden type="checkbox" name="subject" value="psychology" checked>
+
+
+		<br>
+		Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01">
+		<br>
+
+		<table class="students" cellpadding=0 cellspacing=0>
+
+<tr><td>Addie Lane</td><td><input type="radio" name="addie-l-p" value="Present" checked></td><td><input type="radio" name="addie-l-p" value="Late"></td><td><input type="radio" name="addie-l-p" value="Excused"></td><td><input type="radio" name="addie-l-p" value="Unexcused"></td></tr>
+
+<tr><td>Benji Garlinghouse</td><td><input type="radio" name="benji-garlinghouse" value="Present" checked></td><td><input type="radio" name="benji-garlinghouse" value="Late"></td><td><input type="radio" name="benji-garlinghouse" value="Excused"></td><td><input type="radio" name="benji-garlinghouse" value="Unexcused"></td></tr>
+
+<tr><td>Cameron Grant</td><td><input type="radio" name="cameron-grant" value="Present" checked></td><td><input type="radio" name="cameron-grant" value="Late"></td><td><input type="radio" name="cameron-grant" value="Excused"></td><td><input type="radio" name="cameron-grant" value="Unexcused"></td></tr>
+
+<tr><td>Ezrah Lambert</td><td><input type="radio" name="ezrah-lambert" value="Present" checked></td><td><input type="radio" name="ezrah-lambert" value="Late"></td><td><input type="radio" name="ezrah-lambert" value="Excused"></td><td><input type="radio" name="ezrah-lambert" value="Unexcused"></td></tr>
+
+<tr><td>JW Braugher</td><td><input type="radio" name="jw-braugher" value="Present" checked></td><td><input type="radio" name="jw-braugher" value="Late"></td><td><input type="radio" name="jw-braugher" value="Excused"></td><td><input type="radio" name="jw-braugher" value="Unexcused"></td></tr>
+
+<tr><td>Kayla Flaherty</td><td><input type="radio" name="kayla-flaherty" value="Present" checked></td><td><input type="radio" name="kayla-flaherty" value="Late"></td><td><input type="radio" name="kayla-flaherty" value="Excused"></td><td><input type="radio" name="kayla-flaherty" value="Unexcused"></td></tr>
+
+<tr><td>Lila Janski</td><td><input type="radio" name="lila-janski" value="Present" checked></td><td><input type="radio" name="lila-janski" value="Late"></td><td><input type="radio" name="lila-janski" value="Excused"></td><td><input type="radio" name="lila-janski" value="Unexcused"></td></tr>
+
+<tr><td>Maddie Boylan</td><td><input type="radio" name="maddie-boylan" value="Present" checked></td><td><input type="radio" name="maddie-boylan" value="Late"></td><td><input type="radio" name="maddie-boylan" value="Excused"></td><td><input type="radio" name="maddie-boylan" value="Unexcused"></td></tr>
+
+<tr><td>Mercedes Fitch</td><td><input type="radio" name="mercedes-fitch" value="Present" checked></td><td><input type="radio" name="mercedes-fitch" value="Late"></td><td><input type="radio" name="mercedes-fitch" value="Excused"></td><td><input type="radio" name="mercedes-fitch" value="Unexcused"></td></tr>
+
+<tr><td>Moika Carroll Jean-Louis</td><td><input type="radio" name="moika-carroll" value="Present" checked></td><td><input type="radio" name="moika-carroll" value="Late"></td><td><input type="radio" name="moika-carroll" value="Excused"></td><td><input type="radio" name="moika-carroll" value="Unexcused"></td></tr>
+
+<tr><td>Niamh Mcdonnell</td><td><input type="radio" name="niamh-mcdonnell" value="Present" checked></td><td><input type="radio" name="niamh-mcdonnell" value="Late"></td><td><input type="radio" name="niamh-mcdonnell" value="Excused"></td><td><input type="radio" name="niamh-mcdonnell" value="Unexcused"></td></tr>
+
+<tr><td>Rose Orzano</td><td><input type="radio" name="rose-orzano" value="Present" checked></td><td><input type="radio" name="rose-orzano" value="Late"></td><td><input type="radio" name="rose-orzano" value="Excused"></td><td><input type="radio" name="rose-orzano" value="Unexcused"></td></tr>
+
+<tr><td>Tallula Sorst</td><td><input type="radio" name="tallula-sorst" value="Present" checked></td><td><input type="radio" name="tallula-sorst" value="Late"></td><td><input type="radio" name="tallula-sorst" value="Excused"></td><td><input type="radio" name="tallula-sorst" value="Unexcused"></td></tr>
+
+<tr><td>Theo King</td><td><input type="radio" name="theo-king" value="Present" checked></td><td><input type="radio" name="theo-king" value="Late"></td><td><input type="radio" name="theo-king" value="Excused"></td><td><input type="radio" name="theo-king" value="Unexcused"></td></tr>
+
+      </table>
+
+      <br>
+      &emsp;<button class="button" type="submit">Send</button>&emsp;
+      <br><br>
+        
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="google-sheet.js"></script>
+
+<script src="davidb-redirect.js"></script>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<script> document.getElementById('datePicker').valueAsDate = new Date(); </script>
+
+</body>
+</html>
