@@ -24,7 +24,8 @@ $("#foo").submit(function(event){
 
     // Fire off the request to /form.php
     var payload = {
-    url: "https://script.google.com/a/buxtonschool.org/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec",
+    url: "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec",
+         
     method: "POST",
     dataType: 'jsonp',
     data: serializedData
