@@ -1,13 +1,14 @@
-// Variable to hold request
-var request;
+var $form = $('form#test-form'),
+    url = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
 
-// Bind to the submit event of our form
-$("#foo").submit(function(event){
-
-    // Abort any pending request
-    if (request) {
-        request.abort();
-    }
-
-    window.location.href = "http://buxtonschool.github.io/attendance/CallieAttendance";
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    window.location.href = "http://buxtonschool.github.io/attendance/CallieAttendance"
+  );
 });
