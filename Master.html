@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
+<head>
+	<meta charset='utf-8'>
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-
-<div class="header" id="myHeader">
+<div class="header" id="scrollerHeader">
 	<table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
 </div>
 
-	<form id="foo">
-		<input hidden type="checkbox" name="subject" value="master" checked>
+<form id="student-form">
+<input hidden type="checkbox" name="subject" id="secretClassName" value="master" checked />
 
+<br>
+Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01" />
+<br>
 
-		<br>
-		Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01">
-		<br>
-
-		<table class="students" cellpadding=0 cellspacing=0>
+<table class="students" id="studentTable" cellpadding=0 cellspacing=0>
 
 <tr><td>Addie Lane</td><td><input type="radio" name="addie-l-p" value="Present" checked></td><td><input type="radio" name="addie-l-p" value="Late"></td><td><input type="radio" name="addie-l-p" value="Excused"></td><td><input type="radio" name="addie-l-p" value="Unexcused"></td></tr>
 
@@ -185,36 +189,118 @@
 
 <tr><td>Toren Johnson</td><td><input type="radio" name="toren-johnson" value="Present" checked></td><td><input type="radio" name="toren-johnson" value="Late"></td><td><input type="radio" name="toren-johnson" value="Excused"></td><td><input type="radio" name="toren-johnson" value="Unexcused"></td></tr>
 
-      </table>
+</table>
 
-      <br>
-      &emsp;<button class="button" type="submit">Send</button>&emsp;
-      <br><br>
-        
-    </form>
+<br>
+&emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
+<br><br>
+		
+</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<script src="google-sheet.js"></script>
-
-<script src="manary-redirect.js"></script>
-
 <script>
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {scrollerFunction()};
 
-var header = document.getElementById("myHeader");
+var header = document.getElementById("scrollerHeader");
 var sticky = header.offsetTop;
 
-function myFunction() {
+function scrollerFunction() {
   if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+	header.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+	header.classList.remove("sticky");
   }
 }
 </script>
 
-<script> document.getElementById('datePicker').valueAsDate = new Date(); </script>
+<script>
+document.getElementById("datePicker").valueAsDate = new Date(); 
+
+function GetURLParameter(sParam){
+	var sPageURL = window.location.search.substring(1);
+	var sURLVariables = sPageURL.split('&');
+	for (var i = 0; i < sURLVariables.length; i++){
+		var sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam){
+			return sParameterName[1];
+		}
+	}
+}
+
+var schoolSize = new Array(81);
+var className = GetURLParameter("class");
+document.getElementById("secretClassName").value = className;
+var inClass;
+if (className==="algebra1"){
+	inClass = [6,38,50];
+} else if (className==="geometryc"){
+	inClass = [14,28,31,35,37,55,60,70,79];
+} else if (className==="geometryb"){
+	inClass = [15,45,49];
+} else if (className==="algebra2a"){
+	inClass = [2,8,30,48,52,56,62,67,69,74,76];
+} else if (className==="algebra2d"){
+	inClass = [1,9,18,22,26,34,36,41,46,61,73];
+} else if (className==="probstats"){
+	inClass = [12,13,23,42,43,58,71,80];
+} else if (className==="precalculus"){
+	inClass = [5,19,21,24,40,51,54,64,78];
+} else if (className==="calculus"){
+	inClass = [4,20,32,39,47,57,59,63,81];
+} else if (className==="advancedcalculus"){
+	inClass = [3,16,33,44,65,72];
+} else {
+	inClass = [1,11,41,71];
+}
+
+var offsetI = 0;
+for(var i=0;i<schoolSize.length;i++){
+  if (!inClass.includes(i+1)) {
+	document.getElementById("studentTable").deleteRow(i-offsetI);
+	offsetI++;
+  }
+}
+
+var teacherName = GetURLParameter("teacher");
+if (teacherName==="adrian"){
+	var returnURL = "http://buxtonschool.github.io/attendance/AdrianAttendance"
+} else if (teacherName==="micah"){
+	var returnURL = "http://buxtonschool.github.io/attendance/MicahAttendance"
+} else {
+	var returnURL = "http://www.google.com"
+}
+
+var request;
+
+$("#student-form").submit(function(event){
+ 	if (request) {
+ 		request.abort();
+ 	}
+ 	var $form = $(this);
+ 	var serializedData = $form.serialize();
+ 	var $inputs = $form.find("input, select, button, textarea");
+ 	$inputs.prop("disabled", true);
+ 	var payload = {
+		url: "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec",
+		method: "POST",
+		dataType: "json",
+		data: serializedData
+	};
+  request = jQuery.ajax(payload)
+  
+  request.done(function (response, textStatus, jqXHR){
+		window.location.href = returnURL
+	});
+	request.fail(function (jqXHR, textStatus, errorThrown){
+		console.error("The following error occurred: " + textStatus, errorThrown);
+	});
+	request.always(function () {
+		$inputs.prop("disabled", false);
+	});
+ 	event.preventDefault();
+});
+</script>
 
 </body>
 </html>
