@@ -230,6 +230,7 @@ function GetURLParameter(sParam){
         }
     }
 }
+
 var schoolSize = new Array(81);
 var className = GetURLParameter("class");
 if (className==="probstats"){
@@ -238,6 +239,7 @@ if (className==="probstats"){
 	var inClass = [1,2,3,4];
 }
 var offsetI = 0;
+
 for(var i=0;i<schoolSize.length;i++){
   if (inClass.includes(i+1)) {
   	console.log(i+1)
@@ -246,6 +248,7 @@ for(var i=0;i<schoolSize.length;i++){
   	offsetI++;
   }
 }
+
 </script>
 
 </body>
