@@ -232,13 +232,13 @@ function GetURLParameter(sParam){
 var schoolSize = new Array(81);
 var className = GetURLParameter("class");
 if (className==="probstats"){
-	var inClass = [1,2,7,50];
-} else if (className==="precalculus"){
-	var inClass = [1,2,7,50];
-} else if (className==="advancedcalculus"){
-	var inClass = [1,2,7,50];
-} else {
 	var inClass = [1,2,3,4];
+} else if (className==="precalculus"){
+	var inClass = [14,15,16,17];
+} else if (className==="advancedcalculus"){
+	var inClass = [51,52,53,54];
+} else {
+	var inClass = [1,11,41,71];
 }
 var offsetI = 0;
 
@@ -251,9 +251,6 @@ for(var i=0;i<schoolSize.length;i++){
   }
 }
 
-var $form = $('form#student-form'),
-    url = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
-
 var teacherName = GetURLParameter("teacher");
 if (teacherName==="micah"){
 	var returnURL = "http://buxtonschool.github.io/attendance/MicahAttendanceUpgrade"
@@ -263,6 +260,9 @@ if (teacherName==="micah"){
 
 console.log(className);
 console.log(teacherName);
+
+var $form = $('form#student-form'),
+    url = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
 
 $('#submit-form').on('click', function(e) {
   e.preventDefault();
