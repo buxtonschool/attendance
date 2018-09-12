@@ -274,7 +274,7 @@ $('#submit-form').on('click', function(e) {
   var jqxhr = $.ajax({
     url: url,
     method: "GET",
-    dataType: "json",
+    dataType: "jsonp",
     data: $form.serializeObject()
   }).success(
     window.location.href = returnURL
