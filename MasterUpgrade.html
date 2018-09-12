@@ -266,19 +266,41 @@ if (teacherName==="micah"){
 console.log(className);
 console.log(teacherName);
 
-var $form = $('form#student-form'),
-    url = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
+var request;
 
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
+$("#student-form").submit(function(event){
+  if (request) {
+    request.abort();
+  }
+  var $form = $(this);
+  var serializedData = $form.serialize();
+  var $inputs = $form.find("input, select, button, textarea");
+  $inputs.prop("disabled", true);
+  var payload = {
+    url: "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec",
+    method: "POST",
     dataType: "jsonp",
-    data: $form.serializeObject()
-  }).success(
-    window.location.href = returnURL
-  );
+    data: serializedData
+  };
+  request = jQuery.ajax(payload)
+  
+  request.done(function (response, textStatus, jqXHR){
+        console.log("Hooray, it worked!");
+        console.log(textStatus);
+        console.log(jqXHR);
+        window.location.href = returnURL
+    });
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        console.error(
+            "The following error occurred: "+
+            textStatus, errorThrown
+        );
+    });
+    request.always(function () {
+        // Reenable the inputs
+        $inputs.prop("disabled", false);
+    });
+  event.preventDefault();
 });
 </script>
 
