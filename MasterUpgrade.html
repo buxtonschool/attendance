@@ -191,13 +191,13 @@
 <tr><td>Toren Johnson</td><td><input type="radio" name="toren-johnson" value="Present" checked></td><td><input type="radio" name="toren-johnson" value="Late"></td><td><input type="radio" name="toren-johnson" value="Excused"></td><td><input type="radio" name="toren-johnson" value="Unexcused"></td></tr>
 
 
-      </table>
+	  </table>
 
-      <br>
-      &emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
-      <br><br>
-        
-    </form>
+	  <br>
+	  &emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
+	  <br><br>
+		
+	</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -215,23 +215,23 @@ var sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+	header.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+	header.classList.remove("sticky");
   }
 }
 </script>
 
 <script>
 function GetURLParameter(sParam){
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++){
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam){
-            return sParameterName[1];
-        }
-    }
+	var sPageURL = window.location.search.substring(1);
+	var sURLVariables = sPageURL.split('&');
+	for (var i = 0; i < sURLVariables.length; i++){
+		var sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam){
+			return sParameterName[1];
+		}
+	}
 }
 
 var schoolSize = new Array(81);
@@ -249,10 +249,10 @@ var offsetI = 0;
 
 for(var i=0;i<schoolSize.length;i++){
   if (inClass.includes(i+1)) {
-  	console.log(i+1)
+	console.log(i+1)
   } else {
-  	document.getElementById("studentTable").deleteRow(i-offsetI);
-  	offsetI++;
+	document.getElementById("studentTable").deleteRow(i-offsetI);
+	offsetI++;
   }
 }
 
@@ -269,38 +269,34 @@ console.log(teacherName);
 var request;
 
 $("#student-form").submit(function(event){
-  if (request) {
-    request.abort();
-  }
-  var $form = $(this);
-  var serializedData = $form.serialize();
-  var $inputs = $form.find("input, select, button, textarea");
-  $inputs.prop("disabled", true);
-  var payload = {
-    url: "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec",
-    method: "POST",
-    dataType: "jsonp",
-    data: serializedData
-  };
+ 	if (request) {
+ 		request.abort();
+ 	}
+ 	var $form = $(this);
+ 	var serializedData = $form.serialize();
+ 	var $inputs = $form.find("input, select, button, textarea");
+ 	$inputs.prop("disabled", true);
+ 	var payload = {
+		url: "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec",
+		method: "POST",
+		dataType: "jsonp",
+		data: serializedData
+	};
   request = jQuery.ajax(payload)
   
   request.done(function (response, textStatus, jqXHR){
-        console.log("Hooray, it worked!");
-        console.log(textStatus);
-        console.log(jqXHR);
-        window.location.href = returnURL
-    });
-    request.fail(function (jqXHR, textStatus, errorThrown){
-        console.error(
-            "The following error occurred: "+
-            textStatus, errorThrown
-        );
-    });
-    request.always(function () {
-        // Reenable the inputs
-        $inputs.prop("disabled", false);
-    });
-  event.preventDefault();
+		console.log("Hooray, it worked!");
+		console.log(textStatus);
+		console.log(jqXHR);
+		window.location.href = returnURL
+	});
+	request.fail(function (jqXHR, textStatus, errorThrown){
+		console.error("The following error occurred: " + textStatus, errorThrown);
+	});
+	request.always(function () {
+		$inputs.prop("disabled", false);
+	});
+ 	event.preventDefault();
 });
 </script>
 
