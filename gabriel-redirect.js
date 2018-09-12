@@ -11,4 +11,12 @@ $('#submit-form').on('click', function(e) {
   }).success(
     window.location.href = "http://buxtonschool.github.io/attendance/GabrielAttendance"
   );
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    window.location.href = "http://buxtonschool.github.io/attendance/GabrielAttendance"
+  );
 });
