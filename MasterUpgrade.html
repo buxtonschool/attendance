@@ -14,12 +14,12 @@
 
 <body>
 
-<div class="header" id="myHeader">
+<div class="header" id="scrollerHeader">
 	<table><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
 </div>
 
 <form id="student-form">
-<input hidden type="checkbox" name="subject" value="master" checked />
+<input hidden type="checkbox" name="subject" id="secretClassName" value="master" checked />
 
 <br>
 Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max="2019-07-01" />
@@ -199,19 +199,13 @@ Class date: <input type="date" name="date" id="datePicker" min="2018-09-01" max=
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<script src="serializeObject.js"></script>
-
-<!--<script src="google-sheet.js"></script>-->
-
-<script> document.getElementById("datePicker").valueAsDate = new Date(); </script>
-
 <script>
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {scrollerFunction()};
 
-var header = document.getElementById("myHeader");
+var header = document.getElementById("scrollerHeader");
 var sticky = header.offsetTop;
 
-function myFunction() {
+function scrollerFunction() {
   if (window.pageYOffset > sticky) {
 	header.classList.add("sticky");
   } else {
@@ -221,6 +215,8 @@ function myFunction() {
 </script>
 
 <script>
+document.getElementById("datePicker").valueAsDate = new Date(); 
+
 function GetURLParameter(sParam){
 	var sPageURL = window.location.search.substring(1);
 	var sURLVariables = sPageURL.split('&');
@@ -234,21 +230,21 @@ function GetURLParameter(sParam){
 
 var schoolSize = new Array(81);
 var className = GetURLParameter("class");
+document.getElementById("secretClassName").value = className;
+var inClass;
 if (className==="probstats"){
-	var inClass = [1,2,3,4];
+	inClass = [1,2,3,4];
 } else if (className==="precalculus"){
-	var inClass = [14,15,16,17];
+	inClass = [14,15,16,17];
 } else if (className==="advancedcalculus"){
-	var inClass = [51,52,53,54];
+	inClass = [51,52,53,54];
 } else {
-	var inClass = [1,11,41,71];
+	inClass = [1,11,41,71];
 }
-var offsetI = 0;
 
+var offsetI = 0;
 for(var i=0;i<schoolSize.length;i++){
-  if (inClass.includes(i+1)) {
-	console.log(i+1)
-  } else {
+  if (!inClass.includes(i+1)) {
 	document.getElementById("studentTable").deleteRow(i-offsetI);
 	offsetI++;
   }
@@ -283,9 +279,6 @@ $("#student-form").submit(function(event){
   request = jQuery.ajax(payload)
   
   request.done(function (response, textStatus, jqXHR){
-		console.log("Hooray, it worked!");
-		console.log(textStatus);
-		console.log(jqXHR);
 		window.location.href = returnURL
 	});
 	request.fail(function (jqXHR, textStatus, errorThrown){
