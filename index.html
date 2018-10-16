@@ -37,7 +37,8 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="calculus">&emsp;<button class="button" onclick="ChooseClass('calculus')">Calculus</button>&emsp;<br></div>
 <div class="class-button" id="advancedcalculus">&emsp;<button class="button" onclick="ChooseClass('advancedcalculus')">Advanced Calculus</button>&emsp;<br></div>
 <div class="class-button" id="english1">&emsp;<button class="button" onclick="ChooseClass('english1')">English I</button>&emsp;<br></div>
-<div class="class-button" id="english2">&emsp;<button class="button" onclick="ChooseClass('english2')">English II</button>&emsp;<br></div>
+<div class="class-button" id="english2a">&emsp;<button class="button" onclick="ChooseClass('english2')">English IIA</button>&emsp;<br></div>
+<div class="class-button" id="english2c">&emsp;<button class="button" onclick="ChooseClass('english2')">English IIC</button>&emsp;<br></div>
 <div class="class-button" id="english3h">&emsp;<button class="button" onclick="ChooseClass('english3h')">English IIIH</button>&emsp;<br></div>
 <div class="class-button" id="english3s">&emsp;<button class="button" onclick="ChooseClass('english3s')">English IIIS</button>&emsp;<br></div>
 <div class="class-button" id="english4">&emsp;<button class="button" onclick="ChooseClass('english4')">English IV</button>&emsp;<br></div>
@@ -296,7 +297,7 @@ function GetTeacherClasses(teacherNameSent){
 	if (teacherNameSent==="adrian") {
 		return ["algebra1", "algebra2a", "calculus", "studyhall"];
 	} else if (teacherNameSent==="allison") {
-		return ["english2", "drama1", "drama2", "studyhall"];
+		return ["english2a", "drama1", "drama2", "studyhall"];
 	} else if (teacherNameSent==="amrita") {
 		return ["ceramics", "studyhall"];
 	} else if (teacherNameSent==="ben") {
@@ -306,7 +307,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="chiara") {
 		return ["geometryc", "health", "studyhall"];
 	} else if (teacherNameSent==="cordelia") {
-		return ["english2", "feminism", "esl", "studyhall"];
+		return ["english2c", "feminism", "esl", "studyhall"];
 	} else if (teacherNameSent==="davidb") {
 		return ["algebra2d", "chemistry", "psychology", "studyhall"];
 	} else if (teacherNameSent==="davidd") {
@@ -359,8 +360,10 @@ function GetClassList(classNameSent){
 		return ["alina-lai", "chris-zhu", "junzhe-yan", "kirsten-shang", "shannon-morgello"];
 	} else if (classNameSent==="english1") {
 		return ["aurora-sikelianos", "carly-anselmo", "chance-miller", "kai-bjork", "kaj-serrano", "lola-bohle", "shakira-hunt", "shana-itakura"];
-	} else if (classNameSent==="english2") {
-		return ["adrian-aguasvivas", "benji-garlinghouse", "cameron-grant", "ella-arthur", "evan-spencer", "ezrah-lambert", "isaac-mobolaji", "izzy-thompson", "jacob-merrill", "jusmaylin-melo", "jw-braugher", "kacie-chestnut", "karleigh-bath", "kiyah-arrington", "lilian-castaldo", "mari-bolton", "maura-michalowski", "naya-davison", "niamh-mcdonnell", "noelle-mitchell", "reed-parker", "sadie-chernila", "solo-lorusso", "tiger-van-der-laan"];
+	} else if (classNameSent==="english2a") {
+		return ["adrian-aguasvivas", "benji-garlinghouse", "ella-arthur", "evan-spencer", "ezrah-lambert", "kacie-chestnut", "karleigh-bath", "lilian-castaldo", "mari-bolton", "maura-michalowski", "niamh-mcdonnell", "noelle-mitchell", "sadie-chernila"];
+	} else if (classNameSent==="english2c") {
+		return ["cameron-grant", "isaac-mobolaji", "izzy-thompson", "jacob-merrill", "jusmaylin-melo", "jw-braugher", "kiyah-arrington", "naya-davison", "reed-parker", "sadie-chernila", "solo-lorusso", "tiger-van-der-laan"];
 	} else if (classNameSent==="english3h") {
 		return ["asili-johnson", "bryan-asare", "chris-zhu", "emerson-arthur", "eric-ye", "georgia-mcdonald", "giovanni-clarke", "julia-ratnaswamy", "kayla-flaherty", "koe-durley", "lila-janski", "marcella-hetfield", "mercedes-fitch", "owen-bjork", "sophia-bon"];
 	} else if (classNameSent==="english3s") {
@@ -392,9 +395,9 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="westerntradition") {
 		return ["angus-mcpherson", "benji-lenett", "brandon-asare", "elijah-oneill", "ivy-dement", "jack-schiff", "mira-maxwell", "phoebe-lorusso", "tess-barber"];
 	} else if (classNameSent==="americanhistorys") {
-		return ["bryan-asare", "chris-zhu", "georgia-mcdonald", "giovanni-clarke", "julia-ratnaswamy", "koe-durley", "lila-janski", "marcella-hetfield", "mercedes-fitch", "rose-orzano"];
+		return ["bryan-asare", "chris-zhu", "georgia-mcdonald", "giovanni-clarke", "julia-ratnaswamy", "kayla-flaherty", "koe-durley", "lila-janski", "marcella-hetfield", "mercedes-fitch", "rose-orzano"];
 	} else if (classNameSent==="americanhistoryt") {
-		return ["asili-johnson", "bella-waldorf", "emerson-arthur", "eric-ye", "jackson-fina", "junzhe-yan", "kayla-flaherty", "kiara-carman", "nola-muscatello", "sophia-bon", "tallula-sorst"];
+		return ["asili-johnson", "bella-waldorf", "emerson-arthur", "eric-ye", "jackson-fina", "junzhe-yan", "kiara-carman", "nola-muscatello", "sophia-bon", "tallula-sorst"];
 	} else if (classNameSent==="modernchina") {
 		return ["alina-lai", "ava-freyer", "benji-lenett", "eric-ye", "evan-spencer", "irene-chen", "karina-jiang", "kirsten-shang", "lauren-proffitt", "marco-caliandro", "owen-bjork", "sophie-lane", "tommy-yao"];
 	} else if (classNameSent==="feminism") {
