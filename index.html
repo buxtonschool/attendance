@@ -76,6 +76,16 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="psychology">&emsp;<button class="button" onclick="ChooseClass('psychology')">Psychology</button>&emsp;<br></div>
 <div class="class-button" id="humanrights">&emsp;<button class="button" onclick="ChooseClass('humanrights')">Human Rights</button>&emsp;<br></div>
 <div class="class-button" id="learningcenter">&emsp;<button class="button" onclick="ChooseClass('learningcenter')">Learning Center</button>&emsp;<br></div>
+<div class="class-button" id="WSlounging">&emsp;<button class="button" onclick="ChooseClass('WSlounging')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSmusic">&emsp;<button class="button" onclick="ChooseClass('WSmusic')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSheel">&emsp;<button class="button" onclick="ChooseClass('WSheel')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSlanguage">&emsp;<button class="button" onclick="ChooseClass('WSlanguage')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSlife">&emsp;<button class="button" onclick="ChooseClass('WSlife')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSescape">&emsp;<button class="button" onclick="ChooseClass('WSescape')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSpolitics">&emsp;<button class="button" onclick="ChooseClass('WSpolitics')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSgame">&emsp;<button class="button" onclick="ChooseClass('WSgame')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSresiliency">&emsp;<button class="button" onclick="ChooseClass('WSresiliency')">Winter Study</button>&emsp;<br></div>
+<div class="class-button" id="WSmaterials">&emsp;<button class="button" onclick="ChooseClass('WSmaterials')">Winter Study</button>&emsp;<br></div>
 <div class="class-button" id="studyhall">&emsp;<button class="button" onclick="ChooseClass('studyhall')">Study Hall</button>&emsp;<br></div>
 </div>
 
@@ -296,45 +306,45 @@ var schoolRoster = ["addie-l-p",  "adrian-aguasvivas",  "alina-lai",  "angus-mcp
 
 function GetTeacherClasses(teacherNameSent){
 	if (teacherNameSent==="adrian") {
-		return ["algebra1", "algebra2a", "calculus", "studyhall"];
+		return ["algebra1", "algebra2a", "calculus", "WSescape", "studyhall"];
 	} else if (teacherNameSent==="allison") {
-		return ["english2a", "drama1", "drama2", "studyhall"];
+		return ["english2a", "drama1", "drama2", "WSmusic", "studyhall"];
 	} else if (teacherNameSent==="amrita") {
 		return ["ceramics", "studyhall"];
 	} else if (teacherNameSent==="ben") {
 		return ["english4", "geometryb", "photography", "studyhall"];
 	} else if (teacherNameSent==="callie") {
-		return ["learningcenter", "studyhall"];
+		return ["learningcenter", "WSresiliency", "studyhall"];
 	} else if (teacherNameSent==="chiara") {
-		return ["geometryc", "health", "storyforms", "studyhall"];
+		return ["geometryc", "health", "storyforms", "WSlife", "studyhall"];
 	} else if (teacherNameSent==="cordelia") {
 		return ["english2c", "anthropology", "esl", "studyhall"];
 	} else if (teacherNameSent==="davidb") {
-		return ["algebra2d", "chemistry", "psychology", "studyhall"];
+		return ["algebra2d", "chemistry", "psychology", "WSescape", "studyhall"];
 	} else if (teacherNameSent==="davidd") {
-		return ["music1", "music3", "studyhall"];
+		return ["music1", "music3", "WSmusic", "studyhall"];
 	} else if (teacherNameSent==="derek") {
-		return ["spanish1", "spanish2", "esl", "studyhall"];
+		return ["spanish1", "spanish2", "esl", "WSlanguage", "studyhall"];
 	} else if (teacherNameSent==="frank") {
 		return ["studioart", "studyhall"];
 	} else if (teacherNameSent==="franny") {
 		return ["english4", "studyhall"];
 	} else if (teacherNameSent==="gabriel") {
-		return ["spanish3", "spanish4", "spanish5", "russian", "studyhall"];
+		return ["spanish3", "spanish4", "spanish5", "russian", "WSlanguage", "studyhall"];
 	} else if (teacherNameSent==="henry") {
-		return ["english1", "english3h", "modernjazz", "studyhall"];
+		return ["english1", "english3h", "modernjazz", "WSlounging", "studyhall"];
 	} else if (teacherNameSent==="linda") {
 		return ["biology", "physics", "geology", "studyhall"];
 	} else if (teacherNameSent==="matt") {
-		return ["health", "studyhall"];
+		return ["health", "WSmaterials", "studyhall"];
 	} else if (teacherNameSent==="micah") {
-		return ["probstats", "precalculus", "advancedcalculus", "studyhall"];
+		return ["probstats", "precalculus", "advancedcalculus", "WSgame", "studyhall"];
 	} else if (teacherNameSent==="nick") {
-		return ["french1", "french2", "french3", "french4", "studyhall"];
+		return ["french1", "french2", "french3", "french4", "WSheel", "studyhall"];
 	} else if (teacherNameSent==="story") {
-		return ["americanhistorys", "humanrights", "english3s", "studyhall"];
+		return ["americanhistorys", "humanrights", "english3s", "WSlife", "studyhall"];
 	} else if (teacherNameSent==="timothy") {
-		return ["americanhistoryt", "westerntradition", "economics", "studyhall"];
+		return ["americanhistoryt", "westerntradition", "economics", "WSpolitics", "studyhall"];
 	} else if (teacherNameSent==="willie") {
 		return ["videoproduction", "studyhall"];
 	}
@@ -439,6 +449,26 @@ function GetClassList(classNameSent){
 		return ["ava-freyer", "bella-waldorf", "brandon-asare", "elijah-oneill", "emerson-arthur", "ivy-dement", "junzhe-yan", "kirsten-shang", "lauren-proffitt", "marco-caliandro", "mira-maxwell", "sophie-lane", "tallula-sorst", "tess-barber", "theo-king"];
 	} else if (classNameSent==="learningcenter") {
 		return ["addie-l-p", "adrian-aguasvivas", "benji-garlinghouse", "chance-miller", "devin-khoury", "dinah-schone", "eric-ye", "evan-spencer", "foreste-holmes", "izzy-thompson", "jack-schiff", "jacob-merrill", "julia-ratnaswamy", "julian-minigiello", "jw-braugher", "kacie-chestnut", "kai-bjork", "kaj-serrano", "kayla-flaherty", "lila-janski", "maddie-boylan", "maura-michalowski", "mercedes-fitch", "moika-carroll", "naya-davison", "owen-bjork", "reed-parker"];
+	} else if (classNameSent==="WSlounging") {
+		return ["ava-freyer", "benji-garlinghouse", "elijah-oneill", "jusmaylin-melo", "marco-caliandro", "tiger-van-der-laan", "lola-bohle"];
+	} else if (classNameSent==="WSmusic") {
+		return ["chance-miller", "dinah-schone", "emerson-arthur", "evan-spencer", "irene-chen", "sophie-lane"];
+	} else if (classNameSent==="WSheel") {
+		return ["adrian-aguasvivas", "asili-johnson", "carly-anselmo", "jw-braugher", "lila-janski", "maura-michalowski", "moika-carroll", "noelle-mitchell", "shana-itakura", "tallula-sorst"];
+	} else if (classNameSent==="WSlanguage") {
+		return ["brandon-asare", "isaac-mobolaji", "julian-minigiello", "kai-bjork", "naima-nigh", "nola-muscatello", "shakira-hunt", "solo-lorusso", "theo-king"];
+	} else if (classNameSent==="WSlife") {
+		return ["addie-l-p", "cameron-grant", "ella-arthur", "georgia-mcdonald", "giovanni-clarke", "ivy-dement", "kacie-chestnut", "mari-bolton", "sadie-chernila", "sophia-bon"];
+	} else if (classNameSent==="WSescape") {
+		return ["chris-zhu", "julia-ratnaswamy", "kaj-serrano", "kayla-flaherty", "kiyah-arrington", "kirsten-shang", "koe-durley", "naya-davison", "tommy-yao"];
+	} else if (classNameSent==="WSpolitics") {
+		return ["aurora-sikelianos", "jackson-fina", "kiara-carman", "lauren-proffitt", "mercedes-fitch", "niamh-mcdonnell", "owen-bjork", "reed-parker", "tess-barber"];
+	} else if (classNameSent==="WSgame") {
+		return ["alina-lai", "angus-mcpherson", "eric-ye", "izzy-thompson", "karina-jiang", "karleigh-bath", "maddie-boylan"];
+	} else if (classNameSent==="WSresiliency") {
+		return ["bella-waldorf", "benji-lenett", "devin-khoury", "jacob-merrill"];
+	} else if (classNameSent==="WSmaterials") {
+		return ["bryan-asare", "foreste-holmes", "junzhe-yan", "khanyi-ndaba", "mira-maxwell", "phoebe-lorusso"];
 	} else {
 		return schoolRoster;
 	}
