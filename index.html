@@ -467,11 +467,12 @@ $("#student-form").submit(function(event){
  		request.abort();
  	}
  	className = document.getElementById("secretClassName").value;
- 	if (className==="studyhall"){
- 		urlSheet = "https://script.google.com/a/buxtonschool.org/macros/s/AKfycbw-IZzlLK1jbcn3Ht1hIGnu9WVcw2E6QF2f6m6s/exec"
- 	} else {
- 		urlSheet = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
- 	}
+ 	urlSheet = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
+ 	//if (className==="studyhall"){
+ 	//	urlSheet = "https://script.google.com/a/buxtonschool.org/macros/s/AKfycbw-IZzlLK1jbcn3Ht1hIGnu9WVcw2E6QF2f6m6s/exec"
+ 	//} else {
+ 	//	urlSheet = "https://script.google.com/macros/s/AKfycbyzf1nQf4j-IKLplUq5VO5wCAkTncHRkSU77He8JdDs779nc3TI/exec"
+ 	//}
  	var $form = $(this);
  	var serializedData = $form.serialize();
  	var $inputs = $form.find("input,  select,  button,  textarea");
