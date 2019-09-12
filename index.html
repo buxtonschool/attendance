@@ -293,18 +293,12 @@ var schoolRoster = ["addie-l-p", "adrian-aguasvivas", "alina-lai", "angus-mcpher
 function GetTeacherClasses(teacherNameSent){
 	if (teacherNameSent==="adrian") {
 		return ["algebra1", "algebra2a", "calculus", "studyhall"];
-	} else if (teacherNameSent==="allison") {
-		return ["english2a", "drama1", "drama2", "studyhall"];
 	} else if (teacherNameSent==="amrita") {
 		return ["ceramics", "studyhall"];
 	} else if (teacherNameSent==="ben") {
 		return ["english4", "geometryb", "photography", "studyhall"];
-	} else if (teacherNameSent==="callie") {
-		return ["learningcenter", "studyhall"];
 	} else if (teacherNameSent==="chiara") {
 		return ["geometryc", "health", "storyforms", "studyhall"];
-	} else if (teacherNameSent==="cordelia") {
-		return ["english2c", "anthropology", "esl", "studyhall"];
 	} else if (teacherNameSent==="davidb") {
 		return ["algebra2d", "chemistry", "psychology", "studyhall"];
 	} else if (teacherNameSent==="davidd") {
@@ -317,8 +311,6 @@ function GetTeacherClasses(teacherNameSent){
 		return ["english4", "studyhall"];
 	} else if (teacherNameSent==="gabriel") {
 		return ["spanish3", "spanish4", "spanish5", "russian", "studyhall"];
-	} else if (teacherNameSent==="henry") {
-		return ["english1", "english3h", "modernjazz", "studyhall"];
 	} else if (teacherNameSent==="linda") {
 		return ["biology", "physics", "geology", "studyhall"];
 	} else if (teacherNameSent==="matt") {
@@ -326,13 +318,9 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="micah") {
 		return ["probstats", "precalculus", "advancedcalculus", "studyhall"];
 	} else if (teacherNameSent==="nick") {
-		return ["french1", "french2", "french3", "french4", "studyhall"];
-	} else if (teacherNameSent==="story") {
-		return ["americanhistorys", "humanrights", "english3s", "studyhall"];
+		return ["french1", "french2", "french3", "french4", "studyhall"];;
 	} else if (teacherNameSent==="timothy") {
 		return ["americanhistoryt", "westerntradition", "economics", "studyhall"];
-	} else if (teacherNameSent==="willie") {
-		return ["videoproduction", "studyhall"];
 	}
 }
 
@@ -448,21 +436,16 @@ Date.prototype.toDateInputValue = (function() {
 document.getElementById("datePicker").value = new Date().toDateInputValue();
 
 function ChooseClass(classNameSent){
-	if (classNameSent == "studyhall"){
-  			window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSdfpty0LisDi9YNRixMIvNeTULihyGrpCPdqJsc1LHiVo2q-Q/viewform?usp=pp_url&entry.1448343772=Accounted&entry.511789812=Accounted");
-  	} else {
-  		document.getElementById("secretClassName").value = classNameSent;
-  		document.getElementById("student-form").style.display = "inline";
-  		inClass = GetClassList(classNameSent);
-  		for (var i = 0; i < inClass.length; i++){
-  			document.getElementById(inClass[i]).style.display = "table";
-  			if (classNameSent !== "studyhall"){
-  				document.getElementById(inClass[i]+"-present").checked = true;
-  			}
-  		}
-  		document.getElementById("class-buttons").style.display = "none";
-  	}
-	
+	document.getElementById("secretClassName").value = classNameSent;
+	document.getElementById("student-form").style.display = "inline";
+	inClass = GetClassList(classNameSent);
+	for (var i = 0; i < inClass.length; i++){
+		document.getElementById(inClass[i]).style.display = "table";
+		if (classNameSent !== "studyhall"){
+			document.getElementById(inClass[i]+"-present").checked = true;
+		}
+	}
+	document.getElementById("class-buttons").style.display = "none";
 }
 
 function ResetToButtons(){
