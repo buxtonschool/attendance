@@ -22,6 +22,7 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 .students {display: none; border-bottom: 1px solid #000;}
 td {cellpadding:0;}
 .student-form {display: none}
+.adrian-form {display: none}
 table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 </style>
 
@@ -246,6 +247,8 @@ function scrollerFunction() {
 </script>
 
 <script>
+document.getElementById("adrian-form").style.display = "block";
+
 function GetURLParameter(sParam){
 	var sPageURL = window.location.search.substring(1);
 	var sURLVariables = sPageURL.split('&');
@@ -430,6 +433,7 @@ function ChooseClass(classNameSent){
 		}
 	}
 	document.getElementById("class-buttons").style.display = "none";
+	document.getElementById("adrian-form").style.display = "none";
 }
 
 function ResetToButtons(){
@@ -439,6 +443,7 @@ function ResetToButtons(){
 	}
 	document.getElementById("student-form").style.display = "none";
 	document.getElementById("class-buttons").style.display = "block";
+	document.getElementById("adrian-form").style.display = "block";
 }
 
 var request;
@@ -479,7 +484,7 @@ $("#student-form").submit(function(event){
 
 </script>
 
-<div id="adrianform">&emsp;<button class="button" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdhPUuNpbgSnvKPuNWM4Bfk1Nf-pZtILqkrPu_xRJItuUTadQ/viewform?c=0&w=1';">Student Form</button>&emsp;<br></div>
+<div id="adrian-form">&emsp;<button class="button" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdhPUuNpbgSnvKPuNWM4Bfk1Nf-pZtILqkrPu_xRJItuUTadQ/viewform?c=0&w=1';">Student Form</button>&emsp;<br></div>
 
 </body>
 </html>
