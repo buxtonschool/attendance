@@ -303,6 +303,8 @@ function GetTeacherClasses(teacherNameSent){
 		classes = ["english2"];
 	} else if (teacherNameSent==="peter") {
 		classes = ["americanhistorya", "americanhistory1"];
+	} else if (teacherNameSent==="mattm") {
+		classes = ["learningcenter"];
 	}
 	classes.push("studyhall");
 	return classes;
@@ -312,89 +314,89 @@ function GetClassList(classNameSent){
 	if (classNameSent==="algebra1") {
 		return ["lida-boutis", "eliza-goldsteen", "jack-holmes", "evan-hunt", "ruby-lerman"];
 	} else if (classNameSent==="geometry") {
-		return ["x-y", "s-p",];
+		return ["lola-bohle", "rosie-chernila", "foreste-holmes", "finley-kaye", "jean-lozano", "dinah-schone", "kaj-serrano", "aurora-sikelianos"];
 	} else if (classNameSent==="algebra2a") {
-		return ["x-y", "s-p",];
+		return ["carly-anselmo", "kai-bjork", "eri-bolton", "jw-braugher", "george-dalsin", "naya-davison", "shakira-hunt", "devin-khoury", "ruby-khoury", "solo-lorusso", "olive-lyons", "maria-ma", "jacob-merrill", "maura-michalowski", "chance-miller", "tiger-van-der-laan"];
 	} else if (classNameSent==="algebra2d") {
-		return ["x-y", "s-p",];
+		return ["carly-anselmo", "kai-bjork", "eri-bolton", "jw-braugher", "george-dalsin", "naya-davison", "shakira-hunt", "devin-khoury", "ruby-khoury", "solo-lorusso", "olive-lyons", "maria-ma", "jacob-merrill", "maura-michalowski", "chance-miller", "tiger-van-der-laan"];
 	} else if (classNameSent==="precalculus") {
-		return ["adrian-aguasvivas", "koe-durley", "cameron-grant", "niamh-mcdonnell", "jusmaylin-melo", "isaac-mobolaji", "reed-parker", "elizabeth-westerdahl"];
+		return ["adrian-aguasvivas", "sadie-chernila", "kacie-chestnut", "koe-durley", "cameron-grant", "niamh-mcdonnell", "jusmaylin-melo", "isaac-mobolaji", "reed-parker", "elizabeth-westerdahl"];
 	} else if (classNameSent==="trigonometry") {
-		return ["x-y", "s-p",];
+		return ["bryan-asare", "sophia-bon", "kiara-carman", "moika-carroll", "jackson-fina", "mercedes-fitch", "lila-janski", "theo-king", "addie-l-p", "georgia-mcdonald", "tallula-sorst"];
 	} else if (classNameSent==="calculus") {
-		return ["x-y", "s-p",];
+		return ["karleigh-bath", "mari-bolton", "adiel-clarke", "shawna-itakura", "asili-johnson", "julian-minigiello", "evan-spencer", "owen-bjork"];
 	} else if (classNameSent==="english1") {
-		return ["x-y", "s-p",];
+		return ["eri-bolton", "lida-boutis", "rosie-chernila", "eliza-goldsteen", "jack-holmes", "evan-hunt", "ruby-lerman", "jean-lozano"];
 	} else if (classNameSent==="english2") {
-		return ["x-y", "s-p",];
+		return ["carly-anselmo", "kai-bjork", "lola-bohle", "george-dalsin", "foreste-holmes", "shakira-hunt", "olive-lyons", "chance-miller", "kaj-serrano", "aurora-sikelianos"];
 	} else if (classNameSent==="english3") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "karleigh-bath", "mari-bolton", "jw-braugher", "sadie-chernila", "kacie-chestnut", "naya-davison", "cameron-grant", "nick-greco", "shawna-itakura", "finley-kaye", "devin-khoury", "ruby-khoury", "addie-l-p", "solo-lorusso", "maria-ma", "niamh-mcdonnell", "jusmaylin-melo", "jacob-merrill", "maura-michalowski", "isaac-mobolaji", "reed-parker", "dinah-schone", "leo-sedlock", "evan-spencer", "tiger-van-der-laan", "harper-walker-west", "elizabeth-westerdahl"];
 	} else if (classNameSent==="english4") {
-		return ["x-y", "s-p",];
+		return ["bryan-asare", "owen-bjork", "sophia-bon", "kiara-carman", "moika-carroll", "adiel-clarke", "koe-durley", "jackson-fina", "mercedes-fitch", "kayla-flaherty", "lila-janski", "asili-johnson", "theo-king", "georgia-mcdonald", "julian-minigiello", "nola-muscatello", "rose-orzano", "tallula-sorst", "bella-waldorf", "junzhe-yan", "eric-ye", "chris-zhu"];
 	} else if (classNameSent==="spanish1") {
-		return ["x-y", "s-p",];
+		return ["rosie-chernila", "jack-holmes", "shawna-itakura", "eric-ye", "george-dalsin"];
 	} else if (classNameSent==="spanish2") {
-		return ["x-y", "s-p",];
+		return ["carly-anselmo", "eliza-goldsteen", "evan-hunt", "chance-miller", "kaj-serrano"];
 	} else if (classNameSent==="spanish3") {
-		return ["x-y", "s-p",];
+		return ["sadie-chernila", "ruby-khoury", "solo-lorusso", "olive-lyons", "niamh-mcdonnell", "julian-minigiello", "aurora-sikelianos", "tiger-van-der-laan"];
 	} else if (classNameSent==="spanish4") {
-		return ["x-y", "s-p",];
+		return ["bryan-asare", "karleigh-bath", "asili-johnson", "reed-parker", "tallula-sorst", "olive-lyons"];
 	} else if (classNameSent==="spanish5") {
-		return ["x-y", "s-p",];
+		return ["mari-bolton", "shakira-hunt", "nola-muscatello"];
 	} else if (classNameSent==="french1") {
-		return ["x-y", "s-p",];
+		return ["lida-boutis", "addie-l-p", "ruby-lerman", "chris-zhu", "shakira-hunt"];
 	} else if (classNameSent==="french2") {
-		return ["x-y", "s-p",];
+		return ["kai-bjork", "lola-bohle", "kaj-serrano"];
 	} else if (classNameSent==="advfrench") {
-		return ["x-y", "s-p",];
+		return ["evan-spencer"];
 	} else if (classNameSent==="russian") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "sophia-bon" "theo-king", "georgia-mcdonald", "elizabeth-westerdahl"];
 	} else if (classNameSent==="esl") {
-		return ["x-y", "s-p",];
+		return ["eric-ye", "chris-zhu", "maria-ma"];
 	} else if (classNameSent==="currentevents") {
-		return ["x-y", "s-p",];
+		return ["carly-anselmo", "rosie-chernila", "george-dalsin", "naya-davison", "eliza-goldsteen", "jack-holmes", "evan-hunt", "finley-kaye", "ruby-lerman", "aurora-sikelianos", "junzhe-yan"];
 	} else if (classNameSent==="westerntradition") {
-		return ["x-y", "s-p",];
+		return ["kiara-carman", "mercedes-fitch", "kayla-flaherty", "nola-muscatello", "leo-sedlock"];
 	} else if (classNameSent==="americanhistory1") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "karleigh-bath", "sadie-chernila", "kacie-chestnut", "cameron-grant", "shawna-itakura", "ruby-khoury", "solo-lorusso", "maria-ma", "niamh-mcdonnell", "reed-parker", "dinah-schone"];
 	} else if (classNameSent==="americanhistorya") {
-		return ["x-y", "s-p",];
+		return ["jw-braugher", "naya-davison", "finley-kaye", "devin-khoury", "jusmaylin-melo", "jacob-merrill", "maura-michalowski", "isaac-mobolaji", "evan-spencer", "tiger-van-der-laan", "harper-walker-west"];
 	} else if (classNameSent==="middleeast") {
-		return ["x-y", "s-p",];
+		return ["bryan-asare", "lola-bohle", "mari-bolton", "sophia-bon", "moika-carroll", "adiel-clarke", "jackson-fina", "kayla-flaherty", "asili-johnson", "devin-khoury", "theo-king", "georgia-mcdonald", "nola-muscatello", "elizabeth-westerdahl"];
 	} else if (classNameSent==="psychology") {
-		return ["x-y", "s-p",];
+		return ["kiara-carman", "nick-greco", "dinah-schone", "leo-sedlock", "bella-waldorf", "harper-walker-west", "junzhe-yan"];
 	} else if (classNameSent==="studioart") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="ceramics") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="photography") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="music1") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="music2") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="drama1") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="drama2") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="videoproduction") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="biology") {
-		return ["x-y", "s-p",];
+		return ["kai-bjork", "eri-bolton", "rosie-chernila", "george-dalsin", "eliza-goldsteen", "foreste-holmes", "jack-holmes", "ruby-lerman", "jean-lozano", "elizabeth-westerdahl"];
 	} else if (classNameSent==="health") {
-		return ["x-y", "s-p",];
+		return ["carly-anselmo", "kai-bjork", "eri-bolton", "foreste-holmes", "shakira-hunt", "olive-lyons", "chance-miller", "leo-sedlock", "kaj-serrano"];
 	} else if (classNameSent==="chemistry") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "karleigh-bath", "kiara-carman", "moika-carroll", "kacie-chestnut", "jackson-fina", "mercedes-fitch", "kayla-flaherty", "lila-janski", "ruby-khoury", "addie-l-p", "solo-lorusso", "maria-ma", "niamh-mcdonnell", "rose-orzano"];
 	} else if (classNameSent==="physics") {
-		return ["x-y", "s-p",];
+		return ["bryan-asare", "sophia-bon", "sadie-chernila", "kacie-chestnut", "adiel-clarke", "koe-durley", "cameron-grant", "nick-greco", "shawna-itakura", "georgia-mcdonald", "nola-muscatello", "reed-parker", "dinah-schone", "tallula-sorst", "bella-waldorf", "owen-bjork"];
 	} else if (classNameSent==="marinescience") {
-		return ["x-y", "s-p",];
+		return ["mari-bolton", "lida-boutis", "jw-braugher", "cameron-grant", "lila-janski", "jusmaylin-melo", "jacob-merrill", "maura-michalowski", "isaac-mobolaji", "aurora-sikelianos", "evan-spencer", "bella-waldorf"];
 	} else if (classNameSent==="compsci") {
-		return ["koe-durley", "kayla-flaherty", "olive-lyons", "julian-minigiello", "elizabeth-westerdahl", "junzhe-yan", "eric-ye", "chris-zhu"];
+		return ["koe-durley", "kayla-flaherty", "nick-greco", "rose-orzano", "olive-lyons", "julian-minigiello", "junzhe-yan", "eric-ye", "chris-zhu"];
 	} else if (classNameSent==="agriculture") {
-		return ["x-y", "s-p",];
+		return ["lola-bohle", "leo-sedlock", "harper-walker-west"];
 	} else if (classNameSent==="learningcenter") {
-		return ["x-y", "s-p",];
+		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="studyhall") {
 		return ["addie-l-p", "adiel-clarke", "adrian-aguasvivas", "asili-johnson", "aurora-sikelianos", "bella-waldorf", "bryan-asare", "cameron-grant", "carly-anselmo", "chance-miller", "chris-zhu", "devin-khoury", "dinah-schone", "eliza-goldsteen", "elizabeth-westerdahl", "eri-bolton", "eric-ye", "evan-hunt", "evan-spencer", "finley-kaye", "foreste-holmes", "george-dalsin", "georgia-mcdonald", "harper-walker-west", "isaac-mobolaji", "jack-holmes", "jackson-fina", "jacob-merrill", "jean-lozano", "julian-minigiello", "junzhe-yan", "jusmaylin-melo", "jw-braugher", "kacie-chestnut", "kai-bjork", "kaj-serrano", "karleigh-bath", "kayla-flaherty", "kiara-carman", "koe-durley", "leo-sedlock", "lida-boutis", "lila-janski", "lola-bohle", "mari-bolton", "maria-ma", "maura-michalowski", "mercedes-fitch", "moika-carroll", "naya-davison", "niamh-mcdonnell", "nick-greco", "nola-muscatello", "olive-lyons", "owen-bjork", "reed-parker", "rose-orzano", "rosie-chernila", "ruby-khoury", "ruby-lerman", "sadie-chernila", "shakira-hunt", "shawna-itakura", "solo-lorusso", "sophia-bon", "tallula-sorst", "theo-king", "tiger-van-der-laan"];
 	} else {
