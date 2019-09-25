@@ -329,6 +329,8 @@ function GetTeacherClasses(teacherNameSent){
 		classes = ["americanhistorya", "americanhistory1", "dsm2"];
 	} else if (teacherNameSent==="mattm") {
 		classes = ["learningcenter"];
+	} else if (teacherNameSent==="harry") {
+		classes = ["dst1"];
 	}
 	classes.push("studyhall");
 	return classes;
@@ -429,26 +431,38 @@ function GetClassList(classNameSent){
 		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="studyhall") {
 		return ["addie-l-p", "adrian-aguasvivas", "aurora-sikelianos", "bella-waldorf", "cameron-grant", "carly-anselmo", "chance-miller", "chris-zhu", "devin-khoury", "eric-ye", "finley-kaye", "foreste-holmes", "georgia-mcdonald", "harper-walker-west", "isaac-mobolaji", "jack-holmes", "jean-lozano", "junzhe-yan", "jw-braugher", "kacie-chestnut", "kaj-serrano", "kayla-flaherty", "leo-sedlock", "lida-boutis", "mercedes-fitch", "naya-davison", "nick-greco", "owen-bjork", "reed-parker", "rose-orzano", "ruby-lerman", "shawna-itakura"];
+	} else if (classNameSent==="dsm2") {
+		return ["shawna-itakura", "evan-hunt", "ruby-lerman"];
+	} else if (classNameSent==="dsm3") {
+		return ["naya-davison", "evan-spencer", "chance-miller", "jusmaylin-melo"];
+	} else if (classNameSent==="dsm4") {
+		return ["sadie-chernila", "dinah-schone", "eri-bolton", "adrian-aguasvivas", "ruby-lerman"];
+	} else if (classNameSent==="dst1") {
+		return ["jacob-merrill", "cameron-grant", "reed-parker"];
+	} else if (classNameSent==="dst2") {
+		return ["isaac-mobolaji", "kai-bjork", "leo-sedlock", "eri-bolton", "shakira-hunt", "foreste-holmes"];
+	} else if (classNameSent==="dst3") {
+		return ["lida-boutis", "ruby-lerman", "evan-hunt"];
+	} else if (classNameSent==="dst4") {
+		return ["devin-khoury"];
 	} else if (classNameSent==="dsw2") {
 		return ["kaj-serrano"];
 	} else if (classNameSent==="dsw4") {
 		return ["lida-boutis"];
 	} else if (classNameSent==="dsw5") {
 		return ["maura-michalowski", "jack-holmes", "ruby-lerman"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
-	} else if (classNameSent==="learningcenter") {
-		return ["adrian-aguasvivas", "addie-l-p"];
+	} else if (classNameSent==="dsu2") {
+		return ["jack-holmes"];
+	} else if (classNameSent==="dsu3") {
+		return ["carly-anselmo", "kai-bjork", "rosie-chernila", "chance-miller", "shakira-hunt", "addie-l-p"];
+	} else if (classNameSent==="dsu4") {
+		return ["solo-lorusso"];
+	} else if (classNameSent==="dsf2") {
+		return ["carly-anselmo", "kaj-serrano", "eri-bolton", "karleigh-bath", "foreste-holmes", "rosie-chernila"];
+	} else if (classNameSent==="dsf4") {
+		return ["rosie-chernila"];
+	} else if (classNameSent==="dsf5") {
+		return ["lida-boutis", "evan-hunt"];
 	} else {
 		return schoolRoster;
 	}
