@@ -78,7 +78,7 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="anthro">&emsp;<button class="button" onclick="ChooseClass('anthro')">Anthropology</button>&emsp;<br></div>
 <div class="class-button" id="culinary">&emsp;<button class="button" onclick="ChooseClass('culinary')">Culinary</button>&emsp;<br></div>
 <div class="class-button" id="learningcenter">&emsp;<button class="button" onclick="ChooseClass('learningcenter')">Learning Center</button>&emsp;<br></div>
-<div class="class-button" id="dsm2">&emsp;<button class="button" onclick="ChooseClass('dsm2')">Day SH Monday 2</button>&emsp;<br></div>
+<!--<div class="class-button" id="dsm2">&emsp;<button class="button" onclick="ChooseClass('dsm2')">Day SH Monday 2</button>&emsp;<br></div>
 <div class="class-button" id="dsm3">&emsp;<button class="button" onclick="ChooseClass('dsm3')">Day SH Monday 3</button>&emsp;<br></div>
 <div class="class-button" id="dsm4">&emsp;<button class="button" onclick="ChooseClass('dsm4')">Day SH Monday 4</button>&emsp;<br></div>
 <div class="class-button" id="dst1">&emsp;<button class="button" onclick="ChooseClass('dst1')">Day SH Tuesday 1</button>&emsp;<br></div>
@@ -93,7 +93,7 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="dsu4">&emsp;<button class="button" onclick="ChooseClass('dsu4')">Day SH Thursday 4</button>&emsp;<br></div>
 <div class="class-button" id="dsf2">&emsp;<button class="button" onclick="ChooseClass('dsf2')">Day SH Friday 2</button>&emsp;<br></div>
 <div class="class-button" id="dsf4">&emsp;<button class="button" onclick="ChooseClass('dsf4')">Day SH Friday 4</button>&emsp;<br></div>
-<div class="class-button" id="dsf5">&emsp;<button class="button" onclick="ChooseClass('dsf5')">Day SH Friday 5</button>&emsp;<br></div>
+<div class="class-button" id="dsf5">&emsp;<button class="button" onclick="ChooseClass('dsf5')">Day SH Friday 5</button>&emsp;<br></div>-->
 <div class="class-button" id="studyhall">&emsp;<button class="button" onclick="ChooseClass('studyhall')">Evening Study Hall</button>&emsp;<br></div>
 </div>
 
@@ -293,41 +293,41 @@ var schoolRoster = ["addie-l-p", "adiel-clarke", "adrian-aguasvivas", "asili-joh
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
 	if (teacherNameSent==="adrian") {
-		classes = ["algebra2a", "puzzling", "calculus", "dst2"];
+		classes = ["algebra2a", "puzzling", "calculus"];
 	} else if (teacherNameSent==="amrita") {
 		classes = ["ceramics"];
 	} else if (teacherNameSent==="ben") {
-		classes = ["geometry", "photography", "dsu3"];
+		classes = ["geometry", "photography"];
 	} else if (teacherNameSent==="chiara") {
-		classes = ["health", "english1", "dsf5"];
+		classes = ["health", "english1"];
 	} else if (teacherNameSent==="davidb") {
 		classes = ["algebra2d", "chemistry", "psychology", "plastics"];
 	} else if (teacherNameSent==="davidd") {
-		classes = ["music1", "music2", "dst4"];
+		classes = ["music1", "music2"];
 	} else if (teacherNameSent==="derek") {
-		classes = ["spanish1", "spanish2", "esl", "dsm3"];
+		classes = ["spanish1", "spanish2", "esl"];
 	} else if (teacherNameSent==="frank") {
 		classes = ["studioart", "seniorseminar"];
 	} else if (teacherNameSent==="franny") {
 		classes = ["english3", "dramaa", "dramab"];
 	} else if (teacherNameSent==="gabriel") {
-		classes = ["spanish3", "spanish4", "spanish5", "russian", "dst3"];
+		classes = ["spanish3", "spanish4", "spanish5", "russian"];
 	} else if (teacherNameSent==="linda") {
-		classes = ["biology", "physics", "marinescience", "dsf4"];
+		classes = ["biology", "physics", "marinescience"];
 	} else if (teacherNameSent==="matt") {
-		classes = ["health", "agriculture", "dsw2"];
+		classes = ["health", "agriculture"];
 	} else if (teacherNameSent==="micah") {
-		classes = ["algebra1", "precalculus", "compsci", "dsu2"];
+		classes = ["algebra1", "precalculus", "compsci"];
 	} else if (teacherNameSent==="nick") {
-		classes = ["french1", "french2", "advfrench", "dsw4", "dsu4"];;
+		classes = ["french1", "french2", "advfrench"];;
 	} else if (teacherNameSent==="timothy") {
 		classes = ["english4", "westerntradition", "videoproduction", "videoa", "videob", "americanhistoryt"];
 	} else if (teacherNameSent==="john") {
-		classes = ["videoproduction", "politics", "videoa", "videob", "dsm4"];
+		classes = ["videoproduction", "politics", "videoa", "videob"];
 	} else if (teacherNameSent==="lizzy") {
-		classes = ["english2", "dsw5"];
+		classes = ["english2"];
 	} else if (teacherNameSent==="peter") {
-		classes = ["americanhistoryp", "dsm2"];
+		classes = ["americanhistoryp"];
 	} else if (teacherNameSent==="mattm") {
 		classes = ["learningcenter"];
 	} else if (teacherNameSent==="nyasha") {
@@ -335,7 +335,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="greg") {
 		classes = ["culinary"];
 	} else if (teacherNameSent==="harry") {
-		classes = ["dst1", "greek", "english1"];
+		classes = ["greek", "english1"];
 	}
 	classes.push("studyhall");
 	return classes;
@@ -442,38 +442,38 @@ function GetClassList(classNameSent){
 		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="studyhall") {
 		return ["addie-l-p", "adrian-aguasvivas", "bella-waldorf", "cameron-grant", "carly-anselmo", "chance-miller", "chris-zhu", "eric-ye", "finley-kaye", "foreste-holmes", "georgia-mcdonald", "harper-walker-west", "isaac-mobolaji", "jack-holmes", "jean-lozano", "junzhe-yan", "jw-braugher", "kacie-chestnut", "kaj-serrano", "kayla-flaherty", "leo-sedlock", "lida-boutis", "mercedes-fitch", "naya-davison", "nick-greco", "owen-bjork", "rose-orzano", "ruby-lerman", "shawna-itakura"];
-	} else if (classNameSent==="dsm2") {
-		return ["shawna-itakura", "evan-hunt", "ruby-lerman"];
-	} else if (classNameSent==="dsm3") {
-		return ["naya-davison", "evan-spencer", "chance-miller", "jusmaylin-melo"];
-	} else if (classNameSent==="dsm4") {
-		return ["sadie-chernila", "eri-bolton", "adrian-aguasvivas", "ruby-lerman"];
-	} else if (classNameSent==="dst1") {
-		return ["jacob-merrill", "cameron-grant", "reed-parker"];
-	} else if (classNameSent==="dst2") {
-		return ["isaac-mobolaji", "kai-bjork", "leo-sedlock", "eri-bolton", "foreste-holmes", "cameron-grant"];
-	} else if (classNameSent==="dst3") {
-		return ["lida-boutis", "ruby-lerman", "evan-hunt"];
-	} else if (classNameSent==="dst4") {
-		return ["devin-khoury"];
-	} else if (classNameSent==="dsw2") {
-		return ["kaj-serrano"];
-	} else if (classNameSent==="dsw4") {
-		return ["lida-boutis"];
-	} else if (classNameSent==="dsw5") {
-		return ["maura-michalowski", "jack-holmes", "ruby-lerman"];
-	} else if (classNameSent==="dsu2") {
-		return ["jack-holmes", "cameron-grant"];
-	} else if (classNameSent==="dsu3") {
-		return ["carly-anselmo", "kai-bjork", "rosie-chernila", "chance-miller", "addie-l-p", "cameron-grant"];
-	} else if (classNameSent==="dsu4") {
-		return ["solo-lorusso"];
-	} else if (classNameSent==="dsf2") {
-		return ["carly-anselmo", "kaj-serrano", "eri-bolton", "karleigh-bath", "foreste-holmes", "rosie-chernila", "cameron-grant"];
-	} else if (classNameSent==="dsf4") {
-		return ["rosie-chernila", "cameron-grant"];
-	} else if (classNameSent==="dsf5") {
-		return ["lida-boutis", "evan-hunt"];
+//	} else if (classNameSent==="dsm2") {
+//		return ["shawna-itakura", "evan-hunt", "ruby-lerman"];
+//	} else if (classNameSent==="dsm3") {
+//		return ["naya-davison", "evan-spencer", "chance-miller", "jusmaylin-melo"];
+//	} else if (classNameSent==="dsm4") {
+//		return ["sadie-chernila", "eri-bolton", "adrian-aguasvivas", "ruby-lerman"];
+//	} else if (classNameSent==="dst1") {
+//		return ["jacob-merrill", "cameron-grant", "reed-parker"];
+//	} else if (classNameSent==="dst2") {
+//		return ["isaac-mobolaji", "kai-bjork", "leo-sedlock", "eri-bolton", "foreste-holmes", "cameron-grant"];
+//	} else if (classNameSent==="dst3") {
+//		return ["lida-boutis", "ruby-lerman", "evan-hunt"];
+//	} else if (classNameSent==="dst4") {
+//		return ["devin-khoury"];
+//	} else if (classNameSent==="dsw2") {
+//		return ["kaj-serrano"];
+//	} else if (classNameSent==="dsw4") {
+//		return ["lida-boutis"];
+//	} else if (classNameSent==="dsw5") {
+//		return ["maura-michalowski", "jack-holmes", "ruby-lerman"];
+//	} else if (classNameSent==="dsu2") {
+//		return ["jack-holmes", "cameron-grant"];
+//	} else if (classNameSent==="dsu3") {
+//		return ["carly-anselmo", "kai-bjork", "rosie-chernila", "chance-miller", "addie-l-p", "cameron-grant"];
+//	} else if (classNameSent==="dsu4") {
+//		return ["solo-lorusso"];
+//	} else if (classNameSent==="dsf2") {
+//		return ["carly-anselmo", "kaj-serrano", "eri-bolton", "karleigh-bath", "foreste-holmes", "rosie-chernila", "cameron-grant"];
+//	} else if (classNameSent==="dsf4") {
+//		return ["rosie-chernila", "cameron-grant"];
+//	} else if (classNameSent==="dsf5") {
+//		return ["lida-boutis", "evan-hunt"];
 	} else {
 		return schoolRoster;
 	}
