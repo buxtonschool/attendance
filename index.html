@@ -34,7 +34,7 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="algebra2a">&emsp;<button class="button" onclick="ChooseClass('algebra2a')">Algebra IIA</button>&emsp;<br></div>
 <div class="class-button" id="algebra2d">&emsp;<button class="button" onclick="ChooseClass('algebra2d')">Algebra IID</button>&emsp;<br></div>
 <div class="class-button" id="precalculus">&emsp;<button class="button" onclick="ChooseClass('precalculus')">Precalculus</button>&emsp;<br></div>
-<div class="class-button" id="trigonometry">&emsp;<button class="button" onclick="ChooseClass('trigonometry')">Trigonometry</button>&emsp;<br></div>
+<div class="class-button" id="puzzling">&emsp;<button class="button" onclick="ChooseClass('puzzling')">Puzzling</button>&emsp;<br></div>
 <div class="class-button" id="calculus">&emsp;<button class="button" onclick="ChooseClass('calculus')">Calculus</button>&emsp;<br></div>
 <div class="class-button" id="english1">&emsp;<button class="button" onclick="ChooseClass('english1')">English I</button>&emsp;<br></div>
 <div class="class-button" id="english2">&emsp;<button class="button" onclick="ChooseClass('english2')">English II</button>&emsp;<br></div>
@@ -50,11 +50,11 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="advfrench">&emsp;<button class="button" onclick="ChooseClass('advfrench')">Advanced French</button>&emsp;<br></div>
 <div class="class-button" id="russian">&emsp;<button class="button" onclick="ChooseClass('russian')">Russian</button>&emsp;<br></div>
 <div class="class-button" id="esl">&emsp;<button class="button" onclick="ChooseClass('esl')">ESL</button>&emsp;<br></div>
-<div class="class-button" id="currentevents">&emsp;<button class="button" onclick="ChooseClass('currentevents')">Current Events</button>&emsp;<br></div>
+<div class="class-button" id="greek">&emsp;<button class="button" onclick="ChooseClass('greek')">Greek Tragedy</button>&emsp;<br></div>
 <div class="class-button" id="westerntradition">&emsp;<button class="button" onclick="ChooseClass('westerntradition')">Western Tradition</button>&emsp;<br></div>
-<div class="class-button" id="americanhistory1">&emsp;<button class="button" onclick="ChooseClass('americanhistory1')">American History 1</button>&emsp;<br></div>
-<div class="class-button" id="americanhistorya">&emsp;<button class="button" onclick="ChooseClass('americanhistorya')">American History A</button>&emsp;<br></div>
-<div class="class-button" id="middleeast">&emsp;<button class="button" onclick="ChooseClass('middleeast')">Middle East</button>&emsp;<br></div>
+<div class="class-button" id="americanhistoryp">&emsp;<button class="button" onclick="ChooseClass('americanhistoryp')">American History P</button>&emsp;<br></div>
+<div class="class-button" id="americanhistoryt">&emsp;<button class="button" onclick="ChooseClass('americanhistoryt')">American History T</button>&emsp;<br></div>
+<div class="class-button" id="politics">&emsp;<button class="button" onclick="ChooseClass('politics')">Politics</button>&emsp;<br></div>
 <div class="class-button" id="psychology">&emsp;<button class="button" onclick="ChooseClass('psychology')">Psychology</button>&emsp;<br></div>
 <div class="class-button" id="studioart">&emsp;<button class="button" onclick="ChooseClass('studioart')">Studio Art</button>&emsp;<br></div>
 <div class="class-button" id="seniorseminar">&emsp;<button class="button" onclick="ChooseClass('seniorseminar')">Senior Seminar</button>&emsp;<br></div>
@@ -73,7 +73,10 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="physics">&emsp;<button class="button" onclick="ChooseClass('physics')">Physics</button>&emsp;<br></div>
 <div class="class-button" id="marinescience">&emsp;<button class="button" onclick="ChooseClass('marinescience')">Marine Science</button>&emsp;<br></div>
 <div class="class-button" id="compsci">&emsp;<button class="button" onclick="ChooseClass('compsci')">Computer Science</button>&emsp;<br></div>
+<div class="class-button" id="plastics">&emsp;<button class="button" onclick="ChooseClass('plastics')">Plastics</button>&emsp;<br></div>
 <div class="class-button" id="agriculture">&emsp;<button class="button" onclick="ChooseClass('agriculture')">Agriculture</button>&emsp;<br></div>
+<div class="class-button" id="anthro">&emsp;<button class="button" onclick="ChooseClass('anthro')">Anthropology</button>&emsp;<br></div>
+<div class="class-button" id="culinary">&emsp;<button class="button" onclick="ChooseClass('culinary')">Culinary</button>&emsp;<br></div>
 <div class="class-button" id="learningcenter">&emsp;<button class="button" onclick="ChooseClass('learningcenter')">Learning Center</button>&emsp;<br></div>
 <div class="class-button" id="dsm2">&emsp;<button class="button" onclick="ChooseClass('dsm2')">Day SH Monday 2</button>&emsp;<br></div>
 <div class="class-button" id="dsm3">&emsp;<button class="button" onclick="ChooseClass('dsm3')">Day SH Monday 3</button>&emsp;<br></div>
@@ -290,7 +293,7 @@ var schoolRoster = ["addie-l-p", "adiel-clarke", "adrian-aguasvivas", "asili-joh
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
 	if (teacherNameSent==="adrian") {
-		classes = ["algebra2a", "trigonometry", "calculus", "dst2"];
+		classes = ["algebra2a", "puzzling", "calculus", "dst2"];
 	} else if (teacherNameSent==="amrita") {
 		classes = ["ceramics"];
 	} else if (teacherNameSent==="ben") {
@@ -298,11 +301,11 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="chiara") {
 		classes = ["health", "english1", "dsf5"];
 	} else if (teacherNameSent==="davidb") {
-		classes = ["algebra2d", "chemistry", "psychology"];
+		classes = ["algebra2d", "chemistry", "psychology", "plastics"];
 	} else if (teacherNameSent==="davidd") {
 		classes = ["music1", "music2", "dst4"];
 	} else if (teacherNameSent==="derek") {
-		classes = ["spanish1", "spanish2", "currentevents", "esl", "dsm3"];
+		classes = ["spanish1", "spanish2", "esl", "dsm3"];
 	} else if (teacherNameSent==="frank") {
 		classes = ["studioart", "seniorseminar"];
 	} else if (teacherNameSent==="franny") {
@@ -318,17 +321,21 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="nick") {
 		classes = ["french1", "french2", "advfrench", "dsw4", "dsu4"];;
 	} else if (teacherNameSent==="timothy") {
-		classes = ["english4", "westerntradition", "middleeast", "videoproduction", "videoa", "videob"];
+		classes = ["english4", "westerntradition", "videoproduction", "videoa", "videob", "americanhistoryt"];
 	} else if (teacherNameSent==="john") {
-		classes = ["videoproduction", "videoa", "videob", "dsm4"];
+		classes = ["videoproduction", "politics", "videoa", "videob", "dsm4"];
 	} else if (teacherNameSent==="lizzy") {
 		classes = ["english2", "dsw5"];
 	} else if (teacherNameSent==="peter") {
-		classes = ["americanhistorya", "americanhistory1", "dsm2"];
+		classes = ["americanhistoryp", "dsm2"];
 	} else if (teacherNameSent==="mattm") {
 		classes = ["learningcenter"];
+	} else if (teacherNameSent==="nyasha") {
+		classes = ["anthro"];
+	} else if (teacherNameSent==="greg") {
+		classes = ["culinary"];
 	} else if (teacherNameSent==="harry") {
-		classes = ["dst1", "english1"];
+		classes = ["dst1", "greek", "english1"];
 	}
 	classes.push("studyhall");
 	return classes;
@@ -340,13 +347,13 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="geometry") {
 		return ["lola-bohle", "rosie-chernila", "foreste-holmes", "finley-kaye", "jean-lozano", "kaj-serrano", "aurora-sikelianos"];
 	} else if (classNameSent==="algebra2a") {
-		return ["jw-braugher", "naya-davison", "devin-khoury", "ruby-khoury", "solo-lorusso", "jacob-merrill", "maura-michalowski", "tiger-van-der-laan", "maria-ma"];
+		return ["jw-braugher", "naya-davison", "devin-khoury", "ruby-khoury", "solo-lorusso", "jacob-merrill", "maura-michalowski", "tiger-van-der-laan"];
 	} else if (classNameSent==="algebra2d") {
-		return ["carly-anselmo", "george-dalsin", "kai-bjork", "eri-bolton", "olive-lyons", "chance-miller"];
+		return ["carly-anselmo", "george-dalsin", "kai-bjork", "eri-bolton", "olive-lyons", "chance-miller", "maria-ma"];
 	} else if (classNameSent==="precalculus") {
 		return ["adrian-aguasvivas", "sadie-chernila", "koe-durley", "cameron-grant", "niamh-mcdonnell", "jusmaylin-melo", "isaac-mobolaji", "reed-parker", "elizabeth-westerdahl"];
-	} else if (classNameSent==="trigonometry") {
-		return ["bryan-asare", "sophia-bon", "kiara-carman", "moika-carroll", "jackson-fina", "mercedes-fitch", "lila-janski", "theo-king", "addie-l-p", "georgia-mcdonald", "tallula-sorst"];
+	} else if (classNameSent==="puzzling") {
+		return ["georgia-mcdonald", "theo-king", "mercedes-fitch", "foreste-holmes", "sophia-bon"];
 	} else if (classNameSent==="calculus") {
 		return ["karleigh-bath", "mari-bolton", "adiel-clarke", "shawna-itakura", "asili-johnson", "julian-minigiello", "evan-spencer", "owen-bjork"];
 	} else if (classNameSent==="compsci") {
@@ -379,18 +386,18 @@ function GetClassList(classNameSent){
 		return ["adrian-aguasvivas", "theo-king", "georgia-mcdonald", "elizabeth-westerdahl"];
 	} else if (classNameSent==="esl") {
 		return ["eric-ye", "chris-zhu"];
-	} else if (classNameSent==="currentevents") {
-		return ["rosie-chernila", "george-dalsin", "naya-davison", "eliza-goldsteen", "jack-holmes", "evan-hunt", "finley-kaye", "ruby-lerman", "aurora-sikelianos", "junzhe-yan", "lida-boutis"];
+	} else if (classNameSent==="greek") {
+		return ["moika-carroll", "lila-janski", "bryan-asare", "carly-anselmo", "lola-bohle", "addie-l-p", "eri-bolton", "leo-sedlock", "tallula-sorst"];
 	} else if (classNameSent==="westerntradition") {
 		return ["mercedes-fitch", "kayla-flaherty", "nola-muscatello", "owen-bjork", "harper-walker-west"];
-	} else if (classNameSent==="americanhistory1") {
-		return ["adrian-aguasvivas", "karleigh-bath", "sadie-chernila", "kacie-chestnut", "cameron-grant", "shawna-itakura", "finley-kaye", "ruby-khoury", "solo-lorusso", "maria-ma", "niamh-mcdonnell", "reed-parker", "jacob-merrill", "nick-greco"];
-	} else if (classNameSent==="americanhistorya") {
-		return ["jw-braugher", "naya-davison", "devin-khoury", "jusmaylin-melo", "maura-michalowski", "isaac-mobolaji", "evan-spencer", "tiger-van-der-laan", "harper-walker-west"];
-	} else if (classNameSent==="middleeast") {
-		return ["bryan-asare", "lola-bohle", "mari-bolton", "moika-carroll", "adiel-clarke", "jackson-fina", "kayla-flaherty", "devin-khoury", "georgia-mcdonald", "nola-muscatello", "elizabeth-westerdahl"];
+	} else if (classNameSent==="americanhistoryp") {
+		return ["cameron-grant", "karleigh-bath", "niamh-mcdonnell", "ruby-khoury", "sadie-chernila", "shawna-itakura", "solo-lorusso", "devin-khoury", "harper-walker-west", "isaac-mobolaji", "jusmaylin-melo", "jw-braugher", "maura-michalowski", "tiger-van-der-laan"];
+	} else if (classNameSent==="americanhistoryt") {
+		return ["jw-braugher", "naya-davison", "adrian-aguasvivas", "nick-greco", "maria-ma", "jacob-merrill", "reed-parker", "evan-spencer", "kacie-chestnut"];
+	} else if (classNameSent==="politics") {
+		return ["moika-carroll", "kiara-carman", "jackson-fina", "kayla-flaherty", "theo-king", "evan-hunt", "ruby-lerman", "elizabeth-westerdahl", "nola-muscatello"];
 	} else if (classNameSent==="psychology") {
-		return ["kiara-carman", "nick-greco", "maria-ma", "leo-sedlock", "bella-waldorf", "harper-walker-west", "junzhe-yan"];
+		return ["kiara-carman", "rose-orzano", "nick-greco", "maria-ma", "junzhe-yan", "bryan-asare", "olive-lyons"];
 	} else if (classNameSent==="studioart") {
 		return ["adrian-aguasvivas", "bryan-asare", "kai-bjork", "lola-bohle", "eri-bolton", "sophia-bon", "jw-braugher", "rosie-chernila", "sadie-chernila", "naya-davison", "kayla-flaherty", "eliza-goldsteen", "jack-holmes", "evan-hunt", "finley-kaye", "devin-khoury", "ruby-khoury", "solo-lorusso", "olive-lyons", "maria-ma", "maura-michalowski", "chance-miller", "isaac-mobolaji", "nola-muscatello", "tiger-van-der-laan", "bella-waldorf", "elizabeth-westerdahl", "junzhe-yan"];
 	} else if (classNameSent==="ceramics") {
@@ -416,15 +423,21 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="biology") {
 		return ["kai-bjork", "eri-bolton", "rosie-chernila", "eliza-goldsteen", "jack-holmes", "jean-lozano"];
 	} else if (classNameSent==="health") {
-		return ["carly-anselmo", "kai-bjork", "eri-bolton", "foreste-holmes", "jean-lozano", "olive-lyons", "chance-miller", "leo-sedlock", "kaj-serrano"];
+		return ["rosie-chernila", "jack-holmes", "evan-hunt", "ruby-lerman", "george-dalsin", "eliza-goldsteen"];
 	} else if (classNameSent==="chemistry") {
 		return ["adrian-aguasvivas", "karleigh-bath", "kiara-carman", "moika-carroll", "kacie-chestnut", "jackson-fina", "mercedes-fitch", "kayla-flaherty", "lila-janski", "ruby-khoury", "addie-l-p", "solo-lorusso", "maria-ma", "niamh-mcdonnell", "rose-orzano", "jacob-merrill"];
 	} else if (classNameSent==="physics") {
 		return ["bryan-asare", "sophia-bon", "sadie-chernila", "adiel-clarke", "koe-durley", "cameron-grant", "shawna-itakura", "georgia-mcdonald", "nola-muscatello", "reed-parker", "tallula-sorst", "bella-waldorf", "owen-bjork"];
 	} else if (classNameSent==="marinescience") {
 		return ["mari-bolton", "lida-boutis", "jw-braugher", "cameron-grant", "lila-janski", "jusmaylin-melo", "jacob-merrill", "maura-michalowski", "isaac-mobolaji", "aurora-sikelianos", "evan-spencer", "bella-waldorf"];
+	} else if (classNameSent==="plastics") {
+		return ["junzhe-yan", "julian-minigiello", "rose-orzano", "shawna-itakura", "karleigh-bath", "kayla-flaherty", "kiara-carman", "kacie-chestnut"];
 	} else if (classNameSent==="agriculture") {
 		return ["lola-bohle", "leo-sedlock", "harper-walker-west", "owen-bjork", "adiel-clarke", "evan-hunt", "shawna-itakura"];
+	} else if (classNameSent==="anthro") {
+		return ["chance-miller", "kaj-serrano", "aurora-sikelianos", "kai-bjork", "devin-khoury", "jean-lozano", "naya-davison"];
+	} else if (classNameSent==="culinary") {
+		return ["adiel-clarke", "jackson-fina", "nola-muscatello", "mercedes-fitch", "kayla-flaherty", "solo-lorusso"];
 	} else if (classNameSent==="learningcenter") {
 		return ["adrian-aguasvivas", "addie-l-p"];
 	} else if (classNameSent==="studyhall") {
