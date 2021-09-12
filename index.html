@@ -372,7 +372,7 @@ $("#student-form").submit(function(event){
 		dataType: "json", 
 		data: serializedData
 	};
-	request = jQuery.ajax(payload)
+	request = jQuery.ajax(payload);
   
 	request.done(function (response,  textStatus,  jqXHR){
 		ResetToButtons();
