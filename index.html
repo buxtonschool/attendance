@@ -345,7 +345,7 @@ document.getElementById("datePicker").value = new Date().toDateInputValue();
 function ChooseClass(classNameSent){
 	document.getElementById("secretClassName").value = classNameSent;
 	document.getElementById("student-form").style.display = "inline";
-	inClass = GetClassList(className);
+	inClass = GetClassList(classNameSent);
 	if (classNameSent == "studyhall"){
 		for (var i = 0; i < schoolRoster.length; i++){
 			if (inClass.includes(schoolRoster[i])){
