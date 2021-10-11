@@ -351,7 +351,11 @@ function ChooseClass(classNameSent){
 			if (inClass.includes(schoolRoster[i])){
 				document.getElementById(schoolRoster[i]).style.display = "table";
 			} else {
-				document.getElementById(schoolRoster[i]+"-present").checked = true;
+				if (teacherNameSent==="izzy"){
+					document.getElementById(schoolRoster[i]+"-unexcused").checked = true;
+				} else {
+					document.getElementById(schoolRoster[i]+"-present").checked = true;
+				}
 			}
 		}
 	} else {
