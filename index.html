@@ -351,19 +351,20 @@ function ChooseClass(classNameSent){
 			if (inClass.includes(schoolRoster[i])){
 				document.getElementById(schoolRoster[i]).style.display = "table";
 			} else {
-				if (teacherNameSent==="izzy"){
-					document.getElementById(schoolRoster[i]+"-unexcused").checked = true;
-				} else {
-					document.getElementById(schoolRoster[i]+"-present").checked = true;
-				}
+				document.getElementById(schoolRoster[i]+"-present").checked = true;
 			}
 		}
 	} else {
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
-			if (classNameSent != "photography"){
-				document.getElementById(inClass[i]+"-present").checked = true;
-			}
+			if (teacherNameSent==="izzy"){
+					document.getElementById(schoolRoster[i]+"-unexcused").checked = true;
+				} else {
+					document.getElementById(schoolRoster[i]+"-present").checked = true;
+				}
+			//if (classNameSent != "photography"){
+			//	document.getElementById(inClass[i]+"-present").checked = true;
+			//}
 		}
 	}
 	document.getElementById("class-buttons").style.display = "none";
