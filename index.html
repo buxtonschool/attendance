@@ -357,7 +357,7 @@ function ChooseClass(classNameSent){
 	} else {
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
-			if (teacherName==="izzy"){
+			if (classNameSent==="english3" || classNameSent==="geometry" || classNameSent==="health"){
 				document.getElementById(schoolRoster[i]+"-unexcused").checked = true;
 			} else {
 				document.getElementById(schoolRoster[i]+"-present").checked = true;
