@@ -357,11 +357,6 @@ function ChooseClass(classNameSent){
 	} else {
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
-			//if ((classNameSent == "english3" || classNameSent == "geometry") || classNameSent == "health"){
-			//	document.getElementById(schoolRoster[i]+"-unexcused").checked = true;
-			//} else {
-			//	document.getElementById(schoolRoster[i]+"-present").checked = true;
-			//}
 			if (classNameSent != "photography"){
 				document.getElementById(inClass[i]+"-present").checked = true;
 			}
