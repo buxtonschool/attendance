@@ -358,7 +358,7 @@ function ChooseClass(classNameSent){
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
 			if ((classNameSent == "english3" || classNameSent == "health") || classNameSent == "geometry") {
-				document.getElementById(inClass[i]+"-present").unexcused = true;
+				document.getElementById(inClass[i]+"-unexcused").checked = true;
 			} else {
 				document.getElementById(inClass[i]+"-present").checked = true;
 			}
