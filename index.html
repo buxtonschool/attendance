@@ -31,7 +31,8 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div id="class-buttons" class="class-buttons"><br>
 <div class="class-button" id="english1">&emsp;<button class="button" onclick="ChooseClass('english1')">English 1</button>&emsp;<br></div>
 <div class="class-button" id="english2">&emsp;<button class="button" onclick="ChooseClass('english2')">English 2</button>&emsp;<br></div>   
-<div class="class-button" id="english3">&emsp;<button class="button" onclick="ChooseClass('english3')">English 3</button>&emsp;<br></div>   
+<div class="class-button" id="english3i">&emsp;<button class="button" onclick="ChooseClass('english3i')">English 3</button>&emsp;<br></div>
+<div class="class-button" id="english3p">&emsp;<button class="button" onclick="ChooseClass('english3p')">English 3</button>&emsp;<br></div>  
 <div class="class-button" id="english4">&emsp;<button class="button" onclick="ChooseClass('english4')">English 4</button>&emsp;<br></div>   
 <div class="class-button" id="algebra1">&emsp;<button class="button" onclick="ChooseClass('algebra1')">Algebra 1</button>&emsp;<br></div>   
 <div class="class-button" id="geometry">&emsp;<button class="button" onclick="ChooseClass('geometry')">Geometry</button>&emsp;<br></div>    
@@ -148,7 +149,7 @@ name="bea_sas" value="Late"></td><td><input type="radio" id="bea_sas-excused" na
 
 <table class="students" id="max_weeks" cellpadding=0 cellspacing=0><tr><td>Max Weeks</td><td><input type="radio" id="max_weeks-present" name="max_weeks" value="Present"></td><td><input type="radio" id="max_weeks-late" name="max_weeks" value="Late"></td><td><input type="radio" id="max_weeks-excused" name="max_weeks" value="Excused"></td><td><input type="radio" id="max_weeks-unexcused" name="max_weeks" value="Unexcused"></td><td><input hidden type="radio" id="max_weeks-x" name="max_weeks" value="-" checked></td></tr></table>
 
-<table class="students" id="miko_blakeman" cellpadding=0 cellspacing=0><tr><td>miko Blakeman</td><td><input type="radio" id="miko_blakeman-present" name="miko_blakeman" value="Present"></td><td><input type="radio" id="miko_blakeman-late" name="miko_blakeman" value="Late"></td><td><input type="radio" id="miko_blakeman-excused" name="miko_blakeman" value="Excused"></td><td><input type="radio" id="miko_blakeman-unexcused" name="miko_blakeman" value="Unexcused"></td><td><input hidden type="radio" id="miko_blakeman-x" name="miko_blakeman" value="-" checked></td></tr></table>
+<table class="students" id="miko_blakeman" cellpadding=0 cellspacing=0><tr><td>Miko Blakeman</td><td><input type="radio" id="miko_blakeman-present" name="miko_blakeman" value="Present"></td><td><input type="radio" id="miko_blakeman-late" name="miko_blakeman" value="Late"></td><td><input type="radio" id="miko_blakeman-excused" name="miko_blakeman" value="Excused"></td><td><input type="radio" id="miko_blakeman-unexcused" name="miko_blakeman" value="Unexcused"></td><td><input hidden type="radio" id="miko_blakeman-x" name="miko_blakeman" value="-" checked></td></tr></table>
 
 <table class="students" id="mila_harris" cellpadding=0 cellspacing=0><tr><td>Mila Harris</td><td><input type="radio" id="mila_harris-present" name="mila_harris" value="Present"></td><td><input type="radio" id="mila_harris-late" name="mila_harris" value="Late"></td><td><input type="radio" id="mila_harris-excused" name="mila_harris" value="Excused"></td><td><input type="radio" id="mila_harris-unexcused" name="mila_harris" value="Unexcused"></td><td><input hidden type="radio" id="mila_harris-x" name="mila_harris" value="-" checked></td></tr></table>
 
@@ -266,7 +267,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="john") {
 		classes = ['outdoor', 'power'];
 	} else if (teacherNameSent==="peter") {
-		classes = ['ushistp'];
+		classes = ['ushistp', 'english3p'];
 	} else if (teacherNameSent==="riley") {
 		classes = ['self'];
 	} else if (teacherNameSent==="violet") {
@@ -283,8 +284,10 @@ function GetClassList(classNameSent){
 		return ['miko_blakeman', 'jesse_calame', 'sabra_goveia', 'mila_harris', 'edrick_henderson', 'emilio_martinez_buenrostro', 'zay_miller', 'malina_mootoo', 'gia_persaud', 'lotus_peters', 'sophia_sandroni', 'trixie_sharkey-mcquinn', 'morgan_spencer', 'nori_teller-elsberg', 'milo_kempisty', 'pippin_toomey', 'ciara_panza-cecchinato'];
 	} else if (classNameSent==="english2") {
 		return ['alani_carasone', 'demi_cuello', 'noelle_dravis', 'mackenzie_ennis', 'owen_hindes', 'kaya_lay', 'tobias_peterson', 'iris_semon_pike', 'lyric_van_der_laan', 'leo_von_nydeggen', 'oliver_zema'];
-	} else if (classNameSent==="english3") {
-		return ['keita_asada', 'eri_bolton', 'isadore_chernila', 'enes_coemert', 'madeline_feldman', 'eliza_goldsteen', 'evan_hunt', 'jean_lozano', 'yamalia_penaloza-marks', 'serein_serene_reynolds', 'cal_russell-pick', 'bea_sas', 'matt_shubin', 'xixi_smith', 'eleanor_toomey', 'max_weeks', 'griffin_wright', 'quinn_miller', 'anthea_kaplan'];
+	} else if (classNameSent==="english3i") {
+		return ['keita_asada', 'enes_coemert', 'madeline_feldman', 'eliza_goldsteen', 'evan_hunt', 'jean_lozano', 'cal_russell-pick', 'matt_shubin', 'eleanor_toomey', 'max_weeks', 'raven_sandroni'];
+	} else if (classNameSent==="english3p") {
+		return ['eri_bolton', 'isadore_chernila', 'yamalia_penaloza-marks', 'serein_serene_reynolds', 'bea_sas', 'xixi_smith', 'quinn_miller'];
 	} else if (classNameSent==="english4") {
 		return ['leonardo_barber', 'kai_bjork', 'lola_bohle', 'gabe_bonilla', 'george_dalsin', 'ian_foster', 'rosa_henderson', 'sam_kingcade', 'martina_lazzarini', 'wren_llera-jones', 'olive_lyons', 'shante_melville', 'aurora_sikelianos'];
 	} else if (classNameSent==="algebra1") {
@@ -322,7 +325,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="power") {
 		return ['jesse_calame', 'demi_cuello', 'mackenzie_ennis', 'sabra_goveia', 'mila_harris', 'owen_hindes', 'malina_mootoo', 'ciara_panza-cecchinato', 'gia_persaud', 'sophia_sandroni', 'trixie_sharkey-mcquinn', 'morgan_spencer', 'milo_kempisty'];
 	} else if (classNameSent==="poetry") {
-		return ['enes_coemert', 'kai_bjork', 'demi_cuello', 'xixi_smith', 'shante_melville', 'yamalia_penaloza-marks', 'olive_lyons', 'serein_serene_reynolds', 'anthea_kaplan'];
+		return ['enes_coemert', 'kai_bjork', 'demi_cuello', 'xixi_smith', 'shante_melville', 'yamalia_penaloza-marks', 'olive_lyons', 'serein_serene_reynolds'];
 	} else if (classNameSent==="outdoor") {
 		return ['aurora_sikelianos', 'madeline_feldman', 'zay_miller', 'cal_russell-pick', 'xixi_smith', 'pippin_toomey', 'evan_hunt', 'yamalia_penaloza-marks'];
 	} else if (classNameSent==="econ") {
@@ -330,13 +333,13 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="self") {
 		return ['milo_kempisty', 'lotus_peters', 'tobias_peterson', 'nori_teller-elsberg', 'pippin_toomey', 'lyric_van_der_laan', 'max_weeks', 'griffin_wright', 'martina_lazzarini'];
 	} else if (classNameSent==="womenslit") {
-		return ['serein_serene_reynolds', 'kaya_lay', 'bea_sas', 'anthea_kaplan'];
+		return ['serein_serene_reynolds', 'kaya_lay', 'bea_sas'];
 	} else if (classNameSent==="translit") {
 		return ['george_dalsin', 'olive_lyons', 'quinn_miller'];
 	} else if (classNameSent==="ushistp") {
-		return ['eri_bolton', 'isadore_chernila', 'jean_lozano', 'xixi_smith', 'max_weeks', 'griffin_wright', 'demi_cuello'];
+		return ['eri_bolton', 'isadore_chernila', 'jean_lozano', 'xixi_smith', 'max_weeks', 'griffin_wright', 'demi_cuello', 'leonardo_barber'];
 	} else if (classNameSent==="ushistt") {
-		return ['madeline_feldman', 'eliza_goldsteen', 'evan_hunt', 'eleanor_toomey', 'owen_hindes', 'keita_asada', 'leonardo_barber', 'lola_bohle', 'rosa_henderson', 'bea_sas', 'aurora_sikelianos'];
+		return ['madeline_feldman', 'eliza_goldsteen', 'evan_hunt', 'eleanor_toomey', 'owen_hindes', 'keita_asada', 'lola_bohle', 'rosa_henderson', 'bea_sas', 'aurora_sikelianos'];
 	} else if (classNameSent==="drama") {
 		return ['madeline_feldman', 'lotus_peters', 'quinn_miller'];
 	} else {
@@ -366,7 +369,7 @@ function ChooseClass(classNameSent){
 	} else {
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
-			if ((classNameSent == "english3" || classNameSent == "health") || classNameSent == "geometry") {
+			if ((classNameSent == "english3i" || classNameSent == "health") || classNameSent == "geometry") {
 				document.getElementById(inClass[i]+"-unexcused").checked = true;
 			} else {
 				document.getElementById(inClass[i]+"-present").checked = true;
