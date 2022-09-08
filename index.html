@@ -22,7 +22,6 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 .students {display: none; border-bottom: 1px solid #000;}
 td {cellpadding:0;}
 .student-form {display: none}
-.adrian-form {display: none}
 table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 </style>
 
@@ -189,8 +188,6 @@ Class date: <input type="date" name="date" id="datePicker" min="2022-09-01" max=
 		
 </form>
 
-<div id="adrian-form">&emsp;<button class="button" onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdrvlW9XecSk7rlbKq9WQ1-wbU_DtOvKJlUbzDInNFzEk7AEg/viewform?usp=sf_link';">Student Form</button>&emsp;<br></div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <script>
@@ -209,7 +206,6 @@ function scrollerFunction() {
 </script>
 
 <script>
-//document.getElementById("adrian-form").style.display = "block";
 
 function GetURLParameter(sParam){
 	var sPageURL = window.location.search.substring(1);
@@ -367,7 +363,6 @@ function ChooseClass(classNameSent){
 		}
 	}
 	document.getElementById("class-buttons").style.display = "none";
-	document.getElementById("adrian-form").style.display = "none";
 }
 
 function ResetToButtons(){
@@ -377,7 +372,6 @@ function ResetToButtons(){
 	}
 	document.getElementById("student-form").style.display = "none";
 	document.getElementById("class-buttons").style.display = "block";
-	//document.getElementById("adrian-form").style.display = "block";
 }
 
 var request;
