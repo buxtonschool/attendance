@@ -63,9 +63,6 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="studyhall">&emsp;<button class="button" onclick="ChooseClass('studyhall')">Evening Study Hall</button>&emsp;<br></div>
 </div>
 
-<form id="student-form" class="student-form">
-<input hidden type="checkbox" name="subject" id="secretClassName" value="master" checked />
-
 <div class="header" id="scrollerHeader">
 <table class="headertable"><tr><td>Name</td><td>Present</td><td>Late / Partial</td><td>Excused Absence</td><td>Other Absence</td></tr></table>
 </div>
@@ -379,7 +376,7 @@ $("#student-form").submit(function(event){
  		request.abort();
  	}
  	className = document.getElementById("secretClassName").value;
- 	urlSheet = "https://script.google.com/macros/s/AKfycbybPQDqpmhvVT7n7OUwEbUsePSrRxeclxj6px_t7v4vz7uyCYqmVbUMUgLixEogKV10Hw/exec";
+ 	urlSheet = "https://script.google.com/macros/s/AKfycbzcHvVEdcPfsWjBfLetDIofx_jBIxsCz4VWT09PWjzIqUxihsi1R7aqJoznCOHFuZXg2A/exec";
  	var $form = $(this);
  	var serializedData = $form.serialize();
  	var $inputs = $form.find("input,  select,  button,  textarea");
