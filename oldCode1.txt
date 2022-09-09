@@ -1,0 +1,93 @@
+var SHEET_NAME = "RawData";
+
+var SCRIPT_PROP = PropertiesService.getScriptProperties(); // new property service
+
+//function doGet(e){
+  //return handleResponse(e);
+//}
+
+function doPost(e){
+  return handleResponse(e);
+}
+
+function handleResponse(e) {
+  var lock = LockService.getPublicLock();
+  lock.waitLock(30000);
+
+  try {
+    // next set where we write the data - you could write to multiple/alternate destinations
+    var doc = SpreadsheetApp.openById(SCRIPT_PROP.getProperty("key"));
+    var sheet = doc.getSheetByName(SHEET_NAME);
+
+    // we'll assume header is in row 1 but you can override with header_row in GET/POST data
+    var headRow = e.parameter.header_row || 1;
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    var nextRow = sheet.getLastRow()+1; // get next row
+    var row = [];
+    // loop through the header columns
+    var d = new Date();
+    for (i in headers){
+      row.push(e.parameter[headers[i]]);
+      if (e.parameter[headers[i]] == "Late" || e.parameter[headers[i]] == "Unexcused") {
+        //var channel = "zz-" + headers[i];
+        var message = e.parameter["date"] + ": " + e.parameter["subject"] + "  -  " + headers[i] + ": " + e.parameter[headers[i]];
+        sendMessage(message);
+        //PostToSlack(message, channel);
+        //if (headers[i] == "morgan_spencer" || headers[i] == "zafira_miller" || headers[i] == "alani_carasone" || headers[i] == "henry_coduri") {
+          //MailApp.sendEmail("micah.manary@buxtonschool.org", "Attendance Notification", message);
+        //}
+      }
+    }
+    // more efficient to set values as [][] array than individually
+    sheet.getRange(nextRow, 1, 1, row.length).setValues([row]);
+    
+    // return json success results
+    return ContentService
+          .createTextOutput(JSON.stringify({"result":"success", "row": nextRow}))
+          .setMimeType(ContentService.MimeType.JSON);
+  } catch(e){
+    // if error return this
+    return ContentService
+          .createTextOutput(JSON.stringify({"result":"error", "error": e}))
+          .setMimeType(ContentService.MimeType.JSON);
+  } finally { //release lock
+    lock.releaseLock();
+  }
+}
+
+function PostToSlack(message,target) {
+  var payload = {
+    'channel' : target,
+    'text' : message,
+    'as_user' : true
+  }
+  
+return UrlFetchApp.fetch(
+  "https://slack.com/api/chat.postMessage",
+  {
+    method             : 'post',
+    contentType        : 'application/json',
+    headers            : {
+      Authorization : 'Bearer ' + 'xoxb-226748330471-2480750508051-lGsvwveE6MmY6QsA6aLU915d'
+    },
+    payload            : JSON.stringify(payload),
+    muteHttpExceptions : true,
+})
+}
+
+function setup() {
+    var doc = SpreadsheetApp.getActiveSpreadsheet();
+    SCRIPT_PROP.setProperty("key", doc.getId());
+}
+
+const GOOGLE_CHAT_WEBHOOK_LINK = "https://chat.googleapis.com/v1/spaces/AAAAlqx4iFM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=WWV39-oL1DTRiCi0FDhKN51XT_jpLwJFfvrO9-UBGqk%3D";
+function sendMessage(mess) {
+    const payload = JSON.stringify({ text: mess });
+    const options = {
+        method: 'POST',
+        contentType: 'application/json',
+        payload: payload,
+    };
+    UrlFetchApp.fetch(GOOGLE_CHAT_WEBHOOK_LINK, options);
+}
+
