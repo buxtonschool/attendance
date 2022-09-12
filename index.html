@@ -60,6 +60,7 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="ceramics">&emsp;<button class="button" onclick="ChooseClass('ceramics')">Ceramics</button>&emsp;<br></div>
 <div class="class-button" id="drama">&emsp;<button class="button" onclick="ChooseClass('drama')">Site Specific Theater</button>&emsp;<br></div>
 <div class="class-button" id="music">&emsp;<button class="button" onclick="ChooseClass('music')">Music Theory and Composition</button>&emsp;<br></div>
+<div class="class-button" id="cabinet">&emsp;<button class="button" onclick="ChooseClass('cabinet')">Cabinet</button>&emsp;<br></div>
 <div class="class-button" id="studyhall">&emsp;<button class="button" onclick="ChooseClass('studyhall')">Evening Study Hall</button>&emsp;<br></div>
 </div>
 
@@ -243,7 +244,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="linda") {
 		classes = ['physics', 'biology', 'astro'];
 	} else if (teacherNameSent==="john") {
-		classes = ['english1'];
+		classes = ['english1', 'cabinet'];
 	} else if (teacherNameSent==="peter") {
 		classes = ['ushist'];
 	} else if (teacherNameSent==="katie") {
