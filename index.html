@@ -188,6 +188,12 @@ Class date: <input type="date" name="date" id="datePicker" min="2022-09-01" max=
 
 <table class="students" id="zafira_miller" cellpadding=0 cellspacing=0><tr><td>Zafira Miller</td><td><input type="radio" id="zafira_miller-present" name="zafira_miller" value="Present"></td><td><input type="radio" id="zafira_miller-late" name="zafira_miller" value="Late"></td><td><input type="radio" id="zafira_miller-excused" name="zafira_miller" value="Excused"></td><td><input type="radio" id="zafira_miller-unexcused" name="zafira_miller" value="Unexcused"></td><td><input hidden type="radio" id="zafira_miller-x" name="zafira_miller" value="-" checked></td></tr></table>
 
+<table class="students" id="thanh_marquie" cellpadding=0 cellspacing=0><tr><td>Thanh Marquie</td><td><input type="radio" id="thanh_marquie-present" name="thanh_marquie" value="Present"></td><td><input type="radio" id="thanh_marquie-late" name="thanh_marquie" value="Late"></td><td><input type="radio" id="thanh_marquie-excused" name="thanh_marquie" value="Excused"></td><td><input type="radio" id="thanh_marquie-unexcused" name="thanh_marquie" value="Unexcused"></td><td><input hidden type="radio" id="thanh_marquie-x" name="thanh_marquie" value="-" checked></td></tr></table>
+
+<table class="students" id="elsa_boehm" cellpadding=0 cellspacing=0><tr><td>Elsa Boehm</td><td><input type="radio" id="elsa_boehm-present" name="elsa_boehm" value="Present"></td><td><input type="radio" id="elsa_boehm-late" name="elsa_boehm" value="Late"></td><td><input type="radio" id="elsa_boehm-excused" name="elsa_boehm" value="Excused"></td><td><input type="radio" id="elsa_boehm-unexcused" name="elsa_boehm" value="Unexcused"></td><td><input hidden type="radio" id="elsa_boehm-x" name="elsa_boehm" value="-" checked></td></tr></table>
+
+<table class="students" id="arthur_drees" cellpadding=0 cellspacing=0><tr><td>Arthur Drees</td><td><input type="radio" id="arthur_drees-present" name="arthur_drees" value="Present"></td><td><input type="radio" id="arthur_drees-late" name="arthur_drees" value="Late"></td><td><input type="radio" id="arthur_drees-excused" name="arthur_drees" value="Excused"></td><td><input type="radio" id="arthur_drees-unexcused" name="arthur_drees" value="Unexcused"></td><td><input hidden type="radio" id="arthur_drees-x" name="arthur_drees" value="-" checked></td></tr></table>
+
 <br>
 &emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
 <br><br>
@@ -230,7 +236,7 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['alani_carasone', 'bea_sas', 'cal_russell-pick', 'ciara_panza-cecchinato', 'clem_nunez', 'demi_cuello', 'edrick_henderson', 'eleanor_toomey', 'elias_thorp', 'eliza_goldsteen', 'ella_robjent', 'emilio_martinez_buenrostro', 'eri_bolton', 'evan_hunt', 'finn_mccafferty', 'gia_persaud', 'henry_coduri', 'iris_semon_pike', 'isadore_chernila', 'jasper_zahn', 'jean_lozano', 'jesse_calame', 'kaya_lay', 'lotus_peters', 'lyric_van_der_laan', 'malina_mootoo', 'matt_shubin', 'max_weeks', 'miko_blakeman', 'mila_harris', 'miles_boukalik', 'milo_kempisty', 'morgan_spencer', 'moss_selman', 'noelle_dravis', 'nori_teller-elsberg', 'oliver_zema', 'ollie_peterson', 'owen_hindes', 'quinn_miller', 'raven_sandroni', 'rowan_boomer', 'sabra_goveia', 'sani_schollenberger', 'serena_skloot', 'shiah_versey', 'sophie_mcinnes', 'tobias_peterson', 'trixie_sharkey-mcquinn', 'wolfgang_anderson', 'xixi_smith', 'yamalia_penaloza-marks', 'zafira_miller', 'tahlia_frenkel'];
+var schoolRoster = ['alani_carasone', 'bea_sas', 'cal_russell-pick', 'ciara_panza-cecchinato', 'clem_nunez', 'demi_cuello', 'edrick_henderson', 'eleanor_toomey', 'elias_thorp', 'eliza_goldsteen', 'ella_robjent', 'emilio_martinez_buenrostro', 'eri_bolton', 'evan_hunt', 'finn_mccafferty', 'gia_persaud', 'henry_coduri', 'iris_semon_pike', 'isadore_chernila', 'jasper_zahn', 'jean_lozano', 'jesse_calame', 'kaya_lay', 'lotus_peters', 'lyric_van_der_laan', 'malina_mootoo', 'matt_shubin', 'max_weeks', 'miko_blakeman', 'mila_harris', 'miles_boukalik', 'milo_kempisty', 'morgan_spencer', 'moss_selman', 'noelle_dravis', 'nori_teller-elsberg', 'oliver_zema', 'ollie_peterson', 'owen_hindes', 'quinn_miller', 'raven_sandroni', 'rowan_boomer', 'sabra_goveia', 'sani_schollenberger', 'serena_skloot', 'shiah_versey', 'sophie_mcinnes', 'tobias_peterson', 'trixie_sharkey-mcquinn', 'wolfgang_anderson', 'xixi_smith', 'yamalia_penaloza-marks', 'zafira_miller', 'tahlia_frenkel', 'thanh_marquie', 'elsa_boehm', 'arthur_drees'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
@@ -279,7 +285,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="english3") {
 		return ['miles_boukalik', 'alani_carasone', 'henry_coduri', 'demi_cuello', 'noelle_dravis', 'owen_hindes', 'kaya_lay', 'sophie_mcinnes', 'tobias_peterson', 'ella_robjent', 'raven_sandroni', 'iris_semon_pike', 'lyric_van_der_laan', 'oliver_zema', 'tahlia_frenkel'];
 	} else if (classNameSent==="english4") {
-		return ['wolfgang_anderson', 'eri_bolton', 'isadore_chernila', 'eliza_goldsteen', 'evan_hunt', 'jean_lozano', 'quinn_miller', 'yamalia_penaloza-marks', 'cal_russell-pick', 'bea_sas', 'matt_shubin', 'xixi_smith', 'eleanor_toomey', 'max_weeks'];
+		return ['wolfgang_anderson', 'eri_bolton', 'isadore_chernila', 'eliza_goldsteen', 'evan_hunt', 'jean_lozano', 'quinn_miller', 'yamalia_penaloza-marks', 'cal_russell-pick', 'bea_sas', 'matt_shubin', 'xixi_smith', 'eleanor_toomey', 'max_weeks', 'thanh_marquie', 'elsa_boehm'];
 	} else if (classNameSent==="algebra1") {
 		return ['clem_nunez', 'elias_thorp', 'shiah_versey', 'moss_selman', 'sani_schollenberger'];
 	} else if (classNameSent==="geometry") {
@@ -287,7 +293,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="algebra2") {
 		return ['wolfgang_anderson', 'miko_blakeman', 'rowan_boomer', 'alani_carasone', 'kaya_lay', 'sophie_mcinnes', 'malina_mootoo', 'gia_persaud', 'cal_russell-pick', 'raven_sandroni', 'morgan_spencer', 'lyric_van_der_laan', 'jasper_zahn', 'emilio_martinez_buenrostro', 'tahlia_frenkel'];
 	} else if (classNameSent==="precalc") {
-		return ['demi_cuello', 'eliza_goldsteen', 'owen_hindes', 'milo_kempisty', 'zafira_miller', 'tobias_peterson', 'iris_semon_pike', 'nori_teller-elsberg', 'yamalia_penaloza-marks'];
+		return ['demi_cuello', 'eliza_goldsteen', 'owen_hindes', 'milo_kempisty', 'zafira_miller', 'tobias_peterson', 'iris_semon_pike', 'nori_teller-elsberg', 'yamalia_penaloza-marks', 'thanh_marquie'];
 	} else if (classNameSent==="calc") {
 		return ['noelle_dravis', 'jean_lozano', 'quinn_miller', 'eleanor_toomey', 'oliver_zema', 'evan_hunt'];
 	} else if (classNameSent==="diffeq") {
@@ -307,7 +313,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="biology") {
 		return ['finn_mccafferty', 'clem_nunez', 'ciara_panza-cecchinato', 'ollie_peterson', 'moss_selman', 'shiah_versey', 'sani_schollenberger'];
 	} else if (classNameSent==="astro") {
-		return ['wolfgang_anderson', 'oliver_zema', 'miles_boukalik', 'mila_harris', 'milo_kempisty', 'jean_lozano', 'sophie_mcinnes', 'ella_robjent', 'nori_teller-elsberg', 'elias_thorp', 'eleanor_toomey', 'tahlia_frenkel'];
+		return ['wolfgang_anderson', 'oliver_zema', 'miles_boukalik', 'mila_harris', 'milo_kempisty', 'jean_lozano', 'sophie_mcinnes', 'ella_robjent', 'nori_teller-elsberg', 'elias_thorp', 'eleanor_toomey', 'tahlia_frenkel', 'elsa_boehm'];
 	} else if (classNameSent==="healtha") {
 		return ['jesse_calame', 'zafira_miller', 'malina_mootoo', 'ciara_panza-cecchinato', 'ollie_peterson', 'gia_persaud', 'serena_skloot', 'morgan_spencer', 'jasper_zahn'];
 	} else if (classNameSent==="healthb") {
@@ -315,27 +321,27 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="postcolonial") {
 		return ['gia_persaud', 'trixie_sharkey-mcquinn', 'sani_schollenberger', 'emilio_martinez_buenrostro', 'clem_nunez'];
 	} else if (classNameSent==="myth") {
-		return ['rowan_boomer', 'jesse_calame', 'sabra_goveia', 'milo_kempisty', 'finn_mccafferty', 'zafira_miller', 'ollie_peterson', 'moss_selman', 'morgan_spencer', 'shiah_versey', 'jasper_zahn'];
+		return ['rowan_boomer', 'jesse_calame', 'sabra_goveia', 'milo_kempisty', 'finn_mccafferty', 'zafira_miller', 'ollie_peterson', 'moss_selman', 'morgan_spencer', 'shiah_versey', 'jasper_zahn', 'elsa_boehm'];
 	} else if (classNameSent==="china") {
-		return ['eri_bolton', 'evan_hunt', 'matt_shubin', 'bea_sas'];
+		return ['eri_bolton', 'evan_hunt', 'matt_shubin', 'bea_sas', 'thanh_marquie'];
 	} else if (classNameSent==="ushist") {
-		return ['miles_boukalik', 'alani_carasone', 'henry_coduri', 'demi_cuello', 'owen_hindes', 'kaya_lay', 'sophie_mcinnes', 'tobias_peterson', 'ella_robjent', 'iris_semon_pike', 'lyric_van_der_laan', 'oliver_zema', 'noelle_dravis', 'raven_sandroni', 'tahlia_frenkel'];
+		return ['miles_boukalik', 'alani_carasone', 'henry_coduri', 'demi_cuello', 'owen_hindes', 'kaya_lay', 'sophie_mcinnes', 'tobias_peterson', 'ella_robjent', 'iris_semon_pike', 'lyric_van_der_laan', 'oliver_zema', 'noelle_dravis', 'raven_sandroni', 'tahlia_frenkel', 'thanh_marquie', 'elsa_boehm'];
 	} else if (classNameSent==="queer") {
 		return ['evan_hunt', 'malina_mootoo', 'matt_shubin', 'serena_skloot', 'max_weeks'];
 	} else if (classNameSent==="poetry") {
 		return ['miko_blakeman', 'yamalia_penaloza-marks', 'raven_sandroni', 'max_weeks', 'tahlia_frenkel'];
 	} else if (classNameSent==="film") {
-		return ['wolfgang_anderson', 'jesse_calame', 'eliza_goldsteen', 'owen_hindes', 'jean_lozano', 'emilio_martinez_buenrostro', 'sophie_mcinnes', 'yamalia_penaloza-marks', 'tobias_peterson', 'cal_russell-pick', 'bea_sas', 'iris_semon_pike', 'matt_shubin', 'xixi_smith', 'lyric_van_der_laan'];
+		return ['wolfgang_anderson', 'jesse_calame', 'eliza_goldsteen', 'owen_hindes', 'jean_lozano', 'emilio_martinez_buenrostro', 'sophie_mcinnes', 'yamalia_penaloza-marks', 'tobias_peterson', 'cal_russell-pick', 'bea_sas', 'iris_semon_pike', 'matt_shubin', 'xixi_smith', 'lyric_van_der_laan', 'thanh_marquie'];
 	} else if (classNameSent==="studio") {
-		return ['wolfgang_anderson', 'miles_boukalik', 'alani_carasone', 'noelle_dravis', 'eliza_goldsteen', 'sabra_goveia', 'sophie_mcinnes', 'quinn_miller', 'malina_mootoo', 'ciara_panza-cecchinato', 'yamalia_penaloza-marks', 'gia_persaud', 'bea_sas', 'moss_selman', 'iris_semon_pike', 'trixie_sharkey-mcquinn', 'matt_shubin', 'serena_skloot', 'xixi_smith', 'eleanor_toomey', 'max_weeks'];
+		return ['wolfgang_anderson', 'miles_boukalik', 'alani_carasone', 'noelle_dravis', 'eliza_goldsteen', 'sabra_goveia', 'sophie_mcinnes', 'quinn_miller', 'malina_mootoo', 'ciara_panza-cecchinato', 'yamalia_penaloza-marks', 'gia_persaud', 'bea_sas', 'moss_selman', 'iris_semon_pike', 'trixie_sharkey-mcquinn', 'matt_shubin', 'serena_skloot', 'xixi_smith', 'eleanor_toomey', 'max_weeks', 'thanh_marquie'];
 	} else if (classNameSent==="photo") {
 		return ['miles_boukalik', 'isadore_chernila', 'demi_cuello', 'eliza_goldsteen', 'mila_harris', 'owen_hindes', 'milo_kempisty', 'emilio_martinez_buenrostro', 'clem_nunez', 'yamalia_penaloza-marks', 'ella_robjent', 'cal_russell-pick', 'raven_sandroni', 'bea_sas', 'trixie_sharkey-mcquinn', 'matt_shubin', 'xixi_smith', 'morgan_spencer', 'lyric_van_der_laan', 'shiah_versey'];
 	} else if (classNameSent==="ceramics") {
-		return ['miko_blakeman', 'eri_bolton', 'edrick_henderson', 'milo_kempisty', 'finn_mccafferty', 'malina_mootoo', 'lotus_peters', 'tobias_peterson', 'raven_sandroni', 'iris_semon_pike'];
+		return ['miko_blakeman', 'eri_bolton', 'edrick_henderson', 'milo_kempisty', 'finn_mccafferty', 'malina_mootoo', 'lotus_peters', 'tobias_peterson', 'raven_sandroni', 'iris_semon_pike', 'elsa_boehm'];
 	} else if (classNameSent==="drama") {
 		return ['rowan_boomer', 'alani_carasone', 'henry_coduri', 'noelle_dravis', 'quinn_miller', 'ollie_peterson', 'ella_robjent', 'morgan_spencer', 'elias_thorp', 'jasper_zahn'];
 	} else if (classNameSent==="music") {
-		return ['eliza_goldsteen', 'owen_hindes', 'mila_harris', 'evan_hunt', 'quinn_miller', 'lotus_peters', 'jasper_zahn', 'moss_selman'];
+		return ['eliza_goldsteen', 'owen_hindes', 'mila_harris', 'evan_hunt', 'quinn_miller', 'lotus_peters', 'jasper_zahn', 'moss_selman', 'elsa_boehm'];
 	} else if (classNameSent==="cabinet") {
 		return ['edrick_henderson', 'zafira_miller', 'ollie_peterson', 'sani_schollenberger', 'max_weeks'];
 	} else {
