@@ -348,7 +348,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="ceramics") {
 		return ['miko_blakeman', 'eri_bolton', 'milo_kempisty', 'finn_mccafferty', 'malina_mootoo', 'lotus_peters', 'tobias_peterson', 'iris_semon_pike', 'elsa_boehm'];
 	} else if (classNameSent==="drama") {
-		return ['jesse_calame', 'max_weeks', 'jasper_zahn', 'noelle_dravis', 'evan_hunt', 'quinn_miller', 'zafira_miller', 'iris_semon_pike'];
+		return ['jesse_calame', 'jasper_zahn', 'noelle_dravis', 'evan_hunt', 'quinn_miller', 'zafira_miller', 'iris_semon_pike'];
 	} else if (classNameSent==="music") {
 		return ['eliza_goldsteen', 'owen_hindes', 'mila_harris', 'evan_hunt', 'quinn_miller', 'lotus_peters', 'jasper_zahn', 'moss_selman', 'elsa_boehm'];
 	} else if (classNameSent==="eurydice") {
@@ -394,7 +394,7 @@ function ChooseClass(classNameSent){
 	} else {
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
-			if ((classNameSent == "healtha" || classNameSent == "healthb") || classNameSent == "geometry") {
+			if ((classNameSent == "repro" || classNameSent == "homeec") || classNameSent == "geometry") {
 				document.getElementById(inClass[i]+"-unexcused").checked = true;
 			} else {
 				document.getElementById(inClass[i]+"-present").checked = true;
