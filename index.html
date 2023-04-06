@@ -28,10 +28,11 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <body>
 
 <div id="class-buttons" class="class-buttons"><br>
-<div class="class-button" id="noir">&emsp;<button class="button" onclick="ChooseClass('noir')">Noir</button>&emsp;<br></div>
-<div class="class-button" id="dylan">&emsp;<button class="button" onclick="ChooseClass('dylan')">Bob Dylan</button>&emsp;<br></div>   
-<div class="class-button" id="hell">&emsp;<button class="button" onclick="ChooseClass('hell')">Welcome to Hell</button>&emsp;<br></div>  
-<div class="class-button" id="story">&emsp;<button class="button" onclick="ChooseClass('story')">Nontraditional Storytelling</button>&emsp;<br></div>   
+<div class="class-button" id="eng1">&emsp;<button class="button" onclick="ChooseClass('eng1')">English 1</button>&emsp;<br></div>
+<div class="class-button" id="eng2a">&emsp;<button class="button" onclick="ChooseClass('eng2a')">English 2a</button>&emsp;<br></div>   
+<div class="class-button" id="eng2b">&emsp;<button class="button" onclick="ChooseClass('eng2b')">English 2b</button>&emsp;<br></div>  
+<div class="class-button" id="eng3">&emsp;<button class="button" onclick="ChooseClass('eng3')">English 3</button>&emsp;<br></div>
+<div class="class-button" id="eng4">&emsp;<button class="button" onclick="ChooseClass('eng4')">English 4</button>&emsp;<br></div> 
 <div class="class-button" id="algebra1">&emsp;<button class="button" onclick="ChooseClass('algebra1')">Algebra 1</button>&emsp;<br></div>   
 <div class="class-button" id="geometry">&emsp;<button class="button" onclick="ChooseClass('geometry')">Geometry</button>&emsp;<br></div>    
 <div class="class-button" id="algebra2">&emsp;<button class="button" onclick="ChooseClass('algebra2')">Algebra 2</button>&emsp;<br></div>
@@ -61,13 +62,6 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="music">&emsp;<button class="button" onclick="ChooseClass('music')">Music Theory and Composition</button>&emsp;<br></div>
 <div class="class-button" id="cabinet">&emsp;<button class="button" onclick="ChooseClass('cabinet')">Cabinet</button>&emsp;<br></div>
 <div class="class-button" id="studyhall">&emsp;<button class="button" onclick="ChooseClass('studyhall')">Evening Study Hall</button>&emsp;<br></div>
-<div class="class-button" id="relativity">&emsp;<button class="button" onclick="ChooseClass('relativity')">Special Relativity</button>&emsp;<br></div>
-<div class="class-button" id="fungi">&emsp;<button class="button" onclick="ChooseClass('fungi')">Fungi - An Entangled Life</button>&emsp;<br></div>
-<div class="class-button" id="fat">&emsp;<button class="button" onclick="ChooseClass('fat')">Fat Liberation</button>&emsp;<br></div>
-<div class="class-button" id="homeec">&emsp;<button class="button" onclick="ChooseClass('homeec')">Home Economics</button>&emsp;<br></div>
-<div class="class-button" id="spirits">&emsp;<button class="button" onclick="ChooseClass('spirits')">Art and the Spirits</button>&emsp;<br></div>
-<div class="class-button" id="eurydice">&emsp;<button class="button" onclick="ChooseClass('eurydice')">Eurydice</button>&emsp;<br></div>
-<div class="class-button" id="chess">&emsp;<button class="button" onclick="ChooseClass('chess')">Chess</button>&emsp;<br></div>
 </div>
 
 <form id="student-form" class="student-form">
@@ -203,6 +197,8 @@ Class date: <input type="date" name="date" id="datePicker" min="2022-09-01" max=
 
 <table class="students" id="venus_boehm" cellpadding=0 cellspacing=0><tr><td>Venus Boehm</td><td><input type="radio" id="venus_boehm-present" name="venus_boehm" value="Present"></td><td><input type="radio" id="venus_boehm-late" name="venus_boehm" value="Late"></td><td><input type="radio" id="venus_boehm-excused" name="venus_boehm" value="Excused"></td><td><input type="radio" id="venus_boehm-unexcused" name="venus_boehm" value="Unexcused"></td><td><input hidden type="radio" id="venus_boehm-x" name="venus_boehm" value="-" checked></td></tr></table>
 
+<table class="students" id="julia_alswang" cellpadding=0 cellspacing=0><tr><td>Julia Alswang</td><td><input type="radio" id="julia_alswang-present" name="julia_alswang" value="Present"></td><td><input type="radio" id="julia_alswang-late" name="julia_alswang" value="Late"></td><td><input type="radio" id="julia_alswang-excused" name="julia_alswang" value="Excused"></td><td><input type="radio" id="julia_alswang-unexcused" name="julia_alswang" value="Unexcused"></td><td><input hidden type="radio" id="julia_alswang-x" name="julia_alswang" value="-" checked></td></tr></table>
+
 <br>
 &emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
 <br><br>
@@ -245,32 +241,30 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['alani_carasone', 'bea_sas', 'cal_russell-pick', 'ciara_panza-cecchinato', 'clem_nunez', 'demi_cuello', 'edrick_henderson', 'eleanor_toomey', 'elias_thorp', 'eliza_goldsteen', 'ella_robjent', 'emilio_martinez_buenrostro', 'eri_bolton', 'evan_hunt', 'finn_mccafferty', 'gianna_persaud', 'henry_coduri', 'iris_semon_pike', 'isadore_chernila', 'jasper_zahn', 'jean_lozano', 'jesse_calame', 'kaya_lay', 'lotus_peters', 'lyric_van_der_laan', 'malina_mootoo', 'matt_shubin', 'max_weeks', 'miko_blakeman', 'mila_harris', 'miles_boukalik', 'milo_kempisty', 'morgan_spencer', 'moss_selman', 'noelle_dravis', 'nori_teller-elsberg', 'oliver_zema', 'ollie_peterson', 'owen_hindes', 'quinn_miller', 'raven_sandroni', 'rowan_boomer', 'sabra_goveia', 'sani_schollenberger', 'serena_skloot', 'shiah_versey', 'sophie_mcinnes', 'tobias_peterson', 'trixie_sharkey-mcquinn', 'wolfgang_anderson', 'xixi_smith', 'yamalia_penaloza-marks', 'zafira_miller', 'tahlia_frenkel', 'thanh_marquie', 'elsa_boehm', 'arthur_drees', 'noel_preston', 'venus_boehm'];
+var schoolRoster = ['alani_carasone', 'bea_sas', 'cal_russell-pick', 'ciara_panza-cecchinato', 'clem_nunez', 'demi_cuello', 'edrick_henderson', 'eleanor_toomey', 'elias_thorp', 'eliza_goldsteen', 'emilio_martinez_buenrostro', 'eri_bolton', 'evan_hunt', 'finn_mccafferty', 'gianna_persaud', 'henry_coduri', 'iris_semon_pike', 'isadore_chernila', 'jasper_zahn', 'jean_lozano', 'jesse_calame', 'kaya_lay', 'lotus_peters', 'lyric_van_der_laan', 'malina_mootoo', 'matt_shubin', 'max_weeks', 'miko_blakeman', 'mila_harris', 'miles_boukalik', 'milo_kempisty', 'morgan_spencer', 'moss_selman', 'noelle_dravis', 'nori_teller-elsberg', 'oliver_zema', 'ollie_peterson', 'owen_hindes', 'quinn_miller', 'raven_sandroni', 'rowan_boomer', 'sabra_goveia', 'sani_schollenberger', 'serena_skloot', 'shiah_versey', 'sophie_mcinnes', 'tobias_peterson', 'trixie_sharkey-mcquinn', 'wolfgang_anderson', 'xixi_smith', 'yamalia_penaloza-marks', 'zafira_miller', 'tahlia_frenkel', 'thanh_marquie', 'elsa_boehm', 'noel_preston', 'venus_boehm', 'julia_alswang'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
 	if (teacherNameSent==="timothy") {
-		classes = ['noir', 'mideast', 'film'];
+		classes = ['eng3', 'mideast', 'film'];
 	} else if (teacherNameSent==="izzy") {
-		classes = ['geometry', 'repro', 'homeec'];
-	} else if (teacherNameSent==="kevin") {
-		classes = ['dylan', 'poetry', 'spirits'];
+		classes = ['geometry', 'repro', 'zine'];
 	} else if (teacherNameSent==="adrian") {
 		classes = ['algebra1', 'algebra2', 'calc'];
 	} else if (teacherNameSent==="micah") {
-		classes = ['precalc', 'diffeq', 'chemistry', 'computer', 'relativity'];
+		classes = ['precalc', 'diffeq', 'chemistry', 'computer'];
 	} else if (teacherNameSent==="linda") {
-		classes = ['physics', 'biology', 'geo', 'fungi'];
+		classes = ['physics', 'biology', 'geo'];
 	} else if (teacherNameSent==="john") {
-		classes = ['story', 'cabinet'];
+		classes = ['eng1', 'cabinet'];
 	} else if (teacherNameSent==="peter") {
 		classes = ['ushist'];
 	} else if (teacherNameSent==="katie") {
-		classes = ['hell', 'queer'];
+		classes = ['eng2a', 'eng2b', 'queer'];
 	} else if (teacherNameSent==="margarita") {
-		classes = ['spanish1', 'spanish2', 'spanish3', 'fat'];
+		classes = ['spanish1', 'spanish2', 'spanish3'];
 	} else if (teacherNameSent==="scott") {
-		classes = ['music', 'hell', 'chess'];
+		classes = ['music', 'eng4'];
 	} else if (teacherNameSent==="frank") {
 		classes = ['studio'];
 	} else if (teacherNameSent==="katherine") {
@@ -278,25 +272,25 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="maggie") {
 		classes = ['ceramics'];
 	} else if (teacherNameSent==="joseph") {
-		classes = ['performance', 'spirits'];
+		classes = ['performance'];
 	} else if (teacherNameSent==="emily") {
-		classes = ['drama', 'homeec'];
-	} else if (teacherNameSent==="quinn") {
-		classes = ['eurydice'];
+		classes = ['drama'];
 	}
 	//classes.push("studyhall");
 	return classes;
 }
 
 function GetClassList(classNameSent){
-	if (classNameSent==="noir") {
-		return ['eri_bolton', 'miles_boukalik', 'jesse_calame', 'noelle_dravis', 'thanh_marquie', 'mila_harris', 'emilio_martinez_buenrostro', 'kaya_lay', 'quinn_miller', 'lotus_peters', 'sani_schollenberger', 'ollie_peterson', 'eleanor_toomey'];
-	} else if (classNameSent==="dylan") {
-		return ['miko_blakeman', 'jean_lozano', 'sophie_mcinnes', 'zafira_miller', 'malina_mootoo', 'clem_nunez', 'tobias_peterson', 'noel_preston', 'serena_skloot', 'morgan_spencer', 'elias_thorp', 'lyric_van_der_laan'];
-	} else if (classNameSent==="hell") {
-		return ['wolfgang_anderson', 'alani_carasone', 'henry_coduri', 'demi_cuello', 'eliza_goldsteen', 'evan_hunt', 'finn_mccafferty', 'cal_russell-pick', 'bea_sas', 'iris_semon_pike', 'max_weeks'];
-	} else if (classNameSent==="story") {
-		return ['elsa_boehm', 'venus_boehm', 'rowan_boomer', 'isadore_chernila', 'sabra_goveia', 'owen_hindes', 'ciara_panza-cecchinato', 'yamalia_penaloza-marks', 'gianna_persaud', 'matt_shubin', 'trixie_sharkey-mcquinn', 'xixi_smith', 'shiah_versey', 'jasper_zahn', 'oliver_zema'];
+	if (classNameSent==="eng1") {
+		return ['venus_boehm', 'finn_mccafferty', 'clem_nunez', 'noel_preston', 'sani_schollenberger', 'shiah_versey'];
+	} else if (classNameSent==="eng2a") {
+		return ['rowan_boomer', 'milo_kempisty', 'mila_harris', 'zafira_miller', 'ciara_panza-cecchinato', 'trixie_sharkey-mcquinn', 'morgan_spencer', 'nori_teller-elsberg', 'elias_thorp', 'jasper_zahn'];
+	} else if (classNameSent==="eng2b") {
+		return ['miko_blakeman', 'jesse_calame', 'sabra_goveia', 'malina_mootoo', 'emilio_martinez_buenrostro', 'gianna_persaud', 'lotus_peters', 'ollie_peterson', 'serena_skloot'];
+	} else if (classNameSent==="eng3") {
+		return ['julia_alswang', 'miles_boukalik', 'alani_carasone', 'henry_coduri', 'demi_cuello', 'noelle_dravis', 'owen_hindes', 'kaya_lay', 'sophie_mcinnes', 'tobias_peterson', 'iris_semon_pike', 'lyric_van_der_laan', 'oliver_zema'];
+	} else if (classNameSent==="eng4") {
+		return ['wolfgang_anderson', 'elsa_boehm', 'eri_bolton', 'isadore_chernila', 'thanh_marquie', 'evan_hunt', 'eliza_goldsteen', 'jean_lozano', 'quinn_miller', 'yamalia_penaloza-marks', 'cal_russell-pick', 'bea_sas', 'matt_shubin', 'xixi_smith', 'eleanor_toomey', 'max_weeks'];
 	} else if (classNameSent==="algebra1") {
 		return ['clem_nunez', 'elias_thorp', 'shiah_versey', 'noel_preston', 'sani_schollenberger', 'venus_boehm'];
 	} else if (classNameSent==="geometry") {
@@ -340,7 +334,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="poetry") {
 		return ['miko_blakeman', 'yamalia_penaloza-marks', 'max_weeks', 'xixi_smith'];
 	} else if (classNameSent==="film") {
-		return ['wolfgang_anderson', 'jesse_calame', 'eliza_goldsteen', 'owen_hindes', 'jean_lozano', 'emilio_martinez_buenrostro', 'sophie_mcinnes', 'yamalia_penaloza-marks', 'tobias_peterson', 'cal_russell-pick', 'bea_sas', 'matt_shubin', 'xixi_smith', 'lyric_van_der_laan', 'thanh_marquie'];
+		return ['wolfgang_anderson', 'jesse_calame', 'owen_hindes', 'jean_lozano', 'emilio_martinez_buenrostro', 'sophie_mcinnes', 'yamalia_penaloza-marks', 'tobias_peterson', 'cal_russell-pick', 'bea_sas', 'xixi_smith', 'lyric_van_der_laan', 'thanh_marquie', 'mila_harris', 'gianna_persaud', 'lotus_peters', 'milo_kempisty'];
 	} else if (classNameSent==="studio") {
 		return ['wolfgang_anderson', 'miles_boukalik', 'alani_carasone', 'noelle_dravis', 'eliza_goldsteen', 'sabra_goveia', 'sophie_mcinnes', 'quinn_miller', 'malina_mootoo', 'ciara_panza-cecchinato', 'yamalia_penaloza-marks', 'gianna_persaud', 'bea_sas', 'iris_semon_pike', 'trixie_sharkey-mcquinn', 'matt_shubin', 'serena_skloot', 'xixi_smith', 'eleanor_toomey', 'max_weeks', 'thanh_marquie'];
 	} else if (classNameSent==="photo") {
@@ -351,20 +345,6 @@ function GetClassList(classNameSent){
 		return ['jasper_zahn', 'noelle_dravis', 'quinn_miller', 'zafira_miller', 'iris_semon_pike', 'max_weeks'];
 	} else if (classNameSent==="music") {
 		return ['eliza_goldsteen', 'owen_hindes', 'mila_harris', 'evan_hunt', 'quinn_miller', 'lotus_peters', 'jasper_zahn', 'moss_selman', 'elsa_boehm'];
-	} else if (classNameSent==="eurydice") {
-		return ['miko_blakeman', 'elsa_boehm', 'rowan_boomer', 'isadore_chernila', 'mila_harris', 'quinn_miller', 'iris_semon_pike', 'xixi_smith', 'jasper_zahn'];
-	} else if (classNameSent==="fungi") {
-		return ['venus_boehm', 'thanh_marquie', 'kaya_lay', 'ollie_peterson', 'sani_schollenberger', 'serena_skloot', 'oliver_zema'];
-	} else if (classNameSent==="fat") {
-		return ['eri_bolton', 'noelle_dravis', 'ciara_panza-cecchinato', 'lotus_peters', 'trixie_sharkey-mcquinn', 'shiah_versey', 'max_weeks'];
-	} else if (classNameSent==="chess") {
-		return ['milo_kempisty', 'finn_mccafferty', 'tobias_peterson', 'noel_preston', 'matt_shubin', 'lyric_van_der_laan'];
-	} else if (classNameSent==="homeec") {
-		return ['demi_cuello', 'evan_hunt', 'sophie_mcinnes', 'malina_mootoo', 'yamalia_penaloza-marks', 'cal_russell-pick', 'eleanor_toomey'];
-	} else if (classNameSent==="spirits") {
-		return ['wolfgang_anderson', 'miles_boukalik', 'jesse_calame', 'alani_carasone', 'eliza_goldsteen', 'sabra_goveia' ,'owen_hindes', 'emilio_martinez_buenrostro', 'bea_sas'];
-	} else if (classNameSent==="relativity") {
-		return ['henry_coduri', 'jean_lozano', 'zafira_miller', 'clem_nunez', 'morgan_spencer', 'nori_teller-elsberg', 'elias_thorp'];
 	} else if (classNameSent==="cabinet") {
 		return ['zafira_miller', 'ollie_peterson', 'sani_schollenberger', 'max_weeks'];
 	} else {
