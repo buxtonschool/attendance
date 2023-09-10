@@ -54,11 +54,12 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="place">&emsp;<button class="button" onclick="ChooseClass('place')">Placemaking</button>&emsp;<br></div>
 <div class="class-button" id="create">&emsp;<button class="button" onclick="ChooseClass('create')">Creative Nonfiction</button>&emsp;<br></div>
 <div class="class-button" id="psych">&emsp;<button class="button" onclick="ChooseClass('psych')">Psychology</button>&emsp;<br></div>
+<div class="class-button" id="myth">&emsp;<button class="button" onclick="ChooseClass('myth')">Mythology & Religion</button>&emsp;<br></div>
 <div class="class-button" id="digital">&emsp;<button class="button" onclick="ChooseClass('digital')">Digital Photo</button>&emsp;<br></div>
 <div class="class-button" id="studio">&emsp;<button class="button" onclick="ChooseClass('studio')">Studio Art</button>&emsp;<br></div>
 <div class="class-button" id="photo">&emsp;<button class="button" onclick="ChooseClass('photo')">Photography</button>&emsp;<br></div>
-<div class="class-button" id="ceramicsA">&emsp;<button class="button" onclick="ChooseClass('ceramicsA')">Ceramics A</button>&emsp;<br></div>
-<div class="class-button" id="ceramicsB">&emsp;<button class="button" onclick="ChooseClass('ceramicsB')">Ceramics B</button>&emsp;<br></div>
+<div class="class-button" id="ceramicsa">&emsp;<button class="button" onclick="ChooseClass('ceramicsa')">Ceramics A</button>&emsp;<br></div>
+<div class="class-button" id="ceramicsb">&emsp;<button class="button" onclick="ChooseClass('ceramicsb')">Ceramics B</button>&emsp;<br></div>
 <div class="class-button" id="drama">&emsp;<button class="button" onclick="ChooseClass('drama')">Drama</button>&emsp;<br></div>
 <div class="class-button" id="counterpoint">&emsp;<button class="button" onclick="ChooseClass('counterpoint')">Music: Counterpoint</button>&emsp;<br></div>
 <div class="class-button" id="music">&emsp;<button class="button" onclick="ChooseClass('music')">Art of Music</button>&emsp;<br></div>
@@ -75,69 +76,148 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 Class date: <input type="date" name="date" id="datePicker" min="2023-09-01" max="2024-07-01" />
 <br>
 
-<table class="students" id="alani_carasone" cellpadding=0 cellspacing=0><tr><td>Alani Carasone</td><td><input type="radio" id="alani_carasone-present" name="alani_carasone" value="Present"></td><td><input type="radio" id="alani_carasone-late" name="alani_carasone" value="Late"></td><td><input type="radio" id="alani_carasone-excused" name="alani_carasone" value="Excused"></td><td><input type="radio" id="alani_carasone-unexcused" name="alani_carasone" value="Unexcused"></td><td><input hidden type="radio" id="alani_carasone-x" name="alani_carasone" value="-" checked></td></tr></table>
+<table class="students" id="alani-carasone" cellpadding=0 cellspacing=0><tr><td>Alani Carasone
+</td><td><input type="radio" id="alani-carasone-present" name="alani-carasone" value="Present"></td><td><input type="radio" id="alani-carasone-late" name="alani-carasone" value="Late"></td><td><input type="radio" id="alani-carasone-excused" name="alani-carasone" value="Excused"></td><td><input type="radio" id="alani-carasone-unexcused" name="alani-carasone" value="Unexcused"></td><td><input hidden type="radio" id="alani-carasone-x" name="alani-carasone" value="-" checked></td></tr></table>
 
-<table class="students" id="ciara_panza-cecchinato" cellpadding=0 cellspacing=0><tr><td>Bunny Panza-Cecchinato</td><td><input type="radio" id="ciara_panza-cecchinato-present" name="ciara_panza-cecchinato" value="Present"></td><td><input type="radio" id="ciara_panza-cecchinato-late" name="ciara_panza-cecchinato" value="Late"></td><td><input type="radio" id="ciara_panza-cecchinato-excused" name="ciara_panza-cecchinato" value="Excused"></td><td><input type="radio" id="ciara_panza-cecchinato-unexcused" name="ciara_panza-cecchinato" value="Unexcused"></td><td><input hidden type="radio" id="ciara_panza-cecchinato-x" name="ciara_panza-cecchinato" value="-" checked></td></tr></table>
+<table class="students" id="anna-adair-proctor" cellpadding=0 cellspacing=0><tr><td>Anna Adair-Proctor
+</td><td><input type="radio" id="anna-adair-proctor-present" name="anna-adair-proctor" value="Present"></td><td><input type="radio" id="anna-adair-proctor-late" name="anna-adair-proctor" value="Late"></td><td><input type="radio" id="anna-adair-proctor-excused" name="anna-adair-proctor" value="Excused"></td><td><input type="radio" id="anna-adair-proctor-unexcused" name="anna-adair-proctor" value="Unexcused"></td><td><input hidden type="radio" id="anna-adair-proctor-x" name="anna-adair-proctor" value="-" checked></td></tr></table>
 
-<table class="students" id="clem_nunez" cellpadding=0 cellspacing=0><tr><td>Clem Nunez</td><td><input type="radio" id="clem_nunez-present" name="clem_nunez" value="Present"></td><td><input type="radio" id="clem_nunez-late" name="clem_nunez" value="Late"></td><td><input type="radio" id="clem_nunez-excused" name="clem_nunez" value="Excused"></td><td><input type="radio" id="clem_nunez-unexcused" name="clem_nunez" value="Unexcused"></td><td><input hidden type="radio" id="clem_nunez-x" name="clem_nunez" value="-" checked></td></tr></table>
+<table class="students" id="annabelle-greenburger" cellpadding=0 cellspacing=0><tr><td>Annabelle Greenburger
+</td><td><input type="radio" id="annabelle-greenburger-present" name="annabelle-greenburger" value="Present"></td><td><input type="radio" id="annabelle-greenburger-late" name="annabelle-greenburger" value="Late"></td><td><input type="radio" id="annabelle-greenburger-excused" name="annabelle-greenburger" value="Excused"></td><td><input type="radio" id="annabelle-greenburger-unexcused" name="annabelle-greenburger" value="Unexcused"></td><td><input hidden type="radio" id="annabelle-greenburger-x" name="annabelle-greenburger" value="-" checked></td></tr></table>
 
-<table class="students" id="demi_cuello" cellpadding=0 cellspacing=0><tr><td>Demi Cuello</td><td><input type="radio" id="demi_cuello-present" name="demi_cuello" value="Present"></td><td><input type="radio" id="demi_cuello-late" name="demi_cuello" value="Late"></td><td><input type="radio" id="demi_cuello-excused" name="demi_cuello" value="Excused"></td><td><input type="radio" id="demi_cuello-unexcused" name="demi_cuello" value="Unexcused"></td><td><input hidden type="radio" id="demi_cuello-x" name="demi_cuello" value="-" checked></td></tr></table>
+<table class="students" id="athena-patterson" cellpadding=0 cellspacing=0><tr><td>Athena Patterson
+</td><td><input type="radio" id="athena-patterson-present" name="athena-patterson" value="Present"></td><td><input type="radio" id="athena-patterson-late" name="athena-patterson" value="Late"></td><td><input type="radio" id="athena-patterson-excused" name="athena-patterson" value="Excused"></td><td><input type="radio" id="athena-patterson-unexcused" name="athena-patterson" value="Unexcused"></td><td><input hidden type="radio" id="athena-patterson-x" name="athena-patterson" value="-" checked></td></tr></table>
 
-<table class="students" id="edrick_henderson" cellpadding=0 cellspacing=0><tr><td>Edrick Henderson</td><td><input type="radio" id="edrick_henderson-present" name="edrick_henderson" value="Present"></td><td><input type="radio" id="edrick_henderson-late" name="edrick_henderson" value="Late"></td><td><input type="radio" id="edrick_henderson-excused" name="edrick_henderson" value="Excused"></td><td><input type="radio" id="edrick_henderson-unexcused" name="edrick_henderson" value="Unexcused"></td><td><input hidden type="radio" id="edrick_henderson-x" name="edrick_henderson" value="-" checked></td></tr></table>
+<table class="students" id="brennon-zahn" cellpadding=0 cellspacing=0><tr><td>Brennon Zahn
+</td><td><input type="radio" id="brennon-zahn-present" name="brennon-zahn" value="Present"></td><td><input type="radio" id="brennon-zahn-late" name="brennon-zahn" value="Late"></td><td><input type="radio" id="brennon-zahn-excused" name="brennon-zahn" value="Excused"></td><td><input type="radio" id="brennon-zahn-unexcused" name="brennon-zahn" value="Unexcused"></td><td><input hidden type="radio" id="brennon-zahn-x" name="brennon-zahn" value="-" checked></td></tr></table>
 
-<table class="students" id="elias_thorp" cellpadding=0 cellspacing=0><tr><td>Elias Thorp</td><td><input type="radio" id="elias_thorp-present" name="elias_thorp" value="Present"></td><td><input type="radio" id="elias_thorp-late" name="elias_thorp" value="Late"></td><td><input type="radio" id="elias_thorp-excused" name="elias_thorp" value="Excused"></td><td><input type="radio" id="elias_thorp-unexcused" name="elias_thorp" value="Unexcused"></td><td><input hidden type="radio" id="elias_thorp-x" name="elias_thorp" value="-" checked></td></tr></table>
+<table class="students" id="bunny-cecchinato" cellpadding=0 cellspacing=0><tr><td>Bunny Cecchinato
+</td><td><input type="radio" id="bunny-cecchinato-present" name="bunny-cecchinato" value="Present"></td><td><input type="radio" id="bunny-cecchinato-late" name="bunny-cecchinato" value="Late"></td><td><input type="radio" id="bunny-cecchinato-excused" name="bunny-cecchinato" value="Excused"></td><td><input type="radio" id="bunny-cecchinato-unexcused" name="bunny-cecchinato" value="Unexcused"></td><td><input hidden type="radio" id="bunny-cecchinato-x" name="bunny-cecchinato" value="-" checked></td></tr></table>
 
-<table class="students" id="emilio_martinez_buenrostro" cellpadding=0 cellspacing=0><tr><td>Emilio Martinez Buenrostro</td><td><input type="radio" id="emilio_martinez_buenrostro-present" name="emilio_martinez_buenrostro" value="Present"></td><td><input type="radio" id="emilio_martinez_buenrostro-late" name="emilio_martinez_buenrostro" value="Late"></td><td><input type="radio" id="emilio_martinez_buenrostro-excused" name="emilio_martinez_buenrostro" value="Excused"></td><td><input type="radio" id="emilio_martinez_buenrostro-unexcused" name="emilio_martinez_buenrostro" value="Unexcused"></td><td><input hidden type="radio" id="emilio_martinez_buenrostro-x" name="emilio_martinez_buenrostro" value="-" checked></td></tr></table>
+<table class="students" id="camilo-scott" cellpadding=0 cellspacing=0><tr><td>Camilo Scott
+</td><td><input type="radio" id="camilo-scott-present" name="camilo-scott" value="Present"></td><td><input type="radio" id="camilo-scott-late" name="camilo-scott" value="Late"></td><td><input type="radio" id="camilo-scott-excused" name="camilo-scott" value="Excused"></td><td><input type="radio" id="camilo-scott-unexcused" name="camilo-scott" value="Unexcused"></td><td><input hidden type="radio" id="camilo-scott-x" name="camilo-scott" value="-" checked></td></tr></table>
 
-<table class="students" id="finn_mccafferty" cellpadding=0 cellspacing=0><tr><td>Finn McCafferty</td><td><input type="radio" id="finn_mccafferty-present" name="finn_mccafferty" value="Present"></td><td><input type="radio" id="finn_mccafferty-late" name="finn_mccafferty" value="Late"></td><td><input type="radio" id="finn_mccafferty-excused" name="finn_mccafferty" value="Excused"></td><td><input type="radio" id="finn_mccafferty-unexcused" name="finn_mccafferty" value="Unexcused"></td><td><input hidden type="radio" id="finn_mccafferty-x" name="finn_mccafferty" value="-" checked></td></tr></table>
+<table class="students" id="chi-kelly" cellpadding=0 cellspacing=0><tr><td>Chi Kelly
+</td><td><input type="radio" id="chi-kelly-present" name="chi-kelly" value="Present"></td><td><input type="radio" id="chi-kelly-late" name="chi-kelly" value="Late"></td><td><input type="radio" id="chi-kelly-excused" name="chi-kelly" value="Excused"></td><td><input type="radio" id="chi-kelly-unexcused" name="chi-kelly" value="Unexcused"></td><td><input hidden type="radio" id="chi-kelly-x" name="chi-kelly" value="-" checked></td></tr></table>
 
-<table class="students" id="gianna_persaud" cellpadding=0 cellspacing=0><tr><td>Gia Persaud</td><td><input type="radio" id="gianna_persaud-present" name="gianna_persaud" value="Present"></td><td><input type="radio" id="gianna_persaud-late" name="gianna_persaud" value="Late"></td><td><input type="radio" id="gianna_persaud-excused" name="gianna_persaud" value="Excused"></td><td><input type="radio" id="gianna_persaud-unexcused" name="gianna_persaud" value="Unexcused"></td><td><input hidden type="radio" id="gianna_persaud-x" name="gianna_persaud" value="-" checked></td></tr></table>
+<table class="students" id="clem-nunez" cellpadding=0 cellspacing=0><tr><td>Clem Nunez
+</td><td><input type="radio" id="clem-nunez-present" name="clem-nunez" value="Present"></td><td><input type="radio" id="clem-nunez-late" name="clem-nunez" value="Late"></td><td><input type="radio" id="clem-nunez-excused" name="clem-nunez" value="Excused"></td><td><input type="radio" id="clem-nunez-unexcused" name="clem-nunez" value="Unexcused"></td><td><input hidden type="radio" id="clem-nunez-x" name="clem-nunez" value="-" checked></td></tr></table>
 
-<table class="students" id="henry_coduri" cellpadding=0 cellspacing=0><tr><td>Henry Coduri</td><td><input type="radio" id="henry_coduri-present" name="henry_coduri" value="Present"></td><td><input type="radio" id="henry_coduri-late" name="henry_coduri" value="Late"></td><td><input type="radio" id="henry_coduri-excused" name="henry_coduri" value="Excused"></td><td><input type="radio" id="henry_coduri-unexcused" name="henry_coduri" value="Unexcused"></td><td><input hidden type="radio" id="henry_coduri-x" name="henry_coduri" value="-" checked></td></tr></table>
+<table class="students" id="cole-nelson" cellpadding=0 cellspacing=0><tr><td>Cole Nelson
+</td><td><input type="radio" id="cole-nelson-present" name="cole-nelson" value="Present"></td><td><input type="radio" id="cole-nelson-late" name="cole-nelson" value="Late"></td><td><input type="radio" id="cole-nelson-excused" name="cole-nelson" value="Excused"></td><td><input type="radio" id="cole-nelson-unexcused" name="cole-nelson" value="Unexcused"></td><td><input hidden type="radio" id="cole-nelson-x" name="cole-nelson" value="-" checked></td></tr></table>
 
-<table class="students" id="iris_semon_pike" cellpadding=0 cellspacing=0><tr><td>Iris Semon Pike</td><td><input type="radio" id="iris_semon_pike-present" name="iris_semon_pike" value="Present"></td><td><input type="radio" id="iris_semon_pike-late" name="iris_semon_pike" value="Late"></td><td><input type="radio" id="iris_semon_pike-excused" name="iris_semon_pike" value="Excused"></td><td><input type="radio" id="iris_semon_pike-unexcused" name="iris_semon_pike" value="Unexcused"></td><td><input hidden type="radio" id="iris_semon_pike-x" name="iris_semon_pike" value="-" checked></td></tr></table>
+<table class="students" id="delilah-miller" cellpadding=0 cellspacing=0><tr><td>Delilah Miller
+</td><td><input type="radio" id="delilah-miller-present" name="delilah-miller" value="Present"></td><td><input type="radio" id="delilah-miller-late" name="delilah-miller" value="Late"></td><td><input type="radio" id="delilah-miller-excused" name="delilah-miller" value="Excused"></td><td><input type="radio" id="delilah-miller-unexcused" name="delilah-miller" value="Unexcused"></td><td><input hidden type="radio" id="delilah-miller-x" name="delilah-miller" value="-" checked></td></tr></table>
 
-<table class="students" id="jasper_zahn" cellpadding=0 cellspacing=0><tr><td>Jasper Zahn</td><td><input type="radio" id="jasper_zahn-present" name="jasper_zahn" value="Present"></td><td><input type="radio" id="jasper_zahn-late" name="jasper_zahn" value="Late"></td><td><input type="radio" id="jasper_zahn-excused" name="jasper_zahn" value="Excused"></td><td><input type="radio" id="jasper_zahn-unexcused" name="jasper_zahn" value="Unexcused"></td><td><input hidden type="radio" id="jasper_zahn-x" name="jasper_zahn" value="-" checked></td></tr></table>
+<table class="students" id="demi-cuello" cellpadding=0 cellspacing=0><tr><td>Demi Cuello
+</td><td><input type="radio" id="demi-cuello-present" name="demi-cuello" value="Present"></td><td><input type="radio" id="demi-cuello-late" name="demi-cuello" value="Late"></td><td><input type="radio" id="demi-cuello-excused" name="demi-cuello" value="Excused"></td><td><input type="radio" id="demi-cuello-unexcused" name="demi-cuello" value="Unexcused"></td><td><input hidden type="radio" id="demi-cuello-x" name="demi-cuello" value="-" checked></td></tr></table>
 
-<table class="students" id="kaya_lay" cellpadding=0 cellspacing=0><tr><td>Kaya Lay</td><td><input type="radio" id="kaya_lay-present" name="kaya_lay" value="Present"></td><td><input type="radio" id="kaya_lay-late" name="kaya_lay" value="Late"></td><td><input type="radio" id="kaya_lay-excused" name="kaya_lay" value="Excused"></td><td><input type="radio" id="kaya_lay-unexcused" name="kaya_lay" value="Unexcused"></td><td><input hidden type="radio" id="kaya_lay-x" name="kaya_lay" value="-" checked></td></tr></table>
+<table class="students" id="elias-thorp" cellpadding=0 cellspacing=0><tr><td>Elias Thorp
+</td><td><input type="radio" id="elias-thorp-present" name="elias-thorp" value="Present"></td><td><input type="radio" id="elias-thorp-late" name="elias-thorp" value="Late"></td><td><input type="radio" id="elias-thorp-excused" name="elias-thorp" value="Excused"></td><td><input type="radio" id="elias-thorp-unexcused" name="elias-thorp" value="Unexcused"></td><td><input hidden type="radio" id="elias-thorp-x" name="elias-thorp" value="-" checked></td></tr></table>
 
-<table class="students" id="lyric_van_der_laan" cellpadding=0 cellspacing=0><tr><td>Lyric van der Laan</td><td><input type="radio" id="lyric_van_der_laan-present" name="lyric_van_der_laan" value="Present"></td><td><input type="radio" id="lyric_van_der_laan-late" name="lyric_van_der_laan" value="Late"></td><td><input type="radio" id="lyric_van_der_laan-excused" name="lyric_van_der_laan" value="Excused"></td><td><input type="radio" id="lyric_van_der_laan-unexcused" name="lyric_van_der_laan" value="Unexcused"></td><td><input hidden type="radio" id="lyric_van_der_laan-x" name="lyric_van_der_laan" value="-" checked></td></tr></table>
+<table class="students" id="emilio-martinez-buenrostro" cellpadding=0 cellspacing=0><tr><td>Emilio Martinez-Buenrostro
+</td><td><input type="radio" id="emilio-martinez-buenrostro-present" name="emilio-martinez-buenrostro" value="Present"></td><td><input type="radio" id="emilio-martinez-buenrostro-late" name="emilio-martinez-buenrostro" value="Late"></td><td><input type="radio" id="emilio-martinez-buenrostro-excused" name="emilio-martinez-buenrostro" value="Excused"></td><td><input type="radio" id="emilio-martinez-buenrostro-unexcused" name="emilio-martinez-buenrostro" value="Unexcused"></td><td><input hidden type="radio" id="emilio-martinez-buenrostro-x" name="emilio-martinez-buenrostro" value="-" checked></td></tr></table>       
 
-<table class="students" id="malina_mootoo" cellpadding=0 cellspacing=0><tr><td>Malina Mootoo</td><td><input type="radio" id="malina_mootoo-present" name="malina_mootoo" value="Present"></td><td><input type="radio" id="malina_mootoo-late" name="malina_mootoo" value="Late"></td><td><input type="radio" id="malina_mootoo-excused" name="malina_mootoo" value="Excused"></td><td><input type="radio" id="malina_mootoo-unexcused" name="malina_mootoo" value="Unexcused"></td><td><input hidden type="radio" id="malina_mootoo-x" name="malina_mootoo" value="-" checked></td></tr></table>
+<table class="students" id="finn-mccafferty" cellpadding=0 cellspacing=0><tr><td>Finn McCafferty
+</td><td><input type="radio" id="finn-mccafferty-present" name="finn-mccafferty" value="Present"></td><td><input type="radio" id="finn-mccafferty-late" name="finn-mccafferty" value="Late"></td><td><input type="radio" id="finn-mccafferty-excused" name="finn-mccafferty" value="Excused"></td><td><input type="radio" id="finn-mccafferty-unexcused" name="finn-mccafferty" value="Unexcused"></td><td><input hidden type="radio" id="finn-mccafferty-x" name="finn-mccafferty" value="-" checked></td></tr></table>
 
-<table class="students" id="mila_harris" cellpadding=0 cellspacing=0><tr><td>JP Harris</td><td><input type="radio" id="mila_harris-present" name="mila_harris" value="Present"></td><td><input type="radio" id="mila_harris-late" name="mila_harris" value="Late"></td><td><input type="radio" id="mila_harris-excused" name="mila_harris" value="Excused"></td><td><input type="radio" id="mila_harris-unexcused" name="mila_harris" value="Unexcused"></td><td><input hidden type="radio" id="mila_harris-x" name="mila_harris" value="-" checked></td></tr></table>
+<table class="students" id="gia-persaud" cellpadding=0 cellspacing=0><tr><td>Gianna Persaud
+</td><td><input type="radio" id="gia-persaud-present" name="gia-persaud" value="Present"></td><td><input type="radio" id="gia-persaud-late" name="gia-persaud" value="Late"></td><td><input type="radio" id="gia-persaud-excused" name="gia-persaud" value="Excused"></td><td><input type="radio" id="gia-persaud-unexcused" name="gia-persaud" value="Unexcused"></td><td><input hidden type="radio" id="gia-persaud-x" name="gia-persaud" value="-" checked></td></tr></table>
 
-<table class="students" id="miles_boukalik" cellpadding=0 cellspacing=0><tr><td>Miles Boukalik</td><td><input type="radio" id="miles_boukalik-present" name="miles_boukalik" value="Present"></td><td><input type="radio" id="miles_boukalik-late" name="miles_boukalik" value="Late"></td><td><input type="radio" id="miles_boukalik-excused" name="miles_boukalik" value="Excused"></td><td><input type="radio" id="miles_boukalik-unexcused" name="miles_boukalik" value="Unexcused"></td><td><input hidden type="radio" id="miles_boukalik-x" name="miles_boukalik" value="-" checked></td></tr></table>
+<table class="students" id="henry-coduri" cellpadding=0 cellspacing=0><tr><td>Henry Coduri
+</td><td><input type="radio" id="henry-coduri-present" name="henry-coduri" value="Present"></td><td><input type="radio" id="henry-coduri-late" name="henry-coduri" value="Late"></td><td><input type="radio" id="henry-coduri-excused" name="henry-coduri" value="Excused"></td><td><input type="radio" id="henry-coduri-unexcused" name="henry-coduri" value="Unexcused"></td><td><input hidden type="radio" id="henry-coduri-x" name="henry-coduri" value="-" checked></td></tr></table>
 
-<table class="students" id="morgan_spencer" cellpadding=0 cellspacing=0><tr><td>Morgan Spencer</td><td><input type="radio" id="morgan_spencer-present" name="morgan_spencer" value="Present"></td><td><input type="radio" id="morgan_spencer-late" name="morgan_spencer" value="Late"></td><td><input type="radio" id="morgan_spencer-excused" name="morgan_spencer" value="Excused"></td><td><input type="radio" id="morgan_spencer-unexcused" name="morgan_spencer" value="Unexcused"></td><td><input hidden type="radio" id="morgan_spencer-x" name="morgan_spencer" value="-" checked></td></tr></table>
+<table class="students" id="iris-claydon" cellpadding=0 cellspacing=0><tr><td>Iris Claydon
+</td><td><input type="radio" id="iris-claydon-present" name="iris-claydon" value="Present"></td><td><input type="radio" id="iris-claydon-late" name="iris-claydon" value="Late"></td><td><input type="radio" id="iris-claydon-excused" name="iris-claydon" value="Excused"></td><td><input type="radio" id="iris-claydon-unexcused" name="iris-claydon" value="Unexcused"></td><td><input hidden type="radio" id="iris-claydon-x" name="iris-claydon" value="-" checked></td></tr></table>
 
-<table class="students" id="noelle_dravis" cellpadding=0 cellspacing=0><tr><td>Noelle Dravis</td><td><input type="radio" id="noelle_dravis-present" name="noelle_dravis" value="Present"></td><td><input type="radio" id="noelle_dravis-late" name="noelle_dravis" value="Late"></td><td><input type="radio" id="noelle_dravis-excused" name="noelle_dravis" value="Excused"></td><td><input type="radio" id="noelle_dravis-unexcused" name="noelle_dravis" value="Unexcused"></td><td><input hidden type="radio" id="noelle_dravis-x" name="noelle_dravis" value="-" checked></td></tr></table>
+<table class="students" id="iris-semon-pike" cellpadding=0 cellspacing=0><tr><td>Iris Semon-Pike
+</td><td><input type="radio" id="iris-semon-pike-present" name="iris-semon-pike" value="Present"></td><td><input type="radio" id="iris-semon-pike-late" name="iris-semon-pike" value="Late"></td><td><input type="radio" id="iris-semon-pike-excused" name="iris-semon-pike" value="Excused"></td><td><input type="radio" id="iris-semon-pike-unexcused" name="iris-semon-pike" value="Unexcused"></td><td><input hidden type="radio" id="iris-semon-pike-x" name="iris-semon-pike" value="-" checked></td></tr></table>
 
-<table class="students" id="nori_teller-elsberg" cellpadding=0 cellspacing=0><tr><td>Nori Teller-Elsberg</td><td><input type="radio" id="nori_teller-elsberg-present" name="nori_teller-elsberg" value="Present"></td><td><input type="radio" id="nori_teller-elsberg-late" name="nori_teller-elsberg" value="Late"></td><td><input type="radio" id="nori_teller-elsberg-excused" name="nori_teller-elsberg" value="Excused"></td><td><input type="radio" id="nori_teller-elsberg-unexcused" name="nori_teller-elsberg" value="Unexcused"></td><td><input hidden type="radio" id="nori_teller-elsberg-x" name="nori_teller-elsberg" value="-" checked></td></tr></table>
+<table class="students" id="jasper-zahn" cellpadding=0 cellspacing=0><tr><td>Jasper Zahn
+</td><td><input type="radio" id="jasper-zahn-present" name="jasper-zahn" value="Present"></td><td><input type="radio" id="jasper-zahn-late" name="jasper-zahn" value="Late"></td><td><input type="radio" id="jasper-zahn-excused" name="jasper-zahn" value="Excused"></td><td><input type="radio" id="jasper-zahn-unexcused" name="jasper-zahn" value="Unexcused"></td><td><input hidden type="radio" id="jasper-zahn-x" name="jasper-zahn" value="-" checked></td></tr></table>
 
-<table class="students" id="oliver_zema" cellpadding=0 cellspacing=0><tr><td>Oliver Zema</td><td><input type="radio" id="oliver_zema-present" name="oliver_zema" value="Present"></td><td><input type="radio" id="oliver_zema-late" name="oliver_zema" value="Late"></td><td><input type="radio" id="oliver_zema-excused" name="oliver_zema" value="Excused"></td><td><input type="radio" id="oliver_zema-unexcused" name="oliver_zema" value="Unexcused"></td><td><input hidden type="radio" id="oliver_zema-x" name="oliver_zema" value="-" checked></td></tr></table>
+<table class="students" id="jerica-keleher" cellpadding=0 cellspacing=0><tr><td>Jerica Keleher
+</td><td><input type="radio" id="jerica-keleher-present" name="jerica-keleher" value="Present"></td><td><input type="radio" id="jerica-keleher-late" name="jerica-keleher" value="Late"></td><td><input type="radio" id="jerica-keleher-excused" name="jerica-keleher" value="Excused"></td><td><input type="radio" id="jerica-keleher-unexcused" name="jerica-keleher" value="Unexcused"></td><td><input hidden type="radio" id="jerica-keleher-x" name="jerica-keleher" value="-" checked></td></tr></table>
 
-<table class="students" id="ollie_peterson" cellpadding=0 cellspacing=0><tr><td>Ollie Peterson</td><td><input type="radio" id="ollie_peterson-present" name="ollie_peterson" value="Present"></td><td><input type="radio" id="ollie_peterson-late" name="ollie_peterson" value="Late"></td><td><input type="radio" id="ollie_peterson-excused" name="ollie_peterson" value="Excused"></td><td><input type="radio" id="ollie_peterson-unexcused" name="ollie_peterson" value="Unexcused"></td><td><input hidden type="radio" id="ollie_peterson-x" name="ollie_peterson" value="-" checked></td></tr></table>
+<table class="students" id="jp-harris" cellpadding=0 cellspacing=0><tr><td>JP Harris
+</td><td><input type="radio" id="jp-harris-present" name="jp-harris" value="Present"></td><td><input type="radio" id="jp-harris-late" name="jp-harris" value="Late"></td><td><input type="radio" id="jp-harris-excused" name="jp-harris" value="Excused"></td><td><input type="radio" id="jp-harris-unexcused" name="jp-harris" value="Unexcused"></td><td><input hidden type="radio" id="jp-harris-x" name="jp-harris" value="-" checked></td></tr></table>
 
-<table class="students" id="owen_hindes" cellpadding=0 cellspacing=0><tr><td>Owen Hindes</td><td><input type="radio" id="owen_hindes-present" name="owen_hindes" value="Present"></td><td><input type="radio" id="owen_hindes-late" name="owen_hindes" value="Late"></td><td><input type="radio" id="owen_hindes-excused" name="owen_hindes" value="Excused"></td><td><input type="radio" id="owen_hindes-unexcused" name="owen_hindes" value="Unexcused"></td><td><input hidden type="radio" id="owen_hindes-x" name="owen_hindes" value="-" checked></td></tr></table>
+<table class="students" id="julia-alswang" cellpadding=0 cellspacing=0><tr><td>Julia Alswang
+</td><td><input type="radio" id="julia-alswang-present" name="julia-alswang" value="Present"></td><td><input type="radio" id="julia-alswang-late" name="julia-alswang" value="Late"></td><td><input type="radio" id="julia-alswang-excused" name="julia-alswang" value="Excused"></td><td><input type="radio" id="julia-alswang-unexcused" name="julia-alswang" value="Unexcused"></td><td><input hidden type="radio" id="julia-alswang-x" name="julia-alswang" value="-" checked></td></tr></table>
 
-<table class="students" id="rowan_boomer" cellpadding=0 cellspacing=0><tr><td>Rowan Boomer</td><td><input type="radio" id="rowan_boomer-present" name="rowan_boomer" value="Present"></td><td><input type="radio" id="rowan_boomer-late" name="rowan_boomer" value="Late"></td><td><input type="radio" id="rowan_boomer-excused" name="rowan_boomer" value="Excused"></td><td><input type="radio" id="rowan_boomer-unexcused" name="rowan_boomer" value="Unexcused"></td><td><input hidden type="radio" id="rowan_boomer-x" name="rowan_boomer" value="-" checked></td></tr></table>
+<table class="students" id="kaya-lay-sreiy" cellpadding=0 cellspacing=0><tr><td>Kaya Lay-Sreiy
+</td><td><input type="radio" id="kaya-lay-sreiy-present" name="kaya-lay-sreiy" value="Present"></td><td><input type="radio" id="kaya-lay-sreiy-late" name="kaya-lay-sreiy" value="Late"></td><td><input type="radio" id="kaya-lay-sreiy-excused" name="kaya-lay-sreiy" value="Excused"></td><td><input type="radio" id="kaya-lay-sreiy-unexcused" name="kaya-lay-sreiy" value="Unexcused"></td><td><input hidden type="radio" id="kaya-lay-sreiy-x" name="kaya-lay-sreiy" value="-" checked></td></tr></table>
 
-<table class="students" id="sani_schollenberger" cellpadding=0 cellspacing=0><tr><td>Sani Schollenberger</td><td><input type="radio" id="sani_schollenberger-present" name="sani_schollenberger" value="Present"></td><td><input type="radio" id="sani_schollenberger-late" name="sani_schollenberger" value="Late"></td><td><input type="radio" id="sani_schollenberger-excused" name="sani_schollenberger" value="Excused"></td><td><input type="radio" id="sani_schollenberger-unexcused" name="sani_schollenberger" value="Unexcused"></td><td><input hidden type="radio" id="sani_schollenberger-x" name="sani_schollenberger" value="-" checked></td></tr></table>
+<table class="students" id="langley-whitney" cellpadding=0 cellspacing=0><tr><td>Langley Whitney
+</td><td><input type="radio" id="langley-whitney-present" name="langley-whitney" value="Present"></td><td><input type="radio" id="langley-whitney-late" name="langley-whitney" value="Late"></td><td><input type="radio" id="langley-whitney-excused" name="langley-whitney" value="Excused"></td><td><input type="radio" id="langley-whitney-unexcused" name="langley-whitney" value="Unexcused"></td><td><input hidden type="radio" id="langley-whitney-x" name="langley-whitney" value="-" checked></td></tr></table>
 
-<table class="students" id="serena_skloot" cellpadding=0 cellspacing=0><tr><td>Serena Skloot</td><td><input type="radio" id="serena_skloot-present" name="serena_skloot" value="Present"></td><td><input type="radio" id="serena_skloot-late" name="serena_skloot" value="Late"></td><td><input type="radio" id="serena_skloot-excused" name="serena_skloot" value="Excused"></td><td><input type="radio" id="serena_skloot-unexcused" name="serena_skloot" value="Unexcused"></td><td><input hidden type="radio" id="serena_skloot-x" name="serena_skloot" value="-" checked></td></tr></table>
+<table class="students" id="lyric-van-der-laan" cellpadding=0 cellspacing=0><tr><td>Lyric Van-Der-Laan
+</td><td><input type="radio" id="lyric-van-der-laan-present" name="lyric-van-der-laan" value="Present"></td><td><input type="radio" id="lyric-van-der-laan-late" name="lyric-van-der-laan" value="Late"></td><td><input type="radio" id="lyric-van-der-laan-excused" name="lyric-van-der-laan" value="Excused"></td><td><input type="radio" id="lyric-van-der-laan-unexcused" name="lyric-van-der-laan" value="Unexcused"></td><td><input hidden type="radio" id="lyric-van-der-laan-x" name="lyric-van-der-laan" value="-" checked></td></tr></table>
 
-<table class="students" id="shiah_versey" cellpadding=0 cellspacing=0><tr><td>Shiah Versey</td><td><input type="radio" id="shiah_versey-present" name="shiah_versey" value="Present"></td><td><input type="radio" id="shiah_versey-late" name="shiah_versey" value="Late"></td><td><input type="radio" id="shiah_versey-excused" name="shiah_versey" value="Excused"></td><td><input type="radio" id="shiah_versey-unexcused" name="shiah_versey" value="Unexcused"></td><td><input hidden type="radio" id="shiah_versey-x" name="shiah_versey" value="-" checked></td></tr></table>
+<table class="students" id="malina-mootoo" cellpadding=0 cellspacing=0><tr><td>Malina Mootoo
+</td><td><input type="radio" id="malina-mootoo-present" name="malina-mootoo" value="Present"></td><td><input type="radio" id="malina-mootoo-late" name="malina-mootoo" value="Late"></td><td><input type="radio" id="malina-mootoo-excused" name="malina-mootoo" value="Excused"></td><td><input type="radio" id="malina-mootoo-unexcused" name="malina-mootoo" value="Unexcused"></td><td><input hidden type="radio" id="malina-mootoo-x" name="malina-mootoo" value="-" checked></td></tr></table>
 
-<table class="students" id="sophie_mcinnes" cellpadding=0 cellspacing=0><tr><td>Sophie McInnes</td><td><input type="radio" id="sophie_mcinnes-present" name="sophie_mcinnes" value="Present"></td><td><input type="radio" id="sophie_mcinnes-late" name="sophie_mcinnes" value="Late"></td><td><input type="radio" id="sophie_mcinnes-excused" name="sophie_mcinnes" value="Excused"></td><td><input type="radio" id="sophie_mcinnes-unexcused" name="sophie_mcinnes" value="Unexcused"></td><td><input hidden type="radio" id="sophie_mcinnes-x" name="sophie_mcinnes" value="-" checked></td></tr></table>
+<table class="students" id="miles-boukalik" cellpadding=0 cellspacing=0><tr><td>Miles Boukalik
+</td><td><input type="radio" id="miles-boukalik-present" name="miles-boukalik" value="Present"></td><td><input type="radio" id="miles-boukalik-late" name="miles-boukalik" value="Late"></td><td><input type="radio" id="miles-boukalik-excused" name="miles-boukalik" value="Excused"></td><td><input type="radio" id="miles-boukalik-unexcused" name="miles-boukalik" value="Unexcused"></td><td><input hidden type="radio" id="miles-boukalik-x" name="miles-boukalik" value="-" checked></td></tr></table>
 
-<table class="students" id="trixie_sharkey-mcquinn" cellpadding=0 cellspacing=0><tr><td>Trixie Sharkey-McQuinn</td><td><input type="radio" id="trixie_sharkey-mcquinn-present" name="trixie_sharkey-mcquinn" value="Present"></td><td><input type="radio" id="trixie_sharkey-mcquinn-late" name="trixie_sharkey-mcquinn" value="Late"></td><td><input type="radio" id="trixie_sharkey-mcquinn-excused" name="trixie_sharkey-mcquinn" value="Excused"></td><td><input type="radio" id="trixie_sharkey-mcquinn-unexcused" name="trixie_sharkey-mcquinn" value="Unexcused"></td><td><input hidden type="radio" id="trixie_sharkey-mcquinn-x" name="trixie_sharkey-mcquinn" value="-" checked></td></tr></table>
+<table class="students" id="morgan-spencer" cellpadding=0 cellspacing=0><tr><td>Morgan Spencer
+</td><td><input type="radio" id="morgan-spencer-present" name="morgan-spencer" value="Present"></td><td><input type="radio" id="morgan-spencer-late" name="morgan-spencer" value="Late"></td><td><input type="radio" id="morgan-spencer-excused" name="morgan-spencer" value="Excused"></td><td><input type="radio" id="morgan-spencer-unexcused" name="morgan-spencer" value="Unexcused"></td><td><input hidden type="radio" id="morgan-spencer-x" name="morgan-spencer" value="-" checked></td></tr></table>
 
-<table class="students" id="zafira_miller" cellpadding=0 cellspacing=0><tr><td>Deliliah Miller</td><td><input type="radio" id="zafira_miller-present" name="zafira_miller" value="Present"></td><td><input type="radio" id="zafira_miller-late" name="zafira_miller" value="Late"></td><td><input type="radio" id="zafira_miller-excused" name="zafira_miller" value="Excused"></td><td><input type="radio" id="zafira_miller-unexcused" name="zafira_miller" value="Unexcused"></td><td><input hidden type="radio" id="zafira_miller-x" name="zafira_miller" value="-" checked></td></tr></table>
+<table class="students" id="noah-lettrick" cellpadding=0 cellspacing=0><tr><td>Noah Lettrick
+</td><td><input type="radio" id="noah-lettrick-present" name="noah-lettrick" value="Present"></td><td><input type="radio" id="noah-lettrick-late" name="noah-lettrick" value="Late"></td><td><input type="radio" id="noah-lettrick-excused" name="noah-lettrick" value="Excused"></td><td><input type="radio" id="noah-lettrick-unexcused" name="noah-lettrick" value="Unexcused"></td><td><input hidden type="radio" id="noah-lettrick-x" name="noah-lettrick" value="-" checked></td></tr></table>
 
-<table class="students" id="venus_boehm" cellpadding=0 cellspacing=0><tr><td>Venus Boehm</td><td><input type="radio" id="venus_boehm-present" name="venus_boehm" value="Present"></td><td><input type="radio" id="venus_boehm-late" name="venus_boehm" value="Late"></td><td><input type="radio" id="venus_boehm-excused" name="venus_boehm" value="Excused"></td><td><input type="radio" id="venus_boehm-unexcused" name="venus_boehm" value="Unexcused"></td><td><input hidden type="radio" id="venus_boehm-x" name="venus_boehm" value="-" checked></td></tr></table>
+<table class="students" id="noelle-dravis" cellpadding=0 cellspacing=0><tr><td>Noelle Dravis
+</td><td><input type="radio" id="noelle-dravis-present" name="noelle-dravis" value="Present"></td><td><input type="radio" id="noelle-dravis-late" name="noelle-dravis" value="Late"></td><td><input type="radio" id="noelle-dravis-excused" name="noelle-dravis" value="Excused"></td><td><input type="radio" id="noelle-dravis-unexcused" name="noelle-dravis" value="Unexcused"></td><td><input hidden type="radio" id="noelle-dravis-x" name="noelle-dravis" value="-" checked></td></tr></table>
 
-<table class="students" id="julia_alswang" cellpadding=0 cellspacing=0><tr><td>Julia Alswang</td><td><input type="radio" id="julia_alswang-present" name="julia_alswang" value="Present"></td><td><input type="radio" id="julia_alswang-late" name="julia_alswang" value="Late"></td><td><input type="radio" id="julia_alswang-excused" name="julia_alswang" value="Excused"></td><td><input type="radio" id="julia_alswang-unexcused" name="julia_alswang" value="Unexcused"></td><td><input hidden type="radio" id="julia_alswang-x" name="julia_alswang" value="-" checked></td></tr></table>
+<table class="students" id="nori-teller-elsberg" cellpadding=0 cellspacing=0><tr><td>Nori Teller-Elsberg
+</td><td><input type="radio" id="nori-teller-elsberg-present" name="nori-teller-elsberg" value="Present"></td><td><input type="radio" id="nori-teller-elsberg-late" name="nori-teller-elsberg" value="Late"></td><td><input type="radio" id="nori-teller-elsberg-excused" name="nori-teller-elsberg" value="Excused"></td><td><input type="radio" id="nori-teller-elsberg-unexcused" name="nori-teller-elsberg" value="Unexcused"></td><td><input hidden type="radio" id="nori-teller-elsberg-x" name="nori-teller-elsberg" value="-" checked></td></tr></table>
+
+<table class="students" id="oliver-zema" cellpadding=0 cellspacing=0><tr><td>Oliver Zema
+</td><td><input type="radio" id="oliver-zema-present" name="oliver-zema" value="Present"></td><td><input type="radio" id="oliver-zema-late" name="oliver-zema" value="Late"></td><td><input type="radio" id="oliver-zema-excused" name="oliver-zema" value="Excused"></td><td><input type="radio" id="oliver-zema-unexcused" name="oliver-zema" value="Unexcused"></td><td><input hidden type="radio" id="oliver-zema-x" name="oliver-zema" value="-" checked></td></tr></table>
+
+<table class="students" id="ollie-peterson" cellpadding=0 cellspacing=0><tr><td>Ollie Peterson
+</td><td><input type="radio" id="ollie-peterson-present" name="ollie-peterson" value="Present"></td><td><input type="radio" id="ollie-peterson-late" name="ollie-peterson" value="Late"></td><td><input type="radio" id="ollie-peterson-excused" name="ollie-peterson" value="Excused"></td><td><input type="radio" id="ollie-peterson-unexcused" name="ollie-peterson" value="Unexcused"></td><td><input hidden type="radio" id="ollie-peterson-x" name="ollie-peterson" value="-" checked></td></tr></table>
+
+<table class="students" id="owen-hindes" cellpadding=0 cellspacing=0><tr><td>Owen Hindes
+</td><td><input type="radio" id="owen-hindes-present" name="owen-hindes" value="Present"></td><td><input type="radio" id="owen-hindes-late" name="owen-hindes" value="Late"></td><td><input type="radio" id="owen-hindes-excused" name="owen-hindes" value="Excused"></td><td><input type="radio" id="owen-hindes-unexcused" name="owen-hindes" value="Unexcused"></td><td><input hidden type="radio" id="owen-hindes-x" name="owen-hindes" value="-" checked></td></tr></table>
+
+<table class="students" id="palmer-hudson" cellpadding=0 cellspacing=0><tr><td>Palmer Hudson
+</td><td><input type="radio" id="palmer-hudson-present" name="palmer-hudson" value="Present"></td><td><input type="radio" id="palmer-hudson-late" name="palmer-hudson" value="Late"></td><td><input type="radio" id="palmer-hudson-excused" name="palmer-hudson" value="Excused"></td><td><input type="radio" id="palmer-hudson-unexcused" name="palmer-hudson" value="Unexcused"></td><td><input hidden type="radio" id="palmer-hudson-x" name="palmer-hudson" value="-" checked></td></tr></table>
+
+<table class="students" id="phoebe-muise" cellpadding=0 cellspacing=0><tr><td>Phoebe Muise
+</td><td><input type="radio" id="phoebe-muise-present" name="phoebe-muise" value="Present"></td><td><input type="radio" id="phoebe-muise-late" name="phoebe-muise" value="Late"></td><td><input type="radio" id="phoebe-muise-excused" name="phoebe-muise" value="Excused"></td><td><input type="radio" id="phoebe-muise-unexcused" name="phoebe-muise" value="Unexcused"></td><td><input hidden type="radio" id="phoebe-muise-x" name="phoebe-muise" value="-" checked></td></tr></table>
+
+<table class="students" id="rowan-boomer" cellpadding=0 cellspacing=0><tr><td>Rowan Boomer
+</td><td><input type="radio" id="rowan-boomer-present" name="rowan-boomer" value="Present"></td><td><input type="radio" id="rowan-boomer-late" name="rowan-boomer" value="Late"></td><td><input type="radio" id="rowan-boomer-excused" name="rowan-boomer" value="Excused"></td><td><input type="radio" id="rowan-boomer-unexcused" name="rowan-boomer" value="Unexcused"></td><td><input hidden type="radio" id="rowan-boomer-x" name="rowan-boomer" value="-" checked></td></tr></table>
+
+<table class="students" id="sani-schollenberger" cellpadding=0 cellspacing=0><tr><td>Sani Schollenberger
+</td><td><input type="radio" id="sani-schollenberger-present" name="sani-schollenberger" value="Present"></td><td><input type="radio" id="sani-schollenberger-late" name="sani-schollenberger" value="Late"></td><td><input type="radio" id="sani-schollenberger-excused" name="sani-schollenberger" value="Excused"></td><td><input type="radio" id="sani-schollenberger-unexcused" name="sani-schollenberger" value="Unexcused"></td><td><input hidden type="radio" id="sani-schollenberger-x" name="sani-schollenberger" value="-" checked></td></tr></table>
+
+<table class="students" id="serena-skloot" cellpadding=0 cellspacing=0><tr><td>Serena Skloot
+</td><td><input type="radio" id="serena-skloot-present" name="serena-skloot" value="Present"></td><td><input type="radio" id="serena-skloot-late" name="serena-skloot" value="Late"></td><td><input type="radio" id="serena-skloot-excused" name="serena-skloot" value="Excused"></td><td><input type="radio" id="serena-skloot-unexcused" name="serena-skloot" value="Unexcused"></td><td><input hidden type="radio" id="serena-skloot-x" name="serena-skloot" value="-" checked></td></tr></table>
+
+<table class="students" id="shiah-versey" cellpadding=0 cellspacing=0><tr><td>Shiah Versey
+</td><td><input type="radio" id="shiah-versey-present" name="shiah-versey" value="Present"></td><td><input type="radio" id="shiah-versey-late" name="shiah-versey" value="Late"></td><td><input type="radio" id="shiah-versey-excused" name="shiah-versey" value="Excused"></td><td><input type="radio" id="shiah-versey-unexcused" name="shiah-versey" value="Unexcused"></td><td><input hidden type="radio" id="shiah-versey-x" name="shiah-versey" value="-" checked></td></tr></table>
+
+<table class="students" id="sophie-mcinnes" cellpadding=0 cellspacing=0><tr><td>Sophie McInnes
+</td><td><input type="radio" id="sophie-mcinnes-present" name="sophie-mcinnes" value="Present"></td><td><input type="radio" id="sophie-mcinnes-late" name="sophie-mcinnes" value="Late"></td><td><input type="radio" id="sophie-mcinnes-excused" name="sophie-mcinnes" value="Excused"></td><td><input type="radio" id="sophie-mcinnes-unexcused" name="sophie-mcinnes" value="Unexcused"></td><td><input hidden type="radio" id="sophie-mcinnes-x" name="sophie-mcinnes" value="-" checked></td></tr></table>
+
+<table class="students" id="tobi-dreidel" cellpadding=0 cellspacing=0><tr><td>Tobi Dreidel
+</td><td><input type="radio" id="tobi-dreidel-present" name="tobi-dreidel" value="Present"></td><td><input type="radio" id="tobi-dreidel-late" name="tobi-dreidel" value="Late"></td><td><input type="radio" id="tobi-dreidel-excused" name="tobi-dreidel" value="Excused"></td><td><input type="radio" id="tobi-dreidel-unexcused" name="tobi-dreidel" value="Unexcused"></td><td><input hidden type="radio" id="tobi-dreidel-x" name="tobi-dreidel" value="-" checked></td></tr></table>
+
+<table class="students" id="trixie-sharkey-mcquinn" cellpadding=0 cellspacing=0><tr><td>Trixie Sharkey-McQuinn
+</td><td><input type="radio" id="trixie-sharkey-mcquinn-present" name="trixie-sharkey-mcquinn" value="Present"></td><td><input type="radio" id="trixie-sharkey-mcquinn-late" name="trixie-sharkey-mcquinn" value="Late"></td><td><input type="radio" id="trixie-sharkey-mcquinn-excused" name="trixie-sharkey-mcquinn" value="Excused"></td><td><input type="radio" id="trixie-sharkey-mcquinn-unexcused" name="trixie-sharkey-mcquinn" value="Unexcused"></td><td><input hidden type="radio" id="trixie-sharkey-mcquinn-x" name="trixie-sharkey-mcquinn" value="-" checked></td></tr></table>
+
+<table class="students" id="venus-boehm" cellpadding=0 cellspacing=0><tr><td>Venus Boehm
+</td><td><input type="radio" id="venus-boehm-present" name="venus-boehm" value="Present"></td><td><input type="radio" id="venus-boehm-late" name="venus-boehm" value="Late"></td><td><input type="radio" id="venus-boehm-excused" name="venus-boehm" value="Excused"></td><td><input type="radio" id="venus-boehm-unexcused" name="venus-boehm" value="Unexcused"></td><td><input hidden type="radio" id="venus-boehm-x" name="venus-boehm" value="-" checked></td></tr></table>
+
+<table class="students" id="yona-weinberg" cellpadding=0 cellspacing=0><tr><td>Yona Weinberg
+</td><td><input type="radio" id="yona-weinberg-present" name="yona-weinberg" value="Present"></td><td><input type="radio" id="yona-weinberg-late" name="yona-weinberg" value="Late"></td><td><input type="radio" id="yona-weinberg-excused" name="yona-weinberg" value="Excused"></td><td><input type="radio" id="yona-weinberg-unexcused" name="yona-weinberg" value="Unexcused"></td><td><input hidden type="radio" id="yona-weinberg-x" name="yona-weinberg" value="-" checked></td></tr></table>
+
+<table class="students" id="yosh-mizrahi" cellpadding=0 cellspacing=0><tr><td>Yosh Mizrahi
+</td><td><input type="radio" id="yosh-mizrahi-present" name="yosh-mizrahi" value="Present"></td><td><input type="radio" id="yosh-mizrahi-late" name="yosh-mizrahi" value="Late"></td><td><input type="radio" id="yosh-mizrahi-excused" name="yosh-mizrahi" value="Excused"></td><td><input type="radio" id="yosh-mizrahi-unexcused" name="yosh-mizrahi" value="Unexcused"></td><td><input hidden type="radio" id="yosh-mizrahi-x" name="yosh-mizrahi" value="-" checked></td></tr></table>
+
+<table class="students" id="z-choy" cellpadding=0 cellspacing=0><tr><td>Z Choy</td><td><input type="radio" id="z-choy-present" name="z-choy" value="Present"></td><td><input type="radio" id="z-choy-late" name="z-choy" value="Late"></td><td><input type="radio" id="z-choy-excused" name="z-choy" value="Excused"></td><td><input type="radio" id="z-choy-unexcused" name="z-choy" value="Unexcused"></td><td><input hidden type="radio" id="z-choy-x" name="z-choy" value="-" checked></td></tr></table>
 
 <br>
 &emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
@@ -181,40 +261,38 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['alani_carasone', 'bea_sas', 'cal_russell-pick', 'ciara_panza-cecchinato', 'clem_nunez', 'demi_cuello', 'edrick_henderson', 'eleanor_toomey', 'elias_thorp', 'eliza_goldsteen', 'emilio_martinez_buenrostro', 'eri_bolton', 'evan_hunt', 'finn_mccafferty', 'gianna_persaud', 'henry_coduri', 'iris_semon_pike', 'isadore_chernila', 'jasper_zahn', 'jean_lozano', 'jesse_calame', 'kaya_lay', 'lotus_peters', 'lyric_van_der_laan', 'malina_mootoo', 'matt_shubin', 'max_weeks', 'miko_blakeman', 'mila_harris', 'miles_boukalik', 'milo_kempisty', 'morgan_spencer', 'moss_selman', 'noelle_dravis', 'nori_teller-elsberg', 'oliver_zema', 'ollie_peterson', 'owen_hindes', 'quinn_miller', 'raven_sandroni', 'rowan_boomer', 'sabra_goveia', 'sani_schollenberger', 'serena_skloot', 'shiah_versey', 'sophie_mcinnes', 'tobias_peterson', 'trixie_sharkey-mcquinn', 'wolfgang_anderson', 'xixi_smith', 'yamalia_penaloza-marks', 'zafira_miller', 'tahlia_frenkel', 'thanh_marquie', 'elsa_boehm', 'noel_preston', 'venus_boehm', 'julia_alswang'];
+var schoolRoster = ['alani-carasone', 'anna-adair-proctor', 'annabelle-greenburger', 'athena-patterson', 'brennon-zahn', 'bunny-cecchinato', 'camilo-scott', 'chi-kelly', 'clem-nunez', 'cole-nelson', 'delilah-miller', 'demi-cuello', 'elias-thorp', 'emilio-martinez-buenrostro', 'finn-mccafferty', 'gia-persaud', 'henry-coduri', 'iris-claydon', 'iris-semon-pike', 'jasper-zahn', 'jerica-keleher', 'jp-harris', 'julia-alswang', 'kaya-lay-sreiy', 'langley-whitney', 'lyric-van-der-laan', 'malina-mootoo', 'miles-boukalik', 'morgan-spencer', 'noah-lettrick', 'noelle-dravis', 'nori-teller-elsberg', 'oliver-zema', 'ollie-peterson', 'owen-hindes', 'palmer-hudson', 'phoebe-muise', 'rowan-boomer', 'sani-schollenberger', 'serena-skloot', 'shiah-versey', 'sophie-mcinnes', 'tobi-dreidel', 'trixie-sharkey-mcquinn', 'venus-boehm', 'yona-weinberg', 'yosh-mizrahi', 'z-choy'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
-	if (teacherNameSent==="timothy") {
-		classes = ['eng3', 'mideast', 'film'];
-	} else if (teacherNameSent==="izzy") {
-		classes = ['geometry', 'repro', 'zine'];
-	} else if (teacherNameSent==="adrian") {
-		classes = ['algebra1', 'algebra2', 'calc'];
+	if (teacherNameSent==="fiona") {
+		classes = ['chemistry', 'algebra1', 'precalc'];
+	} else if (teacherNameSent==="will") {
+		classes = ['geometry', 'algebra2', 'spanish1'];
 	} else if (teacherNameSent==="micah") {
-		classes = ['precalc', 'diffeq', 'chemistry', 'computer'];
+		classes = ['calc', 'data', 'physics'];
 	} else if (teacherNameSent==="linda") {
-		classes = ['physics', 'biology', 'geo'];
+		classes = ['biology', 'marine'];
 	} else if (teacherNameSent==="john") {
-		classes = ['eng1', 'cabinet'];
-	} else if (teacherNameSent==="peter") {
-		classes = ['ushist'];
+		classes = ['ushista', 'ushistb'];
 	} else if (teacherNameSent==="katie") {
-		classes = ['eng2a', 'eng2b', 'queer'];
+		classes = ['eng4', 'queer', 'poetry'];
 	} else if (teacherNameSent==="margarita") {
-		classes = ['spanish1', 'spanish2', 'spanish3'];
+		classes = ['spanishA', 'spanishH', 'spanishP'];
 	} else if (teacherNameSent==="scott") {
-		classes = ['music', 'eng4'];
+		classes = ['music', 'eng3', 'counterpoint'];
 	} else if (teacherNameSent==="frank") {
 		classes = ['studio'];
 	} else if (teacherNameSent==="katherine") {
 		classes = ['photo'];
 	} else if (teacherNameSent==="maggie") {
-		classes = ['ceramics'];
+		classes = ['ceramicsa', 'ceramicsb', 'outdoor'];
 	} else if (teacherNameSent==="joseph") {
-		classes = ['performance'];
-	} else if (teacherNameSent==="emily") {
-		classes = ['drama'];
+		classes = ['digital', 'eng2', 'place'];
+	} else if (teacherNameSent==="kevinds") {
+		classes = ['eng1', 'myth', 'create'];
+	} else if (teacherNameSent==="zoe") {
+		classes = ['psych'];
 	}
 	//classes.push("studyhall");
 	return classes;
@@ -222,71 +300,75 @@ function GetTeacherClasses(teacherNameSent){
 
 function GetClassList(classNameSent){
 	if (classNameSent==="eng1") {
-		return ['venus_boehm', 'finn_mccafferty', 'clem_nunez', 'noel_preston', 'sani_schollenberger', 'shiah_versey'];
-	} else if (classNameSent==="eng2a") {
-		return ['rowan_boomer', 'milo_kempisty', 'mila_harris', 'zafira_miller', 'ciara_panza-cecchinato', 'trixie_sharkey-mcquinn', 'morgan_spencer', 'nori_teller-elsberg', 'elias_thorp', 'jasper_zahn'];
-	} else if (classNameSent==="eng2b") {
-		return ['miko_blakeman', 'jesse_calame', 'sabra_goveia', 'malina_mootoo', 'emilio_martinez_buenrostro', 'gianna_persaud', 'lotus_peters', 'ollie_peterson', 'serena_skloot'];
+		return ['iris-claydon', 'annabelle-greenburger', 'phoebe-muise', 'cole-nelson', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'langley-whitney', 'brennon-zahn'];
+	} else if (classNameSent==="eng2") {
+		return ['anna-adair-proctor', 'venus-boehm', 'jerica-keleher', 'finn-mccafferty', 'clem-nunez', 'sani-schollenberger', 'shiah-versey'];
 	} else if (classNameSent==="eng3") {
-		return ['julia_alswang', 'miles_boukalik', 'alani_carasone', 'henry_coduri', 'demi_cuello', 'noelle_dravis', 'owen_hindes', 'kaya_lay', 'sophie_mcinnes', 'tobias_peterson', 'iris_semon_pike', 'lyric_van_der_laan', 'oliver_zema'];
+		return ['rowan-boomer', 'bunny-cecchinato', 'jp-harris', 'palmer-hudson', 'chi-kelly', 'emilio-martinez-buenrostro', 'delilah-miller', 'yosh-mizrahi', 'malina-mootoo', 'gia-persaud', 'ollie-peterson', 'trixie-sharkey-mcquinn', 'serena-skloot', 'morgan-spencer', 'nori-teller-elsberg', 'elias-thorp', 'jasper-zahn'];
 	} else if (classNameSent==="eng4") {
-		return ['wolfgang_anderson', 'elsa_boehm', 'eri_bolton', 'isadore_chernila', 'thanh_marquie', 'evan_hunt', 'eliza_goldsteen', 'jean_lozano', 'quinn_miller', 'yamalia_penaloza-marks', 'cal_russell-pick', 'bea_sas', 'matt_shubin', 'xixi_smith', 'eleanor_toomey', 'max_weeks'];
+		return ['julia-alswang', 'miles-boukalik', 'alani-carasone', 'z-choy', 'henry-coduri', 'demi-cuello', 'noelle-dravis', 'tobi-dreidel', 'owen-hindes', 'kaya-lay-sreiy', 'noah-lettrick', 'sophie-mcinnes', 'iris-semon-pike', 'lyric-van-der-laan', 'oliver-zema'];
 	} else if (classNameSent==="algebra1") {
-		return ['clem_nunez', 'elias_thorp', 'shiah_versey', 'noel_preston', 'sani_schollenberger', 'venus_boehm'];
+		return ['annabelle-greenburger', 'phoebe-muise', 'camilo-scott', 'yona-weinberg', 'brennon-zahn'];
 	} else if (classNameSent==="geometry") {
-		return ['jesse_calame', 'sabra_goveia', 'mila_harris', 'finn_mccafferty', 'ciara_panza-cecchinato', 'lotus_peters', 'ollie_peterson', 'trixie_sharkey-mcquinn', 'serena_skloot'];
+		return ['venus-boehm', 'iris-claydon', 'jerica-keleher', 'cole-nelson', 'clem-nunez', 'athena-patterson', 'sani-schollenberger', 'elias-thorp', 'shiah-versey', 'langley-whitney'];
 	} else if (classNameSent==="algebra2") {
-		return ['wolfgang_anderson', 'miko_blakeman', 'rowan_boomer', 'alani_carasone', 'kaya_lay', 'sophie_mcinnes', 'malina_mootoo', 'gianna_persaud', 'cal_russell-pick', 'morgan_spencer', 'lyric_van_der_laan', 'jasper_zahn', 'emilio_martinez_buenrostro'];
+		return ['bunny-cecchinato', 'tobi-dreidel', 'jp-harris', 'finn-mccafferty', 'ollie-peterson', 'trixie-sharkey-mcquinn', 'serena-skloot', 'elias-thorp'];
 	} else if (classNameSent==="precalc") {
-		return ['demi_cuello', 'eliza_goldsteen', 'owen_hindes', 'milo_kempisty', 'zafira_miller', 'tobias_peterson', 'iris_semon_pike', 'nori_teller-elsberg', 'thanh_marquie'];
+		return ['anna-adair-proctor', 'malina-mootoo', 'gia-persaud'];
 	} else if (classNameSent==="calc") {
-		return ['noelle_dravis', 'jean_lozano', 'quinn_miller', 'eleanor_toomey', 'oliver_zema', 'evan_hunt'];
-	} else if (classNameSent==="diffeq") {
-		return ['eri_bolton', 'henry_coduri', 'matt_shubin'];
-	} else if (classNameSent==="computer") {
-		return ['emilio_martinez_buenrostro', 'zafira_miller', 'morgan_spencer', 'elias_thorp', 'jasper_zahn'];
-	} else if (classNameSent==="spanish1") {
-		return ['finn_mccafferty', 'shiah_versey', 'sani_schollenberger'];
-	} else if (classNameSent==="spanish2") {
-		return ['rowan_boomer', 'miles_boukalik', 'alani_carasone', 'henry_coduri', 'noelle_dravis', 'mila_harris', 'kaya_lay', 'zafira_miller', 'malina_mootoo', 'ciara_panza-cecchinato', 'gianna_persaud', 'lotus_peters', 'tobias_peterson', 'trixie_sharkey-mcquinn', 'serena_skloot', 'morgan_spencer', 'nori_teller-elsberg', 'lyric_van_der_laan', 'oliver_zema'];
-	} else if (classNameSent==="spanish3") {
-		return ['isadore_chernila', 'demi_cuello', 'eliza_goldsteen', 'owen_hindes', 'quinn_miller', 'yamalia_penaloza-marks', 'cal_russell-pick', 'iris_semon_pike'];
-	} else if (classNameSent==="physics") {
-		return ['wolfgang_anderson', 'isadore_chernila', 'eliza_goldsteen', 'owen_hindes', 'evan_hunt', 'quinn_miller',  'cal_russell-pick', 'eleanor_toomey', 'oliver_zema'];
-	} else if (classNameSent==="chemistry") {
-		return ['eri_bolton', 'miles_boukalik', 'henry_coduri', 'noelle_dravis', 'kaya_lay', 'jean_lozano', 'iris_semon_pike', 'bea_sas', 'lyric_van_der_laan', 'tobias_peterson', 'demi_cuello'];
+		return ['julia-alswang', 'demi-cuello', 'owen-hindes', 'delilah-miller', 'iris-semon-pike', 'nori-teller-elsberg', 'emilio-martinez-buenrostro'];
+	} else if (classNameSent==="data") {
+		return ['anna-adair-proctor', 'z-choy', 'palmer-hudson', 'kaya-lay-sreiy', 'delilah-miller', 'yosh-mizrahi', 'morgan-spencer', 'lyric-van-der-laan', 'jasper-zahn', 'oliver-zema', 'julia-alswang'];
 	} else if (classNameSent==="biology") {
-		return ['finn_mccafferty', 'clem_nunez', 'ciara_panza-cecchinato', 'ollie_peterson', 'shiah_versey', 'sani_schollenberger', 'noel_preston'];
-	} else if (classNameSent==="geo") {
-		return ['elsa_boehm', 'mila_harris', 'evan_hunt', 'jean_lozano', 'emilio_martinez_buenrostro', 'clem_nunez', 'lotus_peters', 'elias_thorp', 'eleanor_toomey'];
-	} else if (classNameSent==="repro") {
-		return ['miles_boukalik', 'thanh_marquie', 'quinn_miller', 'yamalia_penaloza-marks', 'iris_semon_pike', 'eleanor_toomey', 'max_weeks'];
-	} else if (classNameSent==="zine") {
-		return ['sabra_goveia', 'ciara_panza-cecchinato', 'trixie_sharkey-mcquinn', 'shiah_versey', 'jasper_zahn', 'gianna_persaud', 'max_weeks'];
-	} else if (classNameSent==="performance") {
-		return ['wolfgang_anderson', 'rowan_boomer', 'jesse_calame', 'eliza_goldsteen', 'owen_hindes', 'milo_kempisty', 'finn_mccafferty', 'sophie_mcinnes', 'ollie_peterson', 'noel_preston', 'xixi_smith', 'bea_sas'];
-	} else if (classNameSent==="mideast") {
-		return ['thanh_marquie', 'elsa_boehm', 'xixi_smith'];
-	} else if (classNameSent==="ushist") {
-		return ['miles_boukalik', 'alani_carasone', 'henry_coduri', 'kaya_lay', 'tobias_peterson', 'lyric_van_der_laan', 'oliver_zema', 'morgan_spencer', 'demi_cuello', 'julia_alswang'];
+		return ['anna-adair-proctor', 'venus-boehm', 'iris-claydon', 'annabelle-greenburger', 'jerica-keleher', 'phoebe-muise', 'cole-nelson', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'langley-whitney', 'brennon-zahn'];
+	} else if (classNameSent==="chemistry") {
+		return ['rowan-boomer', 'alani-carasone', 'owen-hindes', 'sophie-mcinnes', 'gia-persaud', 'nori-teller-elsberg', 'elias-thorp'];
+	} else if (classNameSent==="physics") {
+		return ['julia-alswang', 'miles-boukalik', 'demi-cuello', 'tobi-dreidel', 'palmer-hudson', 'chi-kelly', 'kaya-lay-sreiy', 'emilio-martinez-buenrostro', 'delilah-miller', 'yosh-mizrahi', 'iris-semon-pike', 'morgan-spencer', 'lyric-van-der-laan', 'jasper-zahn'];
+	} else if (classNameSent==="marine") {
+		return ['henry-coduri', 'jp-harris', 'finn-mccafferty', 'malina-mootoo', 'clem-nunez', 'ollie-peterson', 'serena-skloot', 'shiah-versey'];
+	} else if (classNameSent==="outdoor") {
+		return ['iris-claydon', 'chi-kelly', 'yosh-mizrahi', 'cole-nelson', 'clem-nunez', 'yona-weinberg', 'brennon-zahn'];
+	} else if (classNameSent==="spanish1") {
+		return ['anna-adair-proctor', 'venus-boehm', 'iris-claydon', 'phoebe-muise', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'langley-whitney', 'brennon-zahn'];
+	} else if (classNameSent==="spanishH") {
+		return ['annabelle-greenburger', 'chi-kelly', 'finn-mccafferty', 'shiah-versey'];
+	} else if (classNameSent==="spanishP") {
+		return ['miles-boukalik', 'alani-carasone', 'henry-coduri', 'jp-harris', 'sophie-mcinnes', 'malina-mootoo'];
+	} else if (classNameSent==="spanishA") {
+		return ['julia-alswang', 'z-choy', 'demi-cuello', 'noelle-dravis', 'jerica-keleher', 'emilio-martinez-buenrostro', 'iris-semon-pike', 'nori-teller-elsberg'];
+	} else if (classNameSent==="ushista") {
+		return ['jp-harris', 'delilah-miller', 'malina-mootoo', 'ollie-peterson', 'elias-thorp', 'jasper-zahn'];
+	} else if (classNameSent==="") {
+		return ['bunny-cecchinato', 'noah-lettrick', 'serena-skloot', 'rowan-boomer', 'emilio-martinez-buenrostro', 'gia-persaud', 'trixie-sharkey-mcquinn', 'nori-teller-elsberg'];
 	} else if (classNameSent==="queer") {
-		return ['evan_hunt', 'malina_mootoo', 'matt_shubin', 'serena_skloot', 'lotus_peters', 'venus_boehm'];
+		return ['iris-claydon', 'finn-mccafferty', 'phoebe-muise', 'cole-nelson', 'sani-schollenberger', 'langley-whitney'];
+	} else if (classNameSent==="myth") {
+		return ['venus-boehm', 'annabelle-greenburger', 'jerica-keleher', 'clem-nunez', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'brennon-zahn'];
+	} else if (classNameSent==="create") {
+		return ['tobi-dreidel', 'ollie-peterson'];
+	} else if (classNameSent==="psych") {
+		return ['bunny-cecchinato', 'demi-cuello', 'noelle-dravis', 'palmer-hudson', 'chi-kelly', 'kaya-lay-sreiy', 'noah-lettrick', 'sophie-mcinnes', 'yosh-mizrahi', 'serena-skloot', 'oliver-zema'];
 	} else if (classNameSent==="poetry") {
-		return ['miko_blakeman', 'yamalia_penaloza-marks', 'max_weeks', 'xixi_smith'];
-	} else if (classNameSent==="film") {
-		return ['wolfgang_anderson', 'jesse_calame', 'owen_hindes', 'jean_lozano', 'emilio_martinez_buenrostro', 'sophie_mcinnes', 'yamalia_penaloza-marks', 'tobias_peterson', 'cal_russell-pick', 'bea_sas', 'xixi_smith', 'lyric_van_der_laan', 'thanh_marquie', 'mila_harris', 'gianna_persaud', 'lotus_peters', 'milo_kempisty'];
+		return ['malina-mootoo', 'shiah-versey'];
+	} else if (classNameSent==="place") {
+		return ['julia-alswang', 'z-choy', 'rowan-boomer', 'miles-boukalik', 'alani-carasone', 'owen-hindes', 'noah-lettrick', 'sophie-mcinnes', 'yosh-mizrahi', 'gia-persaud', 'elias-thorp', 'lyric-van-der-laan'];
 	} else if (classNameSent==="studio") {
-		return ['wolfgang_anderson', 'miles_boukalik', 'alani_carasone', 'noelle_dravis', 'eliza_goldsteen', 'sabra_goveia', 'sophie_mcinnes', 'quinn_miller', 'malina_mootoo', 'ciara_panza-cecchinato', 'yamalia_penaloza-marks', 'gianna_persaud', 'bea_sas', 'iris_semon_pike', 'trixie_sharkey-mcquinn', 'matt_shubin', 'serena_skloot', 'xixi_smith', 'eleanor_toomey', 'max_weeks', 'thanh_marquie'];
-	} else if (classNameSent==="photo") {
-		return ['miles_boukalik', 'isadore_chernila', 'demi_cuello', 'eliza_goldsteen', 'mila_harris', 'owen_hindes', 'milo_kempisty', 'emilio_martinez_buenrostro', 'clem_nunez', 'yamalia_penaloza-marks', 'cal_russell-pick', 'bea_sas', 'trixie_sharkey-mcquinn', 'matt_shubin', 'xixi_smith', 'morgan_spencer', 'lyric_van_der_laan', 'shiah_versey'];
-	} else if (classNameSent==="ceramics") {
-		return ['miko_blakeman', 'eri_bolton', 'milo_kempisty', 'finn_mccafferty', 'malina_mootoo', 'lotus_peters', 'tobias_peterson', 'iris_semon_pike', 'elsa_boehm'];
+		return ['miles-boukalik', 'alani-carasone', 'bunny-cecchinato', 'z-choy', 'iris-claydon', 'noelle-dravis', 'tobi-dreidel', 'annabelle-greenburger', 'noah-lettrick', 'malina-mootoo', 'cole-nelson', 'athena-patterson', 'gia-persaud', 'ollie-peterson', 'camilo-scott', 'trixie-sharkey-mcquinn', 'serena-skloot', 'elias-thorp', 'yona-weinberg', 'langley-whitney', 'oliver-zema'];
+	} else if (classNameSent==="ceramicsa") {
+		return ['venus-boehm', 'palmer-hudson', 'phoebe-muise', 'athena-patterson'];
+	} else if (classNameSent==="ceramicsb") {
+		return ['julia-alswang', 'miles-boukalik', 'henry-coduri', 'sophie-mcinnes', 'iris-semon-pike', 'yona-weinberg'];
+	} else if (classNameSent==="digital") {
+		return ['rowan-boomer', 'owen-hindes', 'trixie-sharkey-mcquinn'];
 	} else if (classNameSent==="drama") {
-		return ['jasper_zahn', 'noelle_dravis', 'quinn_miller', 'zafira_miller', 'iris_semon_pike', 'max_weeks'];
+		return ['rowan-boomer', 'z-choy', 'iris-claydon', 'noelle-dravis', 'annabelle-greenburger', 'phoebe-muise', 'iris-semon-pike', 'brennon-zahn', 'jasper-zahn'];
+	} else if (classNameSent==="photo") {
+		return ['julia-alswang', 'miles-boukalik', 'alani-carasone', 'z-choy', 'demi-cuello', 'jp-harris', 'owen-hindes', 'chi-kelly', 'kaya-lay-sreiy', 'emilio-martinez-buenrostro', 'finn-mccafferty', 'sophie-mcinnes', 'delilah-miller', 'clem-nunez', 'trixie-sharkey-mcquinn', 'serena-skloot', 'morgan-spencer', 'lyric-van-der-laan', 'shiah-versey'];
+	} else if (classNameSent==="counterpoint") {
+		return ['tobi-dreidel', 'jp-harris', 'yosh-mizrahi', 'cole-nelson', 'nori-teller-elsberg', 'jasper-zahn'];
 	} else if (classNameSent==="music") {
-		return ['eliza_goldsteen', 'owen_hindes', 'mila_harris', 'evan_hunt', 'quinn_miller', 'lotus_peters', 'jasper_zahn', 'moss_selman', 'elsa_boehm'];
-	} else if (classNameSent==="cabinet") {
-		return ['zafira_miller', 'ollie_peterson', 'sani_schollenberger', 'max_weeks'];
+		return ['henry-coduri', 'noelle-dravis', 'finn-mccafferty', 'iris-semon-pike'];
 	} else {
 		return schoolRoster;
 	}
@@ -314,7 +396,7 @@ function ChooseClass(classNameSent){
 	} else {
 		for (var i = 0; i < inClass.length; i++){
 			document.getElementById(inClass[i]).style.display = "table";
-			if ((classNameSent == "repro" || classNameSent == "zine") || classNameSent == "geometry") {
+			if ((classNameSent == "repro" || classNameSent == "zine")) {
 				document.getElementById(inClass[i]+"-unexcused").checked = true;
 			} else {
 				document.getElementById(inClass[i]+"-present").checked = true;
