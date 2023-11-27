@@ -219,6 +219,8 @@ Class date: <input type="date" name="date" id="datePicker" min="2023-09-01" max=
 
 <table class="students" id="z-choy" cellpadding=0 cellspacing=0><tr><td>Z Choy</td><td><input type="radio" id="z-choy-present" name="z-choy" value="Present"></td><td><input type="radio" id="z-choy-late" name="z-choy" value="Late"></td><td><input type="radio" id="z-choy-excused" name="z-choy" value="Excused"></td><td><input type="radio" id="z-choy-unexcused" name="z-choy" value="Unexcused"></td><td><input hidden type="radio" id="z-choy-x" name="z-choy" value="-" checked></td></tr></table>
 
+<table class="students" id="ava-gordon" cellpadding=0 cellspacing=0><tr><td>Ava Gordon</td><td><input type="radio" id="ava-gordon-present" name="ava-gordon" value="Present"></td><td><input type="radio" id="ava-gordon-late" name="ava-gordon" value="Late"></td><td><input type="radio" id="ava-gordon-excused" name="ava-gordon" value="Excused"></td><td><input type="radio" id="ava-gordon-unexcused" name="ava-gordon" value="Unexcused"></td><td><input hidden type="radio" id="ava-gordon-x" name="ava-gordon" value="-" checked></td></tr></table>
+
 <br>
 &emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
 <br><br>
@@ -261,7 +263,7 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['alani-carasone', 'anna-adair-proctor', 'annabelle-greenburger', 'athena-patterson', 'brennon-zahn', 'bunny-cecchinato', 'camilo-scott', 'chi-kelly', 'clem-nunez', 'cole-nelson', 'delilah-miller', 'demi-cuello', 'elias-thorp', 'emilio-martinez-buenrostro', 'finn-mccafferty', 'gia-persaud', 'henry-coduri', 'iris-claydon', 'iris-semon-pike', 'jasper-zahn', 'jerica-keleher', 'jp-harris', 'julia-alswang', 'kaya-lay-sreiy', 'langley-whitney', 'lyric-van-der-laan', 'malina-mootoo', 'miles-boukalik', 'morgan-spencer', 'noah-lettrick', 'noelle-dravis', 'nori-teller-elsberg', 'oliver-zema', 'ollie-peterson', 'owen-hindes', 'palmer-hudson', 'phoebe-muise', 'rowan-boomer', 'sani-schollenberger', 'serena-skloot', 'shiah-versey', 'sophie-mcinnes', 'tobi-dreidel', 'trixie-sharkey-mcquinn', 'venus-boehm', 'yona-weinberg', 'yosh-mizrahi', 'z-choy'];
+var schoolRoster = ['alani-carasone', 'anna-adair-proctor', 'annabelle-greenburger', 'athena-patterson', 'brennon-zahn', 'bunny-cecchinato', 'camilo-scott', 'chi-kelly', 'clem-nunez', 'cole-nelson', 'delilah-miller', 'demi-cuello', 'elias-thorp', 'emilio-martinez-buenrostro', 'finn-mccafferty', 'gia-persaud', 'henry-coduri', 'iris-claydon', 'iris-semon-pike', 'jasper-zahn', 'jerica-keleher', 'jp-harris', 'julia-alswang', 'kaya-lay-sreiy', 'langley-whitney', 'lyric-van-der-laan', 'malina-mootoo', 'miles-boukalik', 'morgan-spencer', 'noah-lettrick', 'noelle-dravis', 'nori-teller-elsberg', 'oliver-zema', 'ollie-peterson', 'owen-hindes', 'palmer-hudson', 'phoebe-muise', 'rowan-boomer', 'sani-schollenberger', 'serena-skloot', 'shiah-versey', 'sophie-mcinnes', 'tobi-dreidel', 'trixie-sharkey-mcquinn', 'venus-boehm', 'yona-weinberg', 'yosh-mizrahi', 'z-choy', 'ava-gordon'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
@@ -300,7 +302,7 @@ function GetTeacherClasses(teacherNameSent){
 
 function GetClassList(classNameSent){
 	if (classNameSent==="eng1") {
-		return ['iris-claydon', 'annabelle-greenburger', 'phoebe-muise', 'cole-nelson', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'langley-whitney', 'brennon-zahn'];
+		return ['iris-claydon', 'annabelle-greenburger', 'phoebe-muise', 'cole-nelson', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'langley-whitney', 'brennon-zahn', 'ava-gordon'];
 	} else if (classNameSent==="eng2") {
 		return ['anna-adair-proctor', 'venus-boehm', 'jerica-keleher', 'finn-mccafferty', 'clem-nunez', 'sani-schollenberger', 'shiah-versey'];
 	} else if (classNameSent==="eng3") {
@@ -320,7 +322,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="data") {
 		return ['anna-adair-proctor', 'z-choy', 'palmer-hudson', 'kaya-lay-sreiy', 'delilah-miller', 'yosh-mizrahi', 'morgan-spencer', 'lyric-van-der-laan', 'jasper-zahn', 'oliver-zema', 'sophie-mcinnes'];
 	} else if (classNameSent==="biology") {
-		return ['venus-boehm', 'iris-claydon', 'annabelle-greenburger', 'jerica-keleher', 'cole-nelson', 'athena-patterson', 'yona-weinberg', 'langley-whitney', 'brennon-zahn', 'chi-kelly'];
+		return ['venus-boehm', 'iris-claydon', 'annabelle-greenburger', 'jerica-keleher', 'cole-nelson', 'athena-patterson', 'yona-weinberg', 'langley-whitney', 'brennon-zahn', 'chi-kelly', 'ava-gordon'];
 	} else if (classNameSent==="chemistry") {
 		return ['rowan-boomer', 'alani-carasone', 'owen-hindes', 'gia-persaud', 'nori-teller-elsberg', 'elias-thorp', 'anna-adair-proctor'];
 	} else if (classNameSent==="physics") {
@@ -342,7 +344,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="ushistb") {
 		return ['bunny-cecchinato', 'noah-lettrick', 'serena-skloot', 'rowan-boomer', 'emilio-martinez-buenrostro', 'gia-persaud', 'trixie-sharkey-mcquinn', 'nori-teller-elsberg'];
 	} else if (classNameSent==="queer") {
-		return ['iris-claydon', 'phoebe-muise', 'cole-nelson', 'sani-schollenberger', 'langley-whitney'];
+		return ['iris-claydon', 'phoebe-muise', 'cole-nelson', 'sani-schollenberger', 'langley-whitney', 'ava-gordon'];
 	} else if (classNameSent==="myth") {
 		return ['venus-boehm', 'annabelle-greenburger', 'jerica-keleher', 'clem-nunez', 'athena-patterson', 'camilo-scott', 'yona-weinberg', 'brennon-zahn', 'finn-mccafferty'];
 	} else if (classNameSent==="create") {
