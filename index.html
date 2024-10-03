@@ -62,6 +62,7 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="music">&emsp;<button class="button" onclick="ChooseClass('music')">Music 101</button>&emsp;<br></div>
 <div class="class-button" id="photo">&emsp;<button class="button" onclick="ChooseClass('photo')">Photography</button>&emsp;<br></div>
 <div class="class-button" id="studio">&emsp;<button class="button" onclick="ChooseClass('studio')">Studio Art</button>&emsp;<br></div>
+<div class="class-button" id="theatertech">&emsp;<button class="button" onclick="ChooseClass('theatertech')">Theater Tech</button>&emsp;<br></div>
 </div>
 
 <form id="student-form" class="student-form">
@@ -139,7 +140,7 @@ Class date: <input type="date" name="date" id="datePicker" min="2024-09-01" max=
 
 <table class="students" id="OlivePlona" cellpadding=0 cellspacing=0><tr><td>Olive Plona</td><td><input type="radio" id="OlivePlona-present" name="OlivePlona" value="Present"></td><td><input type="radio" id="OlivePlona-late" name="OlivePlona" value="Late"></td><td><input type="radio" id="OlivePlona-excused" name="OlivePlona" value="Excused"></td><td><input type="radio" id="OlivePlona-unexcused" name="OlivePlona" value="Unexcused"></td><td><input hidden type="radio" id="OlivePlona-x" name="OlivePlona" value="-" checked></td></tr></table>
 
-<table class="students" id="PalmerHudson" cellpadding=0 cellspacing=0><tr><td>Palmer Hudson</td><td><input type="radio" id="PalmerHudson-present" name="PalmerHudson" value="Present"></td><td><input type="radio" id="PalmerHudson-late" name="PalmerHudson" value="Late"></td><td><input type="radio" id="PalmerHudson-excused" name="PalmerHudson" value="Excused"></td><td><input type="radio" id="PalmerHudson-unexcused" name="PalmerHudson" value="Unexcused"></td><td><input hidden type="radio" id="PalmerHudson-x" name="PalmerHudson" value="-" checked></td></tr></table>
+<table class="students" id="PalmerHudson" cellpadding=0 cellspacing=0><tr><td>Mikey Hudson</td><td><input type="radio" id="PalmerHudson-present" name="PalmerHudson" value="Present"></td><td><input type="radio" id="PalmerHudson-late" name="PalmerHudson" value="Late"></td><td><input type="radio" id="PalmerHudson-excused" name="PalmerHudson" value="Excused"></td><td><input type="radio" id="PalmerHudson-unexcused" name="PalmerHudson" value="Unexcused"></td><td><input hidden type="radio" id="PalmerHudson-x" name="PalmerHudson" value="-" checked></td></tr></table>
 
 <table class="students" id="PhoebeMuise" cellpadding=0 cellspacing=0><tr><td>Phoebe Muise</td><td><input type="radio" id="PhoebeMuise-present" name="PhoebeMuise" value="Present"></td><td><input type="radio" id="PhoebeMuise-late" name="PhoebeMuise" value="Late"></td><td><input type="radio" id="PhoebeMuise-excused" name="PhoebeMuise" value="Excused"></td><td><input type="radio" id="PhoebeMuise-unexcused" name="PhoebeMuise" value="Unexcused"></td><td><input hidden type="radio" id="PhoebeMuise-x" name="PhoebeMuise" value="-" checked></td></tr></table>
 
@@ -238,6 +239,8 @@ function GetTeacherClasses(teacherNameSent){
 		classes = ['health','community'];
 	} else if (teacherNameSent==="zoe") {
 		classes = ['eng3','mideast'];
+	} else if (teacherNameSent==="students") {
+		classes = ['theatertech'];
 	}
 	//classes.push("studyhall");
 	return classes;
@@ -312,6 +315,8 @@ function GetClassList(classNameSent){
 		return ['TillyCarlarne','BunnyCecchinato','JPHarris','PalmerHudson','DelilahMiller','ChiKelly','PhoebeMuise','JackieMurphy','OlivePlona','MilesScott','SerenaSkloot','MorganSpencer','NexTuncali','ShiahVersey','JasperZahn'];
 	} else if (classNameSent==="studio") {
 		return ['RosieBatutis','BunnyCecchinato','IrisClaydon','TobyCollins','GiselleEarman','CharlieLong','EmilioMartinezBuenrostro','MalinaMootoo','PhoebeMuise','ChloeMurphy','ColeNelson','AshPatry','AthenaPatterson','GiannaPersaud','OlivePlona','TrixieSharkeyMcQuinn','EliasThorp','YonaWeinberg'];
+	}  else if (classNameSent==="theatertech") {
+		return ['AndyPrather', 'AthenaPatterson', 'ColeNelson', 'EliasThorp', 'IrisClaydon', 'JackieMurphy', 'JamesStenson', 'JoleiMurray', 'PalmerHudson', 'MilesScott', 'RowanBoomer'];
 	} else {
 		return schoolRoster;
 	}
