@@ -62,7 +62,8 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="music">&emsp;<button class="button" onclick="ChooseClass('music')">Music 101</button>&emsp;<br></div>
 <div class="class-button" id="photo">&emsp;<button class="button" onclick="ChooseClass('photo')">Photography</button>&emsp;<br></div>
 <div class="class-button" id="studio">&emsp;<button class="button" onclick="ChooseClass('studio')">Studio Art</button>&emsp;<br></div>
-<div class="class-button" id="theatertech">&emsp;<button class="button" onclick="ChooseClass('theatertech')">Theater Tech</button>&emsp;<br></div>
+<div class="class-button" id="theatertech">&emsp;<button class="button" onclick="ChooseClass('theatertech')">Theater Tech A</button>&emsp;<br></div>
+<div class="class-button" id="theatertechB">&emsp;<button class="button" onclick="ChooseClass('theatertechB')">Theater Tech B</button>&emsp;<br></div>
 </div>
 
 <form id="student-form" class="student-form">
@@ -294,7 +295,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="ushist") {
 		return ['RosieBatutis','VenusBoehm','TillyCarlarne','JericaKeleher','JamesStenson','NoriTellerElsberg','NexTuncali','ShiahVersey'];
 	} else if (classNameSent==="polisci") {
-		return ['AnnaAdairProctor','RowanBoomer','TillyCarlarne','AnnabelleGreenburger','EmilioMartinezBuenrostro','MorganSpencer','EliasThorp','YonaWeinberg','LangleyWhitney','TobyCollins'];
+		return ['AnnaAdairProctor','RowanBoomer','AnnabelleGreenburger','EmilioMartinezBuenrostro','MorganSpencer','EliasThorp','YonaWeinberg','LangleyWhitney','TobyCollins'];
 	} else if (classNameSent==="mideast") {
 		return ['JasminGuzman','JPHarris','PalmerHudson','TrixieSharkeyMcQuinn','SerenaSkloot'];
 	} else if (classNameSent==="aesthetics") {
@@ -316,7 +317,9 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="studio") {
 		return ['RosieBatutis','BunnyCecchinato','IrisClaydon','TobyCollins','GiselleEarman','CharlieLong','EmilioMartinezBuenrostro','MalinaMootoo','PhoebeMuise','ChloeMurphy','ColeNelson','AshPatry','AthenaPatterson','GiannaPersaud','OlivePlona','TrixieSharkeyMcQuinn','EliasThorp','YonaWeinberg'];
 	}  else if (classNameSent==="theatertech") {
-		return ['AndyPrather', 'AthenaPatterson', 'ColeNelson', 'EliasThorp', 'IrisClaydon', 'JackieMurphy', 'JamesStenson', 'JoleiMurray', 'PalmerHudson', 'MilesScott', 'RowanBoomer'];
+		return ['AndyPrather', 'ColeNelson', 'EliasThorp', 'JackieMurphy', 'JamesStenson', 'JoleiMurray', 'PalmerHudson', 'MilesScott', 'RowanBoomer'];
+	}  else if (classNameSent==="theatertechB") {
+		return ['AthenaPatterson', 'EliasThorp', 'IrisClaydon', 'JamesStenson', 'RowanBoomer'];
 	} else {
 		return schoolRoster;
 	}
