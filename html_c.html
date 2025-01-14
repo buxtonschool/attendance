@@ -1,0 +1,42 @@
+
+<br>
+&emsp;<button class="button" type="submit" id="submit-form">Submit</button>&emsp;
+<br><br>
+		
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+window.onscroll = function() {scrollerFunction()};
+
+var header = document.getElementById("scrollerHeader");
+var sticky = header.offsetTop;
+
+function scrollerFunction() {
+  if (window.pageYOffset > sticky) {
+	header.classList.add("sticky");
+  } else {
+	header.classList.remove("sticky");
+  }
+}
+</script>
+
+<script>
+
+function GetURLParameter(sParam){
+	var sPageURL = window.location.search.substring(1);
+	var sURLVariables = sPageURL.split('&');
+	for (var i = 0; i < sURLVariables.length; i++){
+		var sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] == sParam){
+			return sParameterName[1];
+		}
+	}
+}
+teacherName=GetURLParameter("teacher");
+
+teacherClasses = GetTeacherClasses(teacherName);
+for (var i = 0; i < teacherClasses.length; i++){
+	document.getElementById(teacherClasses[i]).style.display = "inline";
+}
