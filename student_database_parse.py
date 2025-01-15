@@ -103,7 +103,8 @@ with open(output_filename, 'a') as output_file:
     line = f'var schoolRoster = ['
     for s in school_roster:
         line += f'\'{s}\', '
-    line += f']\n'
+    line = line[:-2]
+    line += f'];\n'
     output_file.write(line)
     output_file.write("\n")
 output_file.close()
@@ -122,7 +123,8 @@ with open(output_filename, 'a') as output_file:
         output_file.write(line)
         line = f'\t\tclasses = ['
         for c in classes_by_teacher[t]:
-             line += f'\'{c}\', ' 
+            line += f'\'{c}\', ' 
+        line = line[:-2]
         line += "];\n"
         output_file.write(line)
 output_file.close()

@@ -204,44 +204,44 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['AndyPrather', 'AnnaAdairProctor', 'AnnabelleGreenburger', 'AshPatry', 'AthenaPatterson', 'BrennonZahn', 'BunnyCecchinato', 'CharlieLong', 'ChiKelly', 'ChloeMurphy', 'ColeNelson', 'DelilahMiller', 'EliasThorp', 'EmilioMartinezBuenrostro', 'GiannaPersaud', 'GiselleEarman', 'IrisClaydon', 'JPHarris', 'JackieMurphy', 'JamesFish', 'JamesStenson', 'JasminGuzman', 'JasperZahn', 'JericaKeleher', 'JoleiMurray', 'LangleyWhitney', 'LolaBattaglia', 'MalinaMootoo', 'MikeyHudson', 'MilesScott', 'MorganSpencer', 'NexTuncali', 'NoriTellerElsberg', 'OlivePlona', 'PhoebeMuise', 'SerenaSkloot', 'ShiahVersey', 'TillyCarlarne', 'TobyCollins', 'TrixieSharkeyMcQuinn', 'VenusBoehm', 'YonaWeinberg', 'YoshuaMizrahiTroyce', ]
+var schoolRoster = ['AndyPrather', 'AnnaAdairProctor', 'AnnabelleGreenburger', 'AshPatry', 'AthenaPatterson', 'BrennonZahn', 'BunnyCecchinato', 'CharlieLong', 'ChiKelly', 'ChloeMurphy', 'ColeNelson', 'DelilahMiller', 'EliasThorp', 'EmilioMartinezBuenrostro', 'GiannaPersaud', 'GiselleEarman', 'IrisClaydon', 'JPHarris', 'JackieMurphy', 'JamesFish', 'JamesStenson', 'JasminGuzman', 'JasperZahn', 'JericaKeleher', 'JoleiMurray', 'LangleyWhitney', 'LolaBattaglia', 'MalinaMootoo', 'MikeyHudson', 'MilesScott', 'MorganSpencer', 'NexTuncali', 'NoriTellerElsberg', 'OlivePlona', 'PhoebeMuise', 'SerenaSkloot', 'ShiahVersey', 'TillyCarlarne', 'TobyCollins', 'TrixieSharkeyMcQuinn', 'VenusBoehm', 'YonaWeinberg', 'YoshuaMizrahiTroyce'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
 	if (teacherNameSent==="null") {
 		classes = [];
 	} else if (teacherNameSent==="fiona") {
-		classes = ['chemistry', 'algebra1', 'precalc', 'dance', ];
+		classes = ['chemistry', 'algebra1', 'precalc', 'dance'];
 	} else if (teacherNameSent==="micah") {
-		classes = ['calc', 'multicalc', 'puzzling', 'algebra2', 'ww2', ];
+		classes = ['calc', 'multicalc', 'puzzling', 'algebra2', 'ww2'];
 	} else if (teacherNameSent==="linda") {
-		classes = ['biology', 'physics', 'marine', 'astro', ];
+		classes = ['biology', 'physics', 'marine', 'astro'];
 	} else if (teacherNameSent==="john") {
-		classes = ['enggroup1', 'enggroup2', 'enggroup3', ];
+		classes = ['enggroup1', 'enggroup2', 'enggroup3'];
 	} else if (teacherNameSent==="dash") {
-		classes = ['spanish1', 'worldhist', 'passion', ];
+		classes = ['spanish1', 'worldhist', 'passion'];
 	} else if (teacherNameSent==="margarita") {
-		classes = ['spanish2', 'spanish3', 'ushist', ];
+		classes = ['spanish2', 'spanish3', 'ushist'];
 	} else if (teacherNameSent==="scott") {
-		classes = ['musichist', 'music', 'enggroup1', 'enggroup2', 'enggroup3', ];
+		classes = ['musichist', 'music', 'enggroup1', 'enggroup2', 'enggroup3'];
 	} else if (teacherNameSent==="frank") {
-		classes = ['studio', ];
+		classes = ['studio'];
 	} else if (teacherNameSent==="katherine") {
-		classes = ['photo', 'films', ];
+		classes = ['photo', 'films'];
 	} else if (teacherNameSent==="julia") {
-		classes = ['ceramics', ];
+		classes = ['ceramics'];
 	} else if (teacherNameSent==="joseph") {
-		classes = ['digital', ];
+		classes = ['digital'];
 	} else if (teacherNameSent==="chiara") {
-		classes = ['geometry', 'enggroup1', 'enggroup2', 'enggroup3', 'kitchen', ];
+		classes = ['geometry', 'enggroup1', 'enggroup2', 'enggroup3', 'kitchen'];
 	} else if (teacherNameSent==="raven") {
-		classes = ['health', 'podcasting', ];
+		classes = ['health', 'podcasting'];
 	} else if (teacherNameSent==="zoe") {
-		classes = ['eng3', 'mideast', ];
+		classes = ['eng3', 'mideast'];
 	} else if (teacherNameSent==="rosemary") {
-		classes = ['plants', 'wintering', ];
+		classes = ['plants', 'wintering'];
 	} else if (teacherNameSent==="students") {
-		classes = ['theatertech', 'theatertechB', 'ordinary', ];
+		classes = ['theatertech', 'theatertechB', 'ordinary'];
 	} else {
 		return schoolRoster;
 	}
