@@ -116,8 +116,7 @@ with open(output_filename, 'a') as output_file, open('html_d.html','r') as htmld
 output_file.close()
 htmld.close()
 
-with open(output_filename, 'a') as output_file:
-    
+with open(output_filename, 'a') as output_file:  
     for t in classes_by_teacher:
         line = f'\t}} else if (teacherNameSent==="{t}") {{\n'
         output_file.write(line)
@@ -135,3 +134,22 @@ with open(output_filename, 'a') as output_file, open('html_e.html','r') as htmle
     output_file.write("\n")
 output_file.close()
 htmle.close()
+
+with open(output_filename, 'a') as output_file:  
+    for c in students_by_class:
+        line = f'\t}} else if (classNameSent==="{c}") {{\n'
+        output_file.write(line)
+        line = f'\t\treturn ['
+        for s in students_by_class[c]:
+            line += f'\'{s}\', ' 
+        line = line[:-2]
+        line += "];\n"
+        output_file.write(line)
+output_file.close()
+
+with open(output_filename, 'a') as output_file, open('html_f.html','r') as htmlf: 
+    for line in htmlf:
+             output_file.write(line)
+    output_file.write("\n")
+output_file.close()
+htmlf.close()
