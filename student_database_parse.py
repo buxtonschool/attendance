@@ -153,3 +153,6 @@ with open(output_filename, 'a') as output_file, open('html_f.html','r') as htmlf
     output_file.write("\n")
 output_file.close()
 htmlf.close()
+
+for s in school_roster:
+     print(s)
