@@ -118,7 +118,7 @@ htmld.close()
 with open(output_filename, 'a') as output_file:
     
     for t in classes_by_teacher:
-        line = f'\telse if (teacherNameSent==="{t}") {{\n'
+        line = f'\t}} else if (teacherNameSent==="{t}") {{\n'
         output_file.write(line)
         line = f'\t\tclasses = ['
         for c in classes_by_teacher[t]:
