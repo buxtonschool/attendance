@@ -33,7 +33,8 @@ table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="Astronomy">&emsp;<button class="button" onclick="ChooseClass('Astronomy')">Astronomy</button>&emsp;<br></div>
 <div class="class-button" id="Biology">&emsp;<button class="button" onclick="ChooseClass('Biology')">Biology</button>&emsp;<br></div>
 <div class="class-button" id="Calculus">&emsp;<button class="button" onclick="ChooseClass('Calculus')">Calculus</button>&emsp;<br></div>
-<div class="class-button" id="Ceramics">&emsp;<button class="button" onclick="ChooseClass('Ceramics')">Ceramics</button>&emsp;<br></div>
+<div class="class-button" id="CeramicsM">&emsp;<button class="button" onclick="ChooseClass('CeramicsM')">CeramicsM</button>&emsp;<br></div>
+<div class="class-button" id="CeramicsW">&emsp;<button class="button" onclick="ChooseClass('CeramicsW')">CeramicsW</button>&emsp;<br></div>
 <div class="class-button" id="Chemistry">&emsp;<button class="button" onclick="ChooseClass('Chemistry')">Chemistry</button>&emsp;<br></div>
 <div class="class-button" id="Dance">&emsp;<button class="button" onclick="ChooseClass('Dance')">Dance</button>&emsp;<br></div>
 <div class="class-button" id="Digital">&emsp;<button class="button" onclick="ChooseClass('Digital')">Digital</button>&emsp;<br></div>
@@ -239,7 +240,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="katherine") {
 		classes = ['Photo', 'Films'];
 	} else if (teacherNameSent==="julia") {
-		classes = ['Ceramics'];
+		classes = ['CeramicsM', 'CeramicsW'];
 	} else if (teacherNameSent==="joseph") {
 		classes = ['Digital'];
 	} else if (teacherNameSent==="chiara") {
@@ -269,8 +270,10 @@ function GetClassList(classNameSent){
 		return ['GiselleEarman', 'PhoebeMuise', 'ChloeMurphy', 'JackieMurphy', 'AshPatry', 'MilesScott', 'NexTuncali', 'AndyPrather'];
 	} else if (classNameSent==="Calculus") {
 		return ['MalinaMootoo', 'GiannaPersaud'];
-	} else if (classNameSent==="Ceramics") {
-		return ['VenusBoehm', 'JasminGuzman', 'CharlieLong', 'YoshuaMizrahiTroyce', 'AthenaPatterson', 'NexTuncali', 'YonaWeinberg', 'TrixieSharkeyMcQuinn', 'PurpleGrier'];
+	} else if (classNameSent==="CeramicsM") {
+		return ['NexTuncali', 'YonaWeinberg', 'TrixieSharkeyMcQuinn', 'CharlieLong', 'AthenaPatterson', 'VenusBoehm'];
+	} else if (classNameSent==="CeramicsW") {
+		return ['PurpleGrier', 'JasminGuzman', 'YoshuaMizrahiTroyce'];
 	} else if (classNameSent==="Chemistry") {
 		return ['JPHarris', 'ChiKelly', 'EmilioMartinezBuenrostro', 'DelilahMiller', 'OlivePlona', 'MorganSpencer', 'JamesStenson'];
 	} else if (classNameSent==="Dance") {
