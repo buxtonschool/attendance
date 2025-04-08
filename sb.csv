@@ -1,7 +1,7 @@
 teacher,fiona,Chemistry,Algebra1,PreCalc,Dance,,,,,,,,,,,,,
 teacher,micah,Calculus,MultiCalc,Puzzling,Algebra2,,,,,,,,,,,,,
 teacher,linda,Biology,Physics,Marine,Geometry,,,,,,,,,,,,,
-teacher,john,English1,English2,English12,,,,,,,,,,,,,,
+teacher,john,English12,,,,,,,,,,,,,,,,
 teacher,dash,Spanish1,WorldHist,,,,,,,,,,,,,,,
 teacher,margarita,Spanish2,Spanish3,USHist,,,,,,,,,,,,,,
 teacher,scott,MusicHist,Music,English4,,,,,,,,,,,,,,
@@ -9,7 +9,7 @@ teacher,frank,Studio,,,,,,,,,,,,,,,,
 teacher,katherine,Photo,Films,,,,,,,,,,,,,,,
 teacher,julia,CeramicsM,CeramicsW,,,,,,,,,,,,,,,
 teacher,joseph,Digital,,,,,,,,,,,,,,,,
-teacher,chiara,Geometry,English1,English2,English12,,,,,,,,,,,,,
+teacher,chiara,Geometry,English12,,,,,,,,,,,,,,,
 teacher,raven,Health,Podcasting,,,,,,,,,,,,,,,
 teacher,zoe,English3,MidEast,,,,,,,,,,,,,,,
 teacher,rosemary,Plants,,,,,,,,,,,,,,,,
@@ -31,13 +31,8 @@ roster,English12,AshPatry,ChloeMurphy,GiselleEarman,JackieMurphy,AndyPrather,Ann
 roster,Films,TobyCollins,GiselleEarman,JamesFish,JPHarris,MikeyHudson,MorganSpencer,NoriTellerElsberg,,,,,,,,,,
 roster,Geometry,AnnabelleGreenburger,PhoebeMuise,ChloeMurphy,JackieMurphy,AndyPrather,MilesScott,YonaWeinberg,BrennonZahn,PurpleGrier,,,,,,,,
 roster,Health,IrisClaydon,PhoebeMuise,ColeNelson,AthenaPatterson,MilesScott,BrennonZahn,LolaBattaglia,PurpleGrier,,,,,,,,,
-<<<<<<< HEAD:sb.csv
 roster,Marine,IrisClaydon,TobyCollins,AnnabelleGreenburger,MikeyHudson,YoshuaMizrahiTroyce,YonaWeinberg,,,,,,,,,,,
 roster,MidEast,JPHarris,MikeyHudson,TrixieSharkeyMcQuinn,SerenaSkloot,,,,,,,,,,,,,
-=======
-roster,Marine,IrisClaydon,TobyCollins,AnnabelleGreenburger,MikeyHudson,CharlieLong,YoshuaMizrahiTroyce,YonaWeinberg,,,,,,,,,,
-roster,MidEast,JasminGuzman,JPHarris,MikeyHudson,TrixieSharkeyMcQuinn,SerenaSkloot,,,,,,,,,,,,
->>>>>>> 2de7e8bdf3787e89c3dd0c1326ff11c721ce5ffb:c.csv
 roster,MultiCalc,JamesFish,EmilioMartinezBuenrostro,DelilahMiller,NoriTellerElsberg,,,,,,,,,,,,,
 roster,Music,JasminGuzman,OlivePlona,AndyPrather,,,,,,,,,,,,,,
 roster,MusicHist,JasperZahn,ColeNelson,AnnabelleGreenburger,,,,,,,,,,,,,,
@@ -57,13 +52,7 @@ roster,Plants,PurpleGrier,LolaBattaglia,BunnyCecchinato,AthenaPatterson,OlivePlo
 roster,Ordinary,AndyPrather,BrennonZahn,ChiKelly,ColeNelson,DelilahMiller,JasperZahn,OlivePlona,,,,,,,,,,
 roster,Astronomy,AnnabelleGreenburger,AthenaPatterson,IrisClaydon,JoleiMurray,MalinaMootoo,YoshuaMizrahiTroyce,,,,,,,,,,,
 roster,KitchenEssentials,EliasThorp,JPHarris,JackieMurphy,MilesScott,NoriTellerElsberg,PurpleGrier,,,,,,,,,,,
-<<<<<<< HEAD:sb.csv
 roster,Wintering,BunnyCecchinato,GiselleEarman,JasminGuzman,LolaBattaglia,NexTuncali,TillyCarlarne,YonaWeinberg,,,,,,,,,,
 roster,Passion,AnnaAdairProctor,AshPatry,ChloeMurphy,GiannaPersaud,JericaKeleher,LangleyWhitney,SerenaSkloot,ShiahVersey,TobyCollins,TrixieSharkeyMcQuinn,TrixieSharkeyMcQuinn,,,,,,
 roster,WorldHist,BunnyCecchinato,JamesFish,AnnabelleGreenburger,EmilioMartinezBuenrostro,MorganSpencer,EliasThorp,YonaWeinberg,LangleyWhitney,,,,,,,,,
-=======
-roster,Wintering,BunnyCecchinato,GiselleEarman,JasminGuzman,LolaBattaglia,NexTuncali,TillyCarlarne,VenusBoehm,YonaWeinberg,,,,,,,,,
-roster,Passion,AnnaAdairProctor,AshPatry,CharlieLong,ChloeMurphy,GiannaPersaud,JericaKeleher,LangleyWhitney,SerenaSkloot,ShiahVersey,TobyCollins,TrixieSharkeyMcQuinn,,,,,,
-roster,WorldHist,BunnyCecchinato,JamesFish,AnnabelleGreenburger,CharlieLong,EmilioMartinezBuenrostro,MorganSpencer,EliasThorp,YonaWeinberg,LangleyWhitney,,,,,,,,
->>>>>>> 2de7e8bdf3787e89c3dd0c1326ff11c721ce5ffb:c.csv
 roster,Podcasting,AnnaAdairProctor,JericaKeleher,ColeNelson,,,,,,,,,,,,,,
