@@ -1,4 +1,4 @@
-database_filename = "sb.csv"
+database_filename = "sd.csv"
 output_filename = "index.html"
 
 classes_by_teacher = {}
