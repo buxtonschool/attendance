@@ -1,0 +1,68 @@
+var SHEET_NAME = "RawData";
+var SCRIPT_PROP = PropertiesService.getScriptProperties();
+
+
+function doPost(e){
+  return handleResponse(e);
+}
+
+function handleResponse(e) {
+  var lock = LockService.getPublicLock();
+  lock.waitLock(5000);
+
+  try {
+    var doc = SpreadsheetApp.openById(SCRIPT_PROP.getProperty("key"));
+    var sheet = doc.getSheetByName(SHEET_NAME);
+
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    var nextRow = sheet.getLastRow()+1;
+    var row = [];
+    for (i in headers){
+      row.push(e.parameter[headers[i]]);
+      if (e.parameter[headers[i]] == "Late" || e.parameter[headers[i]] == "Unexcused") {
+        var message =  headers[i] + ": " + e.parameter[headers[i]] + "  -  " + e.parameter["subject"] + " " + e.parameter["date"];
+        //if (headers[i] == "zafira_miller" || headers[i] == "morgan_spencer" || headers[i] == "alani_carasone" || headers[i] == "henry_coduri") {
+        //  message = message + "\n" + "@Micah Manary";
+        //}
+        sendMessage(message);
+        if (headers[i] == "AnnaAdairProctor") {
+          MailApp.sendEmail("zoe.rosenbloom@buxtonschool.org", "Anna Adair-Proctor Attendance Notification", message);
+          MailApp.sendEmail("f_adair@yahoo.com", "Anna Adair-Proctor Attendance Notification", message);
+          MailApp.sendEmail("jpro500@yahoo.com", "Anna Adair-Proctor Attendance Notification", message);
+        }
+        if (headers[i] == "RosieBatutis") {
+          MailApp.sendEmail("zoe.rosenbloom@buxtonschool.org", "Rosie Batutis Attendance Notification", message);
+          MailApp.sendEmail("gailshust@gmail.com", "Rosie Batutis Attendance Notification", message);
+        }
+      }
+    }
+    sheet.getRange(nextRow, 1, 1, row.length).setValues([row]);
+    
+    return ContentService
+          .createTextOutput(JSON.stringify({"result":"success", "row": nextRow}))
+          .setMimeType(ContentService.MimeType.JSON);
+  } catch(e){
+    return ContentService
+          .createTextOutput(JSON.stringify({"result":"error", "error": e}))
+          .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function setup() {
+    var doc = SpreadsheetApp.getActiveSpreadsheet();
+    SCRIPT_PROP.setProperty("key", doc.getId());
+}
+
+const GOOGLE_CHAT_WEBHOOK_LINK = "https://chat.googleapis.com/v1/spaces/AAAAlqx4iFM/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=WWV39-oL1DTRiCi0FDhKN51XT_jpLwJFfvrO9-UBGqk%3D";
+function sendMessage(mess) {
+    const payload = JSON.stringify({ text: mess });
+    const options = {
+        method: 'POST',
+        contentType: 'application/json',
+        payload: payload,
+    };
+    UrlFetchApp.fetch(GOOGLE_CHAT_WEBHOOK_LINK, options);
+}
+
