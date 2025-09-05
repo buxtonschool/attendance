@@ -20,9 +20,9 @@ body {margin: 0; font-family: Arial, Helvetica, sans-serif;}
 .students td:nth-child(2), .students td:nth-child(3), .students td:nth-child(4), .students td:nth-child(5) {width: 15%;}
 .students tr {height: 30px}
 .students {display: none; border-bottom: 1px solid #000;}
-td {cellpadding:0;}
+td {padding:0;}
 .student-form {display: none}
-table {cellpadding: 0; cellspacing: 0; width:100%; max-width: 1080px; border: 0}
+table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 </style>
 
 <body>
@@ -146,6 +146,8 @@ Class date: <input type="date" name="date" id="datePicker" min="2024-09-01" max=
 
 <table class="students" id="XanderChrist " cellpadding=0 cellspacing=0><tr><td>XanderChrist </td><td><input type="radio" id="XanderChrist -present" name="XanderChrist " value="Present"></td><td><input type="radio" id="XanderChrist -late" name="XanderChrist " value="Late"></td><td><input type="radio" id="XanderChrist -excused" name="XanderChrist " value="Excused"></td><td><input type="radio" id="XanderChrist -unexcused" name="XanderChrist " value="Unexcused"></td><td><input hidden type="radio" id="XanderChrist -x" name="XanderChrist " value="-" checked></td></tr></table>
 
+<table class="students" id="student" cellpadding=0 cellspacing=0><tr><td>student</td><td><input type="radio" id="student-present" name="student" value="Present"></td><td><input type="radio" id="student-late" name="student" value="Late"></td><td><input type="radio" id="student-excused" name="student" value="Excused"></td><td><input type="radio" id="student-unexcused" name="student" value="Unexcused"></td><td><input hidden type="radio" id="student-x" name="student" value="-" checked></td></tr></table>
+
 
 
 <br>
@@ -190,7 +192,7 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['AnnabelleGreenburger', 'AshPatry', 'AthenaPatterson ', 'AugieMugridgeNeilson ', 'BrennonZahn', 'CarsonMickletz ', 'CharlesCarr', 'ChloeMurphy', 'GarciaMongue', 'GiselleEarman ', 'GraceDeRosa ', 'HenryKaplan ', 'IlanRikon ', 'IrisClaydon ', 'JackieMurphy', 'JamesStenson ', 'JericaKeleher', 'MikeyHudson ', 'MilesScott', 'MoeSquailia ', 'NaziahLynch ', 'NoahMinkoff ', 'NoriTeller-Elsberg ', 'OliveHorner ', 'PhoebeMuise ', 'PurpleGrier', 'ShiahVersey', 'TillyCarlarne', 'VivCoduri ', 'XanderChrist '];
+var schoolRoster = ['AnnabelleGreenburger', 'AshPatry', 'AthenaPatterson ', 'AugieMugridgeNeilson ', 'BrennonZahn', 'CarsonMickletz ', 'CharlesCarr', 'ChloeMurphy', 'GarciaMongue', 'GiselleEarman ', 'GraceDeRosa ', 'HenryKaplan ', 'IlanRikon ', 'IrisClaydon ', 'JackieMurphy', 'JamesStenson ', 'JericaKeleher', 'MikeyHudson ', 'MilesScott', 'MoeSquailia ', 'NaziahLynch ', 'NoahMinkoff ', 'NoriTeller-Elsberg ', 'OliveHorner ', 'PhoebeMuise ', 'PurpleGrier', 'ShiahVersey', 'TillyCarlarne', 'VivCoduri ', 'XanderChrist ', 'student'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
@@ -219,7 +221,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="joseph") {
 		classes = ['Meals', 'AllSchool', 'Digital'];
 	} else if (teacherNameSent==="chiara") {
-		classes = ['Meals', 'AllSchool', 'Geometry'];
+		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="raven") {
 		classes = ['Meals', 'AllSchool', 'Health', 'English12'];
 	} else if (teacherNameSent==="ashby") {
@@ -260,15 +262,15 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="Chemistry") {
 		return ['CharlesCarr', 'PurpleGrier', 'JericaKeleher', 'AthenaPatterson ', 'MilesScott', 'ShiahVersey'];
 	} else if (classNameSent==="Dance") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="DataStats") {
 		return ['AnnabelleGreenburger', 'HenryKaplan ', 'GarciaMongue', 'ShiahVersey', 'CharlesCarr'];
 	} else if (classNameSent==="Digital") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="English1") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="English2") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="English3") {
 		return ['CharlesCarr', 'IrisClaydon ', 'AnnabelleGreenburger', 'PhoebeMuise ', 'AthenaPatterson ', 'MilesScott', 'BrennonZahn'];
 	} else if (classNameSent==="English4") {
@@ -278,7 +280,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="Feminism") {
 		return ['TillyCarlarne', 'GiselleEarman ', 'PurpleGrier', 'MikeyHudson ', 'ChloeMurphy', 'AshPatry', 'NoriTeller-Elsberg ', 'ShiahVersey'];
 	} else if (classNameSent==="Films") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="Geology") {
 		return ['IrisClaydon ', 'GarciaMongue', 'JackieMurphy', 'AthenaPatterson ', 'JamesStenson ', 'TillyCarlarne'];
 	} else if (classNameSent==="Geometry") {
@@ -288,15 +290,15 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="Humanity") {
 		return ['XanderChrist ', 'VivCoduri ', 'GraceDeRosa ', 'NoahMinkoff ', 'AugieMugridgeNeilson ', 'IlanRikon ', 'MoeSquailia '];
 	} else if (classNameSent==="Marine") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="MidEast") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="MultiCalc") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="Music") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="MusicHist") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="OutdoorEd") {
 		return ['CarsonMickletz ', 'BrennonZahn'];
 	} else if (classNameSent==="Photo") {
@@ -308,7 +310,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="Printmaking") {
 		return ['ShiahVersey', 'ChloeMurphy', 'TillyCarlarne', 'AnnabelleGreenburger', 'AshPatry'];
 	} else if (classNameSent==="Puzzling") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="Rock") {
 		return ['TillyCarlarne', 'OliveHorner ', 'JericaKeleher', 'NaziahLynch ', 'NoahMinkoff ', 'MilesScott', 'BrennonZahn'];
 	} else if (classNameSent==="Spanish1") {
@@ -324,7 +326,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="USHist") {
 		return ['IrisClaydon ', 'AnnabelleGreenburger', 'MikeyHudson ', 'PhoebeMuise ', 'MilesScott', 'BrennonZahn'];
 	} else if (classNameSent==="WorldHist") {
-		return];
+		return ['student'];
 	} else if (classNameSent==="Meals") {
 		return ['TillyCarlarne', 'CharlesCarr', 'XanderChrist ', 'IrisClaydon ', 'VivCoduri ', 'GraceDeRosa ', 'GiselleEarman ', 'AnnabelleGreenburger', 'PurpleGrier', 'OliveHorner ', 'MikeyHudson ', 'HenryKaplan ', 'JericaKeleher', 'NaziahLynch ', 'CarsonMickletz ', 'NoahMinkoff ', 'GarciaMongue', 'AugieMugridgeNeilson ', 'PhoebeMuise ', 'ChloeMurphy', 'JackieMurphy', 'AshPatry', 'AthenaPatterson ', 'IlanRikon ', 'MilesScott', 'MoeSquailia ', 'JamesStenson ', 'NoriTeller-Elsberg ', 'ShiahVersey', 'BrennonZahn'];
 	} else if (classNameSent==="AllSchool") {
