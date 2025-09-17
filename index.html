@@ -49,7 +49,8 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="Humanity">&emsp;<button class="button" onclick="ChooseClass('Humanity')">Humanity</button>&emsp;<br></div>
 <div class="class-button" id="Meals">&emsp;<button class="button" onclick="ChooseClass('Meals')">Meals</button>&emsp;<br></div>
 <div class="class-button" id="OutdoorEd">&emsp;<button class="button" onclick="ChooseClass('OutdoorEd')">OutdoorEd</button>&emsp;<br></div>
-<div class="class-button" id="Photo">&emsp;<button class="button" onclick="ChooseClass('Photo')">Photo</button>&emsp;<br></div>
+<div class="class-button" id="PhotoTue">&emsp;<button class="button" onclick="ChooseClass('PhotoTue')">PhotoTue</button>&emsp;<br></div>
+<div class="class-button" id="PhotoWed">&emsp;<button class="button" onclick="ChooseClass('PhotoWed')">PhotoWed</button>&emsp;<br></div>
 <div class="class-button" id="Physics">&emsp;<button class="button" onclick="ChooseClass('Physics')">Physics</button>&emsp;<br></div>
 <div class="class-button" id="PreCalc">&emsp;<button class="button" onclick="ChooseClass('PreCalc')">PreCalc</button>&emsp;<br></div>
 <div class="class-button" id="Printmaking">&emsp;<button class="button" onclick="ChooseClass('Printmaking')">Printmaking</button>&emsp;<br></div>
@@ -203,7 +204,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="frank") {
 		classes = ['Meals', 'AllSchool', 'Studio', 'Printmaking'];
 	} else if (teacherNameSent==="daniele") {
-		classes = ['Meals', 'AllSchool', 'Photo'];
+		classes = ['Meals', 'AllSchool', 'PhotoTue', 'PhotoWed'];
 	} else if (teacherNameSent==="julia") {
 		classes = ['Meals', 'AllSchool', 'CeramicsW', 'CeramicsF', 'Feminism'];
 	} else if (teacherNameSent==="joseph") {
@@ -269,8 +270,10 @@ function GetClassList(classNameSent){
 		return ['XanderChrist', 'VivCoduri', 'GraceDeRosa', 'JayaHartpence', 'NoahMinkoff', 'AugieMugridgeNeilson', 'IlanRikon', 'MoeSquailia'];
 	} else if (classNameSent==="OutdoorEd") {
 		return ['CarsonMickletz', 'BrennonZahn'];
-	} else if (classNameSent==="Photo") {
-		return ['TillyCarlarne', 'PurpleGrier', 'MikeyHudson', 'NaziahLynch', 'PhoebeMuise', 'AugieMugridgeNeilson', 'JackieMurphy', 'MilesScott', 'JamesStenson', 'ShiahVersey', 'BrennonZahn'];
+	} else if (classNameSent==="PhotoTue") {
+		return ['TillyCarlarne', 'PurpleGrier', 'MilesScott', 'JamesStenson', 'ShiahVersey', 'BrennonZahn'];
+	} else if (classNameSent==="PhotoWed") {
+		return ['TillyCarlarne', 'MikeyHudson', 'NaziahLynch', 'PhoebeMuise', 'AugieMugridgeNeilson', 'JackieMurphy'];
 	} else if (classNameSent==="Physics") {
 		return ['TillyCarlarne', 'IrisClaydon', 'GarciaMongue', 'HenryKaplan', 'JamesStenson', 'NoriTeller-Elsberg', 'BrennonZahn'];
 	} else if (classNameSent==="PreCalc") {
