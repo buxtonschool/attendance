@@ -58,6 +58,7 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="Spanish1">&emsp;<button class="button" onclick="ChooseClass('Spanish1')">Spanish1</button>&emsp;<br></div>
 <div class="class-button" id="Spanish2">&emsp;<button class="button" onclick="ChooseClass('Spanish2')">Spanish2</button>&emsp;<br></div>
 <div class="class-button" id="Studio">&emsp;<button class="button" onclick="ChooseClass('Studio')">Studio</button>&emsp;<br></div>
+<div class="class-button" id="TheaterPer">&emsp;<button class="button" onclick="ChooseClass('TheaterPer')">TheaterPer</button>&emsp;<br></div>
 <div class="class-button" id="TheaterTechA">&emsp;<button class="button" onclick="ChooseClass('TheaterTechA')">TheaterTechA</button>&emsp;<br></div>
 <div class="class-button" id="TheaterTechFri">&emsp;<button class="button" onclick="ChooseClass('TheaterTechFri')">TheaterTechFri</button>&emsp;<br></div>
 <div class="class-button" id="USHist">&emsp;<button class="button" onclick="ChooseClass('USHist')">USHist</button>&emsp;<br></div>
@@ -233,67 +234,69 @@ function GetClassList(classNameSent){
 	if (classNameSent==="null") {
 		return [];
 	} else if (classNameSent==="AdvSpanish") {
-		return ['GiselleEarman', 'ChloeMurphy', 'JackieMurphy', 'AthenaPatterson', 'NoriTeller-Elsberg', 'ShiahVersey', 'GarciaMongue', 'JericaKeleher'];
+		return ['AthenaPatterson', 'ChloeMurphy', 'GarciaMongue', 'GiselleEarman', 'JackieMurphy', 'JericaKeleher', 'NoriTeller-Elsberg', 'ShiahVersey'];
 	} else if (classNameSent==="Ag") {
-		return ['XanderChrist', 'AnnabelleGreenburger', 'PurpleGrier', 'MikeyHudson', 'HenryKaplan'];
+		return ['AnnabelleGreenburger', 'HenryKaplan', 'MikeyHudson', 'PurpleGrier', 'XanderChrist'];
 	} else if (classNameSent==="Algebra1") {
-		return ['XanderChrist', 'GraceDeRosa', 'JayaHartpence', 'OliveHorner', 'NoahMinkoff', 'IlanRikon', 'MoeSquailia'];
+		return ['GraceDeRosa', 'IlanRikon', 'JayaHartpence', 'MoeSquailia', 'NoahMinkoff', 'OliveHorner', 'XanderChrist'];
 	} else if (classNameSent==="Algebra2") {
-		return ['CharlesCarr', 'PurpleGrier', 'PhoebeMuise', 'ChloeMurphy', 'JackieMurphy', 'MilesScott'];
+		return ['CharlesCarr', 'ChloeMurphy', 'JackieMurphy', 'MilesScott', 'PhoebeMuise', 'PurpleGrier'];
 	} else if (classNameSent==="Biology") {
-		return ['NekoCoduri', 'GraceDeRosa', 'JayaHartpence', 'OliveHorner', 'CarsonMickletz', 'NoahMinkoff', 'AugieMugridgeNeilson', 'IlanRikon', 'MoeSquailia'];
+		return ['AugieMugridgeNeilson', 'CarsonMickletz', 'GraceDeRosa', 'IlanRikon', 'JayaHartpence', 'MoeSquailia', 'NekoCoduri', 'NoahMinkoff', 'OliveHorner'];
 	} else if (classNameSent==="Calculus") {
 		return ['JericaKeleher', 'ShiahVersey'];
 	} else if (classNameSent==="CeramicsW") {
-		return ['XanderChrist', 'PurpleGrier', 'JayaHartpence', 'NoahMinkoff', 'GarciaMongue', 'ChloeMurphy', 'AthenaPatterson', 'IlanRikon', 'MoeSquailia'];
+		return ['AthenaPatterson', 'ChloeMurphy', 'IlanRikon', 'GarciaMongue', 'JayaHartpence', 'MoeSquailia', 'NoahMinkoff', 'PurpleGrier', 'XanderChrist'];
 	} else if (classNameSent==="CeramicsF") {
-		return ['XanderChrist', 'PurpleGrier', 'NoahMinkoff', 'GarciaMongue', 'ChloeMurphy', 'AthenaPatterson', 'IlanRikon', 'MoeSquailia'];
+		return ['AthenaPatterson', 'ChloeMurphy', 'GarciaMongue', 'IlanRikon', 'MoeSquailia', 'NoahMinkoff', 'PurpleGrier', 'XanderChrist'];
 	} else if (classNameSent==="Chemistry") {
-		return ['CharlesCarr', 'AnnabelleGreenburger', 'PurpleGrier', 'JericaKeleher', 'AthenaPatterson', 'MilesScott', 'ShiahVersey'];
+		return ['AnnabelleGreenburger', 'AthenaPatterson', 'CharlesCarr', 'JericaKeleher', 'MilesScott', 'PurpleGrier', 'ShiahVersey'];
 	} else if (classNameSent==="DataStats") {
 		return ['AnnabelleGreenburger', 'HenryKaplan', 'ShiahVersey'];
 	} else if (classNameSent==="English3") {
-		return ['CharlesCarr', 'IrisClaydon', 'AnnabelleGreenburger', 'PhoebeMuise', 'AthenaPatterson', 'MilesScott', 'BrennonZahn'];
+		return ['AnnabelleGreenburger', 'AthenaPatterson', 'BrennonZahn', 'CharlesCarr', 'IrisClaydon', 'MilesScott', 'PhoebeMuise'];
 	} else if (classNameSent==="English4") {
-		return ['TillyCarlarne', 'PurpleGrier', 'MikeyHudson', 'HenryKaplan', 'JericaKeleher', 'GarciaMongue', 'JamesStenson', 'NoriTeller-Elsberg', 'ShiahVersey'];
+		return ['GarciaMongue', 'HenryKaplan', 'JamesStenson', 'JericaKeleher', 'MikeyHudson', 'NoriTeller-Elsberg', 'PurpleGrier', 'ShiahVersey', 'TillyCarlarne'];
 	} else if (classNameSent==="English12") {
-		return ['XanderChrist', 'NekoCoduri', 'GraceDeRosa', 'JayaHartpence', 'OliveHorner', 'NoahMinkoff', 'AugieMugridgeNeilson', 'IlanRikon', 'MoeSquailia', 'GiselleEarman', 'NaziahLynch', 'CarsonMickletz', 'ChloeMurphy', 'JackieMurphy', 'AshPatry'];
+		return ['AshPatry', 'AugieMugridgeNeilson', 'CarsonMickletz', 'ChloeMurphy', 'GiselleEarman', 'GraceDeRosa', 'IlanRikon', 'JackieMurphy', 'JayaHartpence', 'MoeSquailia', 'NaziahLynch', 'NekoCoduri', 'NoahMinkoff', 'OliveHorner', 'XanderChrist'];
 	} else if (classNameSent==="Feminism") {
-		return ['TillyCarlarne', 'GiselleEarman', 'PurpleGrier', 'MikeyHudson', 'ChloeMurphy', 'AshPatry', 'NoriTeller-Elsberg'];
+		return ['AshPatry', 'ChloeMurphy', 'GiselleEarman', 'MikeyHudson', 'NoriTeller-Elsberg', 'PurpleGrier', 'TillyCarlarne'];
 	} else if (classNameSent==="Geology") {
-		return ['IrisClaydon', 'JackieMurphy', 'AthenaPatterson', 'JamesStenson'];
+		return ['AthenaPatterson', 'IrisClaydon', 'JackieMurphy', 'JamesStenson'];
 	} else if (classNameSent==="Geometry") {
-		return ['NekoCoduri', 'GiselleEarman', 'NaziahLynch', 'CarsonMickletz', 'AugieMugridgeNeilson', 'AshPatry'];
+		return ['AshPatry', 'AugieMugridgeNeilson', 'CarsonMickletz', 'GiselleEarman', 'NaziahLynch', 'NekoCoduri'];
 	} else if (classNameSent==="Health") {
-		return ['GiselleEarman', 'NaziahLynch', 'ChloeMurphy', 'JackieMurphy', 'AshPatry'];
+		return ['AshPatry', 'ChloeMurphy', 'GiselleEarman', 'JackieMurphy', 'NaziahLynch'];
 	} else if (classNameSent==="Humanity") {
-		return ['XanderChrist', 'NekoCoduri', 'GraceDeRosa', 'JayaHartpence', 'NoahMinkoff', 'AugieMugridgeNeilson', 'IlanRikon', 'MoeSquailia'];
+		return ['AugieMugridgeNeilson', 'GraceDeRosa', 'IlanRikon', 'JayaHartpence', 'MoeSquailia', 'NekoCoduri', 'NoahMinkoff', 'XanderChrist'];
 	} else if (classNameSent==="OutdoorEd") {
-		return ['CarsonMickletz', 'BrennonZahn'];
+		return ['BrennonZahn', 'CarsonMickletz'];
 	} else if (classNameSent==="PhotoTue") {
-		return ['TillyCarlarne', 'PurpleGrier', 'JamesStenson', 'ShiahVersey'];
+		return ['JamesStenson', 'PurpleGrier', 'ShiahVersey', 'TillyCarlarne'];
 	} else if (classNameSent==="PhotoWed") {
-		return ['MikeyHudson', 'NaziahLynch', 'PhoebeMuise', 'AugieMugridgeNeilson', 'JackieMurphy'];
+		return ['AugieMugridgeNeilson', 'JackieMurphy', 'MikeyHudson', 'NaziahLynch', 'PhoebeMuise'];
 	} else if (classNameSent==="Physics") {
-		return ['TillyCarlarne', 'IrisClaydon', 'GarciaMongue', 'HenryKaplan', 'JamesStenson', 'NoriTeller-Elsberg', 'BrennonZahn'];
+		return ['BrennonZahn', 'GarciaMongue', 'HenryKaplan', 'IrisClaydon', 'JamesStenson', 'NoriTeller-Elsberg', 'TillyCarlarne'];
 	} else if (classNameSent==="PreCalc") {
-		return ['TillyCarlarne', 'IrisClaydon', 'GarciaMongue', 'AthenaPatterson', 'JamesStenson', 'BrennonZahn'];
+		return ['AthenaPatterson', 'BrennonZahn', 'GarciaMongue', 'IrisClaydon', 'JamesStenson', 'TillyCarlarne'];
 	} else if (classNameSent==="Printmaking") {
-		return ['ShiahVersey', 'ChloeMurphy', 'TillyCarlarne', 'AnnabelleGreenburger', 'AshPatry'];
+		return ['AnnabelleGreenburger', 'AshPatry', 'ChloeMurphy', 'ShiahVersey', 'TillyCarlarne'];
 	} else if (classNameSent==="Rock") {
-		return ['OliveHorner', 'NaziahLynch', 'CarsonMickletz', 'NoahMinkoff', 'MilesScott'];
+		return ['CarsonMickletz', 'MilesScott', 'NaziahLynch', 'NoahMinkoff', 'OliveHorner'];
 	} else if (classNameSent==="Spanish1") {
-		return ['XanderChrist', 'OliveHorner', 'AugieMugridgeNeilson', 'IlanRikon', 'MoeSquailia', 'CharlesCarr'];
+		return ['AugieMugridgeNeilson', 'CharlesCarr', 'IlanRikon', 'MoeSquailia', 'OliveHorner', 'XanderChrist'];
 	} else if (classNameSent==="Spanish2") {
-		return ['TillyCarlarne', 'NekoCoduri', 'GraceDeRosa', 'NaziahLynch', 'AshPatry'];
+		return ['AshPatry', 'GraceDeRosa', 'NaziahLynch', 'NekoCoduri', 'TillyCarlarne'];
 	} else if (classNameSent==="Studio") {
-		return ['NekoCoduri', 'GraceDeRosa', 'GiselleEarman', 'AnnabelleGreenburger', 'JayaHartpence', 'OliveHorner', 'MikeyHudson', 'HenryKaplan', 'NoahMinkoff', 'AugieMugridgeNeilson', 'ChloeMurphy', 'AshPatry', 'AthenaPatterson', 'ShiahVersey'];
+		return ['AnnabelleGreenburger', 'AshPatry', 'AthenaPatterson', 'AugieMugridgeNeilson', 'ChloeMurphy', 'GiselleEarman', 'GraceDeRosa', 'HenryKaplan', 'JayaHartpence', 'MikeyHudson', 'NekoCoduri', 'NoahMinkoff', 'OliveHorner', 'ShiahVersey'];
+	} else if (classNameSent==="TheaterPer") {
+		return ['BrennonZahn', 'CarsonMickletz', 'CharlesCarr', 'GiselleEarman', 'IlanRikon', 'IrisClaydon', 'JericaKeleher', 'MikeyHudson', 'NoriTeller-Elsberg', 'PhoebeMuise', 'PurpleGrier'];
 	} else if (classNameSent==="TheaterTechA") {
-		return ['CharlesCarr', 'IrisClaydon', 'GraceDeRosa', 'HenryKaplan', 'PhoebeMuise', 'MoeSquailia', 'JamesStenson', 'BrennonZahn'];
+		return ['BrennonZahn', 'CharlesCarr', 'GraceDeRosa', 'HenryKaplan', 'IrisClaydon', 'JamesStenson', 'MoeSquailia', 'PhoebeMuise'];
 	} else if (classNameSent==="TheaterTechFri") {
-		return ['CharlesCarr', 'XanderChrist', 'IrisClaydon', 'GraceDeRosa', 'HenryKaplan', 'JericaKeleher', 'PhoebeMuise', 'MoeSquailia', 'JamesStenson', 'BrennonZahn'];
+		return ['BrennonZahn', 'CharlesCarr', 'GraceDeRosa', 'HenryKaplan', 'IrisClaydon', 'JamesStenson', 'JericaKeleher', 'MoeSquailia', 'PhoebeMuise', 'XanderChrist'];
 	} else if (classNameSent==="USHist") {
-		return ['IrisClaydon', 'AnnabelleGreenburger', 'MikeyHudson', 'PhoebeMuise', 'MilesScott', 'BrennonZahn'];
+		return ['AnnabelleGreenburger', 'BrennonZahn', 'IrisClaydon', 'MikeyHudson', 'MilesScott', 'PhoebeMuise'];
 	} else if (classNameSent==="Meals") {
 		return ['TillyCarlarne', 'CharlesCarr', 'XanderChrist', 'IrisClaydon', 'NekoCoduri', 'GraceDeRosa', 'GiselleEarman', 'AnnabelleGreenburger', 'PurpleGrier', 'JayaHartpence', 'OliveHorner', 'MikeyHudson', 'HenryKaplan', 'JericaKeleher', 'NaziahLynch', 'CarsonMickletz', 'NoahMinkoff', 'GarciaMongue', 'AugieMugridgeNeilson', 'PhoebeMuise', 'ChloeMurphy', 'JackieMurphy', 'AshPatry', 'AthenaPatterson', 'IlanRikon', 'MilesScott', 'MoeSquailia', 'JamesStenson', 'NoriTeller-Elsberg', 'ShiahVersey', 'BrennonZahn'];
 	} else if (classNameSent==="AllSchool") {
