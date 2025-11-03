@@ -38,16 +38,13 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="CeramicsF">&emsp;<button class="button" onclick="ChooseClass('CeramicsF')">CeramicsF</button>&emsp;<br></div>
 <div class="class-button" id="CeramicsW">&emsp;<button class="button" onclick="ChooseClass('CeramicsW')">CeramicsW</button>&emsp;<br></div>
 <div class="class-button" id="Chemistry">&emsp;<button class="button" onclick="ChooseClass('Chemistry')">Chemistry</button>&emsp;<br></div>
-<div class="class-button" id="ColorTheory">&emsp;<button class="button" onclick="ChooseClass('ColorTheory')">ColorTheory</button>&emsp;<br></div>
 <div class="class-button" id="DataStats">&emsp;<button class="button" onclick="ChooseClass('DataStats')">DataStats</button>&emsp;<br></div>
 <div class="class-button" id="English12">&emsp;<button class="button" onclick="ChooseClass('English12')">English12</button>&emsp;<br></div>
 <div class="class-button" id="English3">&emsp;<button class="button" onclick="ChooseClass('English3')">English3</button>&emsp;<br></div>
 <div class="class-button" id="English4">&emsp;<button class="button" onclick="ChooseClass('English4')">English4</button>&emsp;<br></div>
 <div class="class-button" id="Feminism">&emsp;<button class="button" onclick="ChooseClass('Feminism')">Feminism</button>&emsp;<br></div>
-<div class="class-button" id="FiberArts">&emsp;<button class="button" onclick="ChooseClass('FiberArts')">FiberArts</button>&emsp;<br></div>
 <div class="class-button" id="Geology">&emsp;<button class="button" onclick="ChooseClass('Geology')">Geology</button>&emsp;<br></div>
 <div class="class-button" id="Geometry">&emsp;<button class="button" onclick="ChooseClass('Geometry')">Geometry</button>&emsp;<br></div>
-<div class="class-button" id="Ghosties">&emsp;<button class="button" onclick="ChooseClass('Ghosties')">Ghosties</button>&emsp;<br></div>
 <div class="class-button" id="Health">&emsp;<button class="button" onclick="ChooseClass('Health')">Health</button>&emsp;<br></div>
 <div class="class-button" id="Humanity">&emsp;<button class="button" onclick="ChooseClass('Humanity')">Humanity</button>&emsp;<br></div>
 <div class="class-button" id="Meals">&emsp;<button class="button" onclick="ChooseClass('Meals')">Meals</button>&emsp;<br></div>
@@ -55,7 +52,6 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="PhotoTue">&emsp;<button class="button" onclick="ChooseClass('PhotoTue')">PhotoTue</button>&emsp;<br></div>
 <div class="class-button" id="PhotoWed">&emsp;<button class="button" onclick="ChooseClass('PhotoWed')">PhotoWed</button>&emsp;<br></div>
 <div class="class-button" id="Physics">&emsp;<button class="button" onclick="ChooseClass('Physics')">Physics</button>&emsp;<br></div>
-<div class="class-button" id="Pizza">&emsp;<button class="button" onclick="ChooseClass('Pizza')">Pizza</button>&emsp;<br></div>
 <div class="class-button" id="PreCalc">&emsp;<button class="button" onclick="ChooseClass('PreCalc')">PreCalc</button>&emsp;<br></div>
 <div class="class-button" id="Printmaking">&emsp;<button class="button" onclick="ChooseClass('Printmaking')">Printmaking</button>&emsp;<br></div>
 <div class="class-button" id="Rock">&emsp;<button class="button" onclick="ChooseClass('Rock')">Rock</button>&emsp;<br></div>
@@ -195,25 +191,23 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="fiona") {
 		classes = ['Meals', 'AllSchool', 'Chemistry', 'Algebra1', 'PreCalc'];
 	} else if (teacherNameSent==="moon") {
-		classes = ['Meals', 'AllSchool', 'Calculus', 'DataStats', 'Algebra2', 'ColorTheory'];
+		classes = ['Meals', 'AllSchool', 'Calculus', 'DataStats', 'Algebra2'];
 	} else if (teacherNameSent==="linda") {
-		classes = ['Meals', 'AllSchool', 'Biology', 'Physics', 'Geology', 'Geometry', 'FiberArts'];
+		classes = ['Meals', 'AllSchool', 'Biology', 'Physics', 'Geology', 'Geometry'];
 	} else if (teacherNameSent==="john") {
-		classes = ['Meals', 'AllSchool', 'Pizza'];
+		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="dash") {
 		classes = ['Meals', 'AllSchool', 'Spanish1', 'OutdoorEd', 'Rock'];
 	} else if (teacherNameSent==="margarita") {
-		classes = ['Meals', 'AllSchool', 'AdvSpanish', 'USHist', 'FiberArts'];
+		classes = ['Meals', 'AllSchool', 'AdvSpanish', 'USHist'];
 	} else if (teacherNameSent==="scott") {
-		classes = ['Meals', 'AllSchool', 'Humanity', 'English4', 'Ghosties'];
+		classes = ['Meals', 'AllSchool', 'Humanity', 'English4'];
 	} else if (teacherNameSent==="frank") {
 		classes = ['Meals', 'AllSchool', 'Studio', 'Printmaking'];
 	} else if (teacherNameSent==="daniele") {
 		classes = ['Meals', 'AllSchool', 'PhotoTue', 'PhotoWed'];
 	} else if (teacherNameSent==="julia") {
-		classes = ['Meals', 'AllSchool', 'CeramicsW', 'CeramicsF', 'Feminism', 'FiberArts'];
-	} else if (teacherNameSent==="joseph") {
-		classes = ['Meals', 'AllSchool', 'Digital'];
+		classes = ['Meals', 'AllSchool', 'CeramicsW', 'CeramicsF', 'Feminism'];
 	} else if (teacherNameSent==="chiara") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="raven") {
@@ -227,7 +221,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="ralph") {
 		classes = ['TheaterPer'];
 	} else if (teacherNameSent==="rosemary") {
-		classes = ['Meals', 'AllSchool', 'Spanish2', 'Ag', 'ColorTheory'];
+		classes = ['Meals', 'AllSchool', 'Spanish2', 'Ag'];
 	} else if (teacherNameSent==="students") {
 		classes = ['TheaterTechA', 'TheaterTechFri'];
 	} else {
@@ -246,7 +240,7 @@ function GetClassList(classNameSent){
 	} else if (classNameSent==="Algebra1") {
 		return ['GraceDeRosa', 'IlanRikon', 'JayaHartpence', 'MoeSquailia', 'NoahMinkoff', 'XanderChrist'];
 	} else if (classNameSent==="Algebra2") {
-		return ['CharlesCarr', 'ChloeMurphy', 'JackieMurphy', 'MilesScott', 'PhoebeMuise', 'PurpleGrier'];
+		return ['AnnabelleGreenburger', 'CharlesCarr', 'ChloeMurphy', 'JackieMurphy', 'MilesScott', 'PhoebeMuise', 'PurpleGrier'];
 	} else if (classNameSent==="Biology") {
 		return ['AugieMugridgeNeilson', 'CarsonMickletz', 'GraceDeRosa', 'IlanRikon', 'JayaHartpence', 'NekoCoduri', 'NoahMinkoff'];
 	} else if (classNameSent==="Calculus") {
@@ -257,8 +251,6 @@ function GetClassList(classNameSent){
 		return ['AlisterWarneck', 'AthenaPatterson', 'ChloeMurphy', 'GarciaMongue', 'IlanRikon', 'MoeSquailia', 'NoahMinkoff', 'PurpleGrier', 'XanderChrist'];
 	} else if (classNameSent==="Chemistry") {
 		return ['AnnabelleGreenburger', 'AthenaPatterson', 'CharlesCarr', 'JericaKeleher', 'MilesScott', 'PurpleGrier', 'ShiahVersey'];
-	} else if (classNameSent==="ColorTheory") {
-		return ['AlisterWarneck', 'IrisClaydon', 'JayaHartpence', 'JericaKeleher', 'MikeyHudson', 'MoeSquailia'];
 	} else if (classNameSent==="DataStats") {
 		return ['AnnabelleGreenburger', 'HenryKaplan', 'ShiahVersey'];
 	} else if (classNameSent==="English3") {
@@ -269,14 +261,10 @@ function GetClassList(classNameSent){
 		return ['AshPatry', 'AugieMugridgeNeilson', 'CarsonMickletz', 'ChloeMurphy', 'GiselleEarman', 'GraceDeRosa', 'IlanRikon', 'JackieMurphy', 'JayaHartpence', 'MoeSquailia', 'NaziahLynch', 'NekoCoduri', 'NoahMinkoff', 'XanderChrist'];
 	} else if (classNameSent==="Feminism") {
 		return ['AshPatry', 'ChloeMurphy', 'GiselleEarman', 'MikeyHudson', 'NoriTeller-Elsberg', 'PurpleGrier', 'TillyCarlarne'];
-	} else if (classNameSent==="FiberArts") {
-		return ['AshPatry', 'ChloeMurphy', 'GarciaMongue', 'NoriTeller-Elsberg', 'PurpleGrier'];
 	} else if (classNameSent==="Geology") {
 		return ['AthenaPatterson', 'IrisClaydon', 'JackieMurphy', 'JamesStenson'];
 	} else if (classNameSent==="Geometry") {
 		return ['AshPatry', 'AugieMugridgeNeilson', 'CarsonMickletz', 'GiselleEarman', 'NaziahLynch', 'NekoCoduri'];
-	} else if (classNameSent==="Ghosties") {
-		return ['AnnabelleGreenburger', 'AthenaPatterson', 'CharlesCarr', 'NaziahLynch', 'NekoCoduri', 'PhoebeMuise'];
 	} else if (classNameSent==="Health") {
 		return ['AshPatry', 'ChloeMurphy', 'JackieMurphy', 'NaziahLynch'];
 	} else if (classNameSent==="Humanity") {
@@ -289,8 +277,6 @@ function GetClassList(classNameSent){
 		return ['AugieMugridgeNeilson', 'JackieMurphy', 'NaziahLynch', 'PhoebeMuise'];
 	} else if (classNameSent==="Physics") {
 		return ['AlisterWarneck', 'BrennonZahn', 'GarciaMongue', 'HenryKaplan', 'IrisClaydon', 'JamesStenson', 'NoriTeller-Elsberg', 'TillyCarlarne'];
-	} else if (classNameSent==="Pizza") {
-		return ['GraceDeRosa', 'HenryKaplan', 'IlanRikon', 'JackieMurphy', 'JamesStenson', 'MilesScott'];
 	} else if (classNameSent==="PreCalc") {
 		return ['AthenaPatterson', 'BrennonZahn', 'GarciaMongue', 'IrisClaydon', 'JamesStenson'];
 	} else if (classNameSent==="Printmaking") {
