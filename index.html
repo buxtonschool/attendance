@@ -47,6 +47,12 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="Geometry">&emsp;<button class="button" onclick="ChooseClass('Geometry')">Geometry</button>&emsp;<br></div>
 <div class="class-button" id="Health">&emsp;<button class="button" onclick="ChooseClass('Health')">Health</button>&emsp;<br></div>
 <div class="class-button" id="Humanity">&emsp;<button class="button" onclick="ChooseClass('Humanity')">Humanity</button>&emsp;<br></div>
+<div class="class-button" id="ImmArts">&emsp;<button class="button" onclick="ChooseClass('ImmArts')">ImmArts</button>&emsp;<br></div>
+<div class="class-button" id="ImmCooking">&emsp;<button class="button" onclick="ChooseClass('ImmCooking')">ImmCooking</button>&emsp;<br></div>
+<div class="class-button" id="ImmGames">&emsp;<button class="button" onclick="ChooseClass('ImmGames')">ImmGames</button>&emsp;<br></div>
+<div class="class-button" id="ImmMagic">&emsp;<button class="button" onclick="ChooseClass('ImmMagic')">ImmMagic</button>&emsp;<br></div>
+<div class="class-button" id="ImmOutdoor">&emsp;<button class="button" onclick="ChooseClass('ImmOutdoor')">ImmOutdoor</button>&emsp;<br></div>
+<div class="class-button" id="ImmPuppets">&emsp;<button class="button" onclick="ChooseClass('ImmPuppets')">ImmPuppets</button>&emsp;<br></div>
 <div class="class-button" id="Meals">&emsp;<button class="button" onclick="ChooseClass('Meals')">Meals</button>&emsp;<br></div>
 <div class="class-button" id="MusicPro">&emsp;<button class="button" onclick="ChooseClass('MusicPro')">MusicPro</button>&emsp;<br></div>
 <div class="class-button" id="PhotoTue">&emsp;<button class="button" onclick="ChooseClass('PhotoTue')">PhotoTue</button>&emsp;<br></div>
@@ -195,17 +201,19 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="daniele") {
 		classes = ['Meals', 'AllSchool', 'PhotoTue', 'PhotoWed'];
 	} else if (teacherNameSent==="dash") {
-		classes = ['Meals', 'AllSchool', 'Spanish1', 'MusicPro', 'Rock'];
+		classes = ['Meals', 'AllSchool', 'Spanish1', 'MusicPro', 'Rock', 'ImmOutdoor'];
 	} else if (teacherNameSent==="emily") {
-		classes = ['Meals', 'AllSchool', 'English2'];
+		classes = ['Meals', 'AllSchool', 'English2', 'ImmPuppets'];
 	} else if (teacherNameSent==="fiona") {
-		classes = ['Meals', 'AllSchool', 'Chemistry', 'Algebra1', 'PreCalc', 'Dance'];
+		classes = ['Meals', 'AllSchool', 'Chemistry', 'Algebra1', 'PreCalc', 'Dance', 'ImmCooking'];
 	} else if (teacherNameSent==="frank") {
-		classes = ['Meals', 'AllSchool', 'Studio', 'Printmaking'];
+		classes = ['Meals', 'AllSchool', 'Studio', 'Printmaking', 'ImmArts'];
 	} else if (teacherNameSent==="john") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="julia") {
-		classes = ['Meals', 'AllSchool', 'CeramicsM', 'CeramicsW', 'PoliHorror'];
+		classes = ['Meals', 'AllSchool', 'CeramicsM', 'CeramicsW', 'PoliHorror', 'ImmArts'];
+	} else if (teacherNameSent==="kevin") {
+		classes = ['Meals', 'AllSchool', 'ImmCooking'];
 	} else if (teacherNameSent==="linda") {
 		classes = ['Meals', 'AllSchool', 'Biology', 'Physics', 'Geometry'];
 	} else if (teacherNameSent==="lynn") {
@@ -213,9 +221,9 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="margarita") {
 		classes = ['Meals', 'AllSchool', 'AdvSpanish', 'USHist'];
 	} else if (teacherNameSent==="moon") {
-		classes = ['Meals', 'AllSchool', 'Calculus', 'DataStats', 'Algebra2'];
+		classes = ['Meals', 'AllSchool', 'Calculus', 'DataStats', 'Algebra2', 'ImmGames'];
 	} else if (teacherNameSent==="raven") {
-		classes = ['Meals', 'AllSchool', 'Health', 'English1'];
+		classes = ['Meals', 'AllSchool', 'Health', 'English1', 'ImmMagic'];
 	} else if (teacherNameSent==="rosemary") {
 		classes = ['Meals', 'AllSchool', 'Spanish2', 'Ag'];
 	} else if (teacherNameSent==="scott") {
@@ -297,6 +305,18 @@ function GetClassList(classNameSent){
 		return ['BrennonZahn', 'GraceDeRosa', 'IrisClaydon', 'JamesStenson', 'PhoebeMuise'];
 	} else if (classNameSent==="TheaterTechFri") {
 		return ['BrennonZahn', 'GraceDeRosa', 'IrisClaydon', 'JamesStenson', 'PhoebeMuise', 'XanderChrist'];
+	} else if (classNameSent==="ImmMagic") {
+		return ['HenryKaplan', 'JericaKeleher', 'PhoebeMuise'];
+	} else if (classNameSent==="ImmArts") {
+		return ['AlisterWarneck', 'ChloeMurphy', 'NekoCoduri', 'PurpleGrier', 'ShiahVersey', 'TillyCarlarne'];
+	} else if (classNameSent==="ImmGames") {
+		return ['JamesStenson', 'XanderChrist'];
+	} else if (classNameSent==="ImmOutdoor") {
+		return ['AugieMugridgeNeilson', 'BrennonZahn', 'GiselleEarman', 'IlanRikon', 'JackieMurphy', 'MoeSquailia'];
+	} else if (classNameSent==="ImmPuppets") {
+		return ['AshPatry', 'CharlesCarr', 'GraceDeRosa', 'MikeyHudson', 'MilesScott', 'NaziahLynch'];
+	} else if (classNameSent==="ImmCooking") {
+		return ['AnnabelleGreenburger', 'AthenaPatterson', 'CarsonMickletz', 'GarciaMongue', 'IrisClaydon', 'NoriTeller-Elsberg'];
 	} else if (classNameSent==="Meals") {
 		return ['AlisterWarneck', 'AnnabelleGreenburger', 'AshPatry', 'AthenaPatterson', 'AugieMugridgeNeilson', 'BrennonZahn', 'CarsonMickletz', 'CharlesCarr', 'ChloeMurphy', 'GarciaMongue', 'GiselleEarman', 'GraceDeRosa', 'HenryKaplan', 'IlanRikon', 'IrisClaydon', 'JackieMurphy', 'JamesStenson', 'JericaKeleher', 'MikeyHudson', 'MilesScott', 'MoeSquailia', 'NaziahLynch', 'NekoCoduri', 'NoriTeller-Elsberg', 'PhoebeMuise', 'PurpleGrier', 'ShiahVersey', 'TillyCarlarne', 'XanderChrist'];
 	} else if (classNameSent==="AllSchool") {
