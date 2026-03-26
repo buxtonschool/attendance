@@ -48,7 +48,6 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="Health">&emsp;<button class="button" onclick="ChooseClass('Health')">Health</button>&emsp;<br></div>
 <div class="class-button" id="Humanity">&emsp;<button class="button" onclick="ChooseClass('Humanity')">Humanity</button>&emsp;<br></div>
 <div class="class-button" id="Meals">&emsp;<button class="button" onclick="ChooseClass('Meals')">Meals</button>&emsp;<br></div>
-<div class="class-button" id="MusicPro">&emsp;<button class="button" onclick="ChooseClass('MusicPro')">MusicPro</button>&emsp;<br></div>
 <div class="class-button" id="PhotoTue">&emsp;<button class="button" onclick="ChooseClass('PhotoTue')">PhotoTue</button>&emsp;<br></div>
 <div class="class-button" id="PhotoWed">&emsp;<button class="button" onclick="ChooseClass('PhotoWed')">PhotoWed</button>&emsp;<br></div>
 <div class="class-button" id="Physics">&emsp;<button class="button" onclick="ChooseClass('Physics')">Physics</button>&emsp;<br></div>
@@ -195,7 +194,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="daniele") {
 		classes = ['Meals', 'AllSchool', 'PhotoTue', 'PhotoWed'];
 	} else if (teacherNameSent==="dash") {
-		classes = ['Meals', 'AllSchool', 'Spanish1', 'MusicPro', 'Rock'];
+		classes = ['Meals', 'AllSchool', 'Spanish1', 'Rock'];
 	} else if (teacherNameSent==="emily") {
 		classes = ['Meals', 'AllSchool', 'English2'];
 	} else if (teacherNameSent==="fiona") {
@@ -277,8 +276,6 @@ function GetClassList(classNameSent){
 		return ['AugieMugridgeNeilson', 'CharlesCarr', 'IlanRikon', 'MoeSquailia', 'XanderChrist'];
 	} else if (classNameSent==="Spanish2") {
 		return ['AshPatry', 'GraceDeRosa', 'NaziahLynch', 'NekoCoduri', 'TillyCarlarne'];
-	} else if (classNameSent==="MusicPro") {
-		return ['CarsonMickletz', 'HenryKaplan', 'JackieMurphy', 'JamesStenson'];
 	} else if (classNameSent==="Rock") {
 		return ['CarsonMickletz', 'JackieMurphy', 'JericaKeleher', 'NaziahLynch', 'TillyCarlarne'];
 	} else if (classNameSent==="Studio") {
