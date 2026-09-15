@@ -87,7 +87,7 @@ htmlb.close()
 
 with open(output_filename, 'a') as output_file:
     for s in school_roster:
-        line = f'<table class="students" id="{s}" cellpadding=0 cellspacing=0><tr><td>{s}</td><td><input type="radio" id="{s}-present" name="{s}" value="Present"></td><td><input type="radio" id="{s}-late" name="{s}" value="Late"></td><td><input type="radio" id="{s}-absent" name="{s}" value="Absent"></td><td><input hidden type="radio" id="{s}-x" name="{s}" value="-" checked></td></tr></table>\n\n'
+        line = f'<table class="students" id="{s}" cellpadding=0 cellspacing=0><tr><td>{s}</td><td><input type="radio" id="{s}-present" name="{s}" value="Present"></td><td><input type="radio" id="{s}-late" name="{s}" value="Late"></td><td><input type="radio" id="{s}-excused" name="{s}" value="Excused"></td><td><input type="radio" id="{s}-unexcused" name="{s}" value="Unexcused"></td><td><input hidden type="radio" id="{s}-x" name="{s}" value="-" checked></td></tr></table>\n\n'
         output_file.write(line)
     output_file.write("\n")
 output_file.close()
