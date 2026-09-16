@@ -34,10 +34,8 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="AllSchool">&emsp;<button class="button" onclick="ChooseClass('AllSchool')">AllSchool</button>&emsp;<br></div>
 <div class="class-button" id="Biology">&emsp;<button class="button" onclick="ChooseClass('Biology')">Biology</button>&emsp;<br></div>
 <div class="class-button" id="Calculus">&emsp;<button class="button" onclick="ChooseClass('Calculus')">Calculus</button>&emsp;<br></div>
-<div class="class-button" id="CeramicsF">&emsp;<button class="button" onclick="ChooseClass('CeramicsF')">CeramicsF</button>&emsp;<br></div>
-<div class="class-button" id="CeramicsM">&emsp;<button class="button" onclick="ChooseClass('CeramicsM')">CeramicsM</button>&emsp;<br></div>
-<div class="class-button" id="CeramicsTh">&emsp;<button class="button" onclick="ChooseClass('CeramicsTh')">CeramicsTh</button>&emsp;<br></div>
-<div class="class-button" id="CeramicsW">&emsp;<button class="button" onclick="ChooseClass('CeramicsW')">CeramicsW</button>&emsp;<br></div>
+<div class="class-button" id="CeramicsMTh">&emsp;<button class="button" onclick="ChooseClass('CeramicsMTh')">CeramicsMTh</button>&emsp;<br></div>
+<div class="class-button" id="CeramicsWF">&emsp;<button class="button" onclick="ChooseClass('CeramicsWF')">CeramicsWF</button>&emsp;<br></div>
 <div class="class-button" id="Chemistry">&emsp;<button class="button" onclick="ChooseClass('Chemistry')">Chemistry</button>&emsp;<br></div>
 <div class="class-button" id="Dance">&emsp;<button class="button" onclick="ChooseClass('Dance')">Dance</button>&emsp;<br></div>
 <div class="class-button" id="English1">&emsp;<button class="button" onclick="ChooseClass('English1')">English1</button>&emsp;<br></div>
@@ -202,7 +200,7 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="jess") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="julia") {
-		classes = ['Meals', 'AllSchool', 'CeramicsM', 'CeramicsW', 'CeramicsT', 'CeramicsF', 'FemMedia', 'Hiking'];
+		classes = ['Meals', 'AllSchool', 'CeramicsMTh', 'CeramicsWF', 'FemMedia', 'Hiking'];
 	} else if (teacherNameSent==="kevin") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="linda") {
@@ -280,14 +278,10 @@ function GetClassList(classNameSent){
 		return ['AnnabelleLainez', 'AthenaPatterson', 'CharlieCarr', 'ChloeMurphy', 'IrisClaydon', 'JackieMurphy'];
 	} else if (classNameSent==="Studio1Fri") {
 		return ['AndreWehry', 'BrielleCarter', 'GiselleEarman', 'GraceDeRosa', 'IsabellaReyDiaz', 'NekoCoduri', 'RafiThompson', 'XanderChrist'];
-	} else if (classNameSent==="CeramicsM") {
-		return ['AndreWehry', 'AugieMugridgeNeilson', 'BrielleCarter', 'GraceDeRosa', 'IsabellaReyDiaz'];
-	} else if (classNameSent==="CeramicsW") {
-		return ['AshPatry', 'BrennonZahn', 'ChloeGomez', 'ChloeMurphy', 'IlanRikon', 'MoeSquailia', 'VioletEncarnarcion'];
-	} else if (classNameSent==="CeramicsTh") {
-		return ['AndreWehry', 'AugieMugridgeNeilson', 'BrielleCarter', 'GraceDeRosa', 'IsabellaReyDiaz'];
-	} else if (classNameSent==="CeramicsF") {
-		return ['AshPatry', 'BrennonZahn', 'ChloeGomez', 'ChloeMurphy', 'IlanRikon', 'MoeSquailia', 'VioletEncarnarcion'];
+	} else if (classNameSent==="CeramicsMTh") {
+		return ['AndreWehry', 'AugieMugridgeNeilson', 'BrielleCarter', 'GraceDeRosa', 'IsabellaReyDiaz', 'IlanRikon'];
+	} else if (classNameSent==="CeramicsWF") {
+		return ['BrennonZahn', 'ChloeGomez', 'ChloeMurphy', 'GavinStenson', 'MoeSquailia', 'RafiThompson', 'VioletEncarnarcion'];
 	} else if (classNameSent==="Photo") {
 		return ['AthenaPatterson', 'AugieMugridgeNeilson', 'CharlieCarr'];
 	} else if (classNameSent==="Dance") {
