@@ -185,6 +185,8 @@ function GetTeacherClasses(teacherNameSent){
 	var classes = [];
 	if (teacherNameSent==="null") {
 		classes = [];
+	} else if (teacherNameSent==="adrian") {
+		classes = ['Meals', 'AllSchool', 'Calculus', 'Algebra1', 'Algebra2', 'Volleyball'];
 	} else if (teacherNameSent==="ashby") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="chiara") {
