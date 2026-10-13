@@ -185,6 +185,8 @@ function GetTeacherClasses(teacherNameSent){
 	var classes = [];
 	if (teacherNameSent==="null") {
 		classes = [];
+	} else if (teacherNameSent==="adrian") {
+		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="ashby") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="chiara") {
@@ -200,8 +202,6 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="frank") {
 		classes = ['Meals', 'AllSchool', 'Studio2Tue', 'Studio1Wed', 'Studio2Fri', 'Studio1Fri'];
 	} else if (teacherNameSent==="jess") {
-		classes = ['Meals', 'AllSchool'];
-	} else if (teacherNameSent==="adrian") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="julia") {
 		classes = ['Meals', 'AllSchool', 'CeramicsMTh', 'CeramicsWF', 'FemMedia', 'Hiking'];
