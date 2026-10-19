@@ -35,6 +35,7 @@ table {padding: 0; border-spacing: 0; width:100%; max-width: 1080px; border: 0}
 <div class="class-button" id="Biology">&emsp;<button class="button" onclick="ChooseClass('Biology')">Biology</button>&emsp;<br></div>
 <div class="class-button" id="Bookmaking">&emsp;<button class="button" onclick="ChooseClass('Bookmaking')">Bookmaking</button>&emsp;<br></div>
 <div class="class-button" id="Calculus">&emsp;<button class="button" onclick="ChooseClass('Calculus')">Calculus</button>&emsp;<br></div>
+<div class="class-button" id="Camping">&emsp;<button class="button" onclick="ChooseClass('Camping')">Camping</button>&emsp;<br></div>
 <div class="class-button" id="CeramicsMTh">&emsp;<button class="button" onclick="ChooseClass('CeramicsMTh')">CeramicsMTh</button>&emsp;<br></div>
 <div class="class-button" id="CeramicsWF">&emsp;<button class="button" onclick="ChooseClass('CeramicsWF')">CeramicsWF</button>&emsp;<br></div>
 <div class="class-button" id="Chemistry">&emsp;<button class="button" onclick="ChooseClass('Chemistry')">Chemistry</button>&emsp;<br></div>
@@ -130,6 +131,8 @@ Class date: <input type="date" name="date" id="datePicker" min="2026-09-01" max=
 
 <table class="students" id="NacheketPatel" cellpadding=0 cellspacing=0><tr><td>NacheketPatel</td><td><input type="radio" id="NacheketPatel-present" name="NacheketPatel" value="Present"></td><td><input type="radio" id="NacheketPatel-late" name="NacheketPatel" value="Late"></td><td><input type="radio" id="NacheketPatel-absent" name="NacheketPatel" value="Absent"></td><td><input hidden type="radio" id="NacheketPatel-x" name="NacheketPatel" value="-" checked></td></tr></table>
 
+<table class="students" id="NazLynch" cellpadding=0 cellspacing=0><tr><td>NazLynch</td><td><input type="radio" id="NazLynch-present" name="NazLynch" value="Present"></td><td><input type="radio" id="NazLynch-late" name="NazLynch" value="Late"></td><td><input type="radio" id="NazLynch-absent" name="NazLynch" value="Absent"></td><td><input hidden type="radio" id="NazLynch-x" name="NazLynch" value="-" checked></td></tr></table>
+
 <table class="students" id="NaziahLynch" cellpadding=0 cellspacing=0><tr><td>NaziahLynch</td><td><input type="radio" id="NaziahLynch-present" name="NaziahLynch" value="Present"></td><td><input type="radio" id="NaziahLynch-late" name="NaziahLynch" value="Late"></td><td><input type="radio" id="NaziahLynch-absent" name="NaziahLynch" value="Absent"></td><td><input hidden type="radio" id="NaziahLynch-x" name="NaziahLynch" value="-" checked></td></tr></table>
 
 <table class="students" id="NekoCoduri" cellpadding=0 cellspacing=0><tr><td>NekoCoduri</td><td><input type="radio" id="NekoCoduri-present" name="NekoCoduri" value="Present"></td><td><input type="radio" id="NekoCoduri-late" name="NekoCoduri" value="Late"></td><td><input type="radio" id="NekoCoduri-absent" name="NekoCoduri" value="Absent"></td><td><input hidden type="radio" id="NekoCoduri-x" name="NekoCoduri" value="-" checked></td></tr></table>
@@ -184,7 +187,7 @@ for (var i = 0; i < teacherClasses.length; i++){
 	document.getElementById(teacherClasses[i]).style.display = "inline";
 }
 
-var schoolRoster = ['AndreWehry', 'AnnabelleGreenburger', 'AnnabelleLainez', 'AshPatry', 'AthenaPatterson', 'AugieMugridgeNeilson', 'BrennonZahn', 'BrielleCarter', 'CharlieCarr', 'CharlotteMahon', 'ChloeGomez', 'ChloeGuzman', 'ChloeMurphy', 'DavidGbor', 'GavinStenson', 'GiselleEarman', 'GraceDeRosa', 'IlanRikon', 'IrisClaydon', 'IsabellaReyDiaz', 'ItzelSequeiraMaas', 'JackieMurphy', 'KamLaCasse', 'MoeSquailia', 'NacheketPatel', 'NaziahLynch', 'NekoCoduri', 'RafiThompson', 'VioletEncarnarcion', 'XanderChrist'];
+var schoolRoster = ['AndreWehry', 'AnnabelleGreenburger', 'AnnabelleLainez', 'AshPatry', 'AthenaPatterson', 'AugieMugridgeNeilson', 'BrennonZahn', 'BrielleCarter', 'CharlieCarr', 'CharlotteMahon', 'ChloeGomez', 'ChloeGuzman', 'ChloeMurphy', 'DavidGbor', 'GavinStenson', 'GiselleEarman', 'GraceDeRosa', 'IlanRikon', 'IrisClaydon', 'IsabellaReyDiaz', 'ItzelSequeiraMaas', 'JackieMurphy', 'KamLaCasse', 'MoeSquailia', 'NacheketPatel', 'NazLynch', 'NaziahLynch', 'NekoCoduri', 'RafiThompson', 'VioletEncarnarcion', 'XanderChrist'];
 
 function GetTeacherClasses(teacherNameSent){
 	var classes = [];
@@ -193,13 +196,13 @@ function GetTeacherClasses(teacherNameSent){
 	} else if (teacherNameSent==="adrian") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="ashby") {
-		classes = ['Meals', 'AllSchool'];
+		classes = ['Meals', 'AllSchool', 'Camping'];
 	} else if (teacherNameSent==="chiara") {
 		classes = ['Meals', 'AllSchool'];
 	} else if (teacherNameSent==="daniele") {
 		classes = ['Meals', 'AllSchool', 'Spanish2', 'Photo'];
 	} else if (teacherNameSent==="dash") {
-		classes = ['Meals', 'AllSchool', 'Spanish1', 'Rock', 'WeightRoom'];
+		classes = ['Meals', 'AllSchool', 'Spanish1', 'Rock', 'WeightRoom', 'Camping'];
 	} else if (teacherNameSent==="emily") {
 		classes = ['Meals', 'AllSchool', 'English1', 'English2', 'WritingBlock'];
 	} else if (teacherNameSent==="fiona") {
@@ -309,6 +312,8 @@ function GetClassList(classNameSent){
 		return ['AshPatry', 'AugieMugridgeNeilson', 'ChloeGuzman', 'GraceDeRosa', 'IlanRikon', 'IrisClaydon', 'KamLaCasse', 'MoeSquailia'];
 	} else if (classNameSent==="Play") {
 		return ['AndreWehry', 'AnnabelleGreenburger', 'BrielleCarter', 'CharlieCarr', 'DavidGbor', 'GavinStenson', 'GiselleEarman', 'VioletEncarnarcion'];
+	} else if (classNameSent==="Camping") {
+		return ['BrennonZahn', 'CharlotteMahon', 'IsabellaReyDiaz', 'ItzelSequeiraMaas', 'JackieMurphy', 'NazLynch', 'RafiThompson'];
 	} else {
 		return schoolRoster;
 	}
